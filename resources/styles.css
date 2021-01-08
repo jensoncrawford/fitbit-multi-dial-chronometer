@@ -1,0 +1,241 @@
+.markercolour {
+  fill: #c7c7c7;
+}
+
+.minuteColor {
+  fill: #c7c7c7;
+}
+
+.subMinuteColor {
+  fill: #b8b8b8;
+}
+
+.fiveMinuteOuterColor {
+  fill: #f47c47;
+}
+
+.fiveMinuteInnerColor {
+  fill: #b8b8b8;
+}
+
+.quarterHourColor {
+  fill: #f47c47;
+}
+
+.accentcolour {
+  fill: #2F77D4;
+}
+
+.faceColor {
+  fill: #505050; 
+}
+
+.bezelColor {
+  fill: #6f1a21;
+}
+.minuteHandColor {
+  fill: #c7c7c7;
+}
+.secondHandColor {
+  fill: #cc0000;  
+}
+.batteryColor {
+  fill: #6f1a21;
+}
+.statsicon {
+  x: 50%-17;
+  y: 18%;
+  width: 34;
+  height: 34;
+}
+
+.statsfield {
+  x: 50%+1; 
+  y: -50%;
+  text-anchor: middle;
+  font-family: Seville-Regular;
+  font-size: 26;
+}
+
+
+.maindialtwelve {
+  y: -49%;
+  width: 2;
+  height: 25;
+}
+
+.mainDialQuarter {
+  x: 0%-3;
+  y: -50%;
+  width: 9;
+  height: 15;
+}
+
+.mainDialFiveOuter {
+  x: 0%-3;
+  y: -50%;
+  width: 7;
+  height: 15;
+}
+
+.mainDialFiveInner {
+  x: 0%-3;
+  y: -50%+28;
+  width: 7;
+  height: 17;
+}
+
+.mainDialTwelveInner {
+  x: 0%-3;
+  y: -50%+28;
+  width: 7;
+  height: 25;
+}
+
+.mainDialMinute {
+  x: 0%;
+  y: -50%;
+  width: 1;
+  height: 24;
+}
+
+.mainDialSubMinuteInner {
+  x: 0%;
+  y: -50%+12;
+  width: 1;
+  height: 12;
+}
+
+.mainDialSubMinuteOuter {
+  x: 0%;
+  y: -50%;
+  width: 1;
+  height: 12;
+}
+
+.dateTextColor {
+  fill: #202020;
+}
+
+.dateBackgroundColor {
+  fill: #707070;
+}
+
+
+.dayMonthText {
+  x: 0;
+  y: -7%;
+  font-family: Seville-Regular;
+  font-size: 14;
+  text-anchor: middle;
+  text-length: 8;
+}
+
+.dateText {
+  x: 0;
+  y: +15%;
+  font-family: Seville-Regular;
+  font-size: 14;
+  text-anchor: middle;
+  text-length: 4;
+}
+
+.hourmarker8text {
+  x: 30%;
+  y: +21%;
+  font-family: Seville-Regular;
+  font-size: 18;
+  text-anchor: middle;
+}
+
+.hourmarker16text {
+  x: -27%;
+  y: +21%;
+  font-family: Seville-Regular;
+  font-size: 18;
+  text-anchor: middle;
+}
+
+.hourmarker24text {
+  x: 0%;
+  y: -27%;
+  font-family: Seville-Regular;
+  font-size: 18;
+  text-anchor: middle;
+}
+
+.hourmarker24tickS {
+  x: 0%;
+  y: -45%;
+  width: 2;
+  height: 4; 
+}
+
+.hourmarker24tickL {
+  x: 0%;
+  y: -45%;
+  width: 1;
+  height: 15; 
+}
+
+.hrMarkerTickS {
+  x: 0%;
+  y: -45%;
+  width: 2;
+  height: 4; 
+}
+
+.hrMarkerTickL {
+  x: 0%;
+  y: -45%;
+  width: 1;
+  height: 15; 
+}
+
+.monthDialTickS {
+  x: 0%;
+  y: -45%;
+  width: 2;
+  height: 4; 
+}
+
+.monthDialTickL {
+  x: 0%;
+  y: -45%;
+  width: 1;
+  height: 15; 
+}
+
+.monthDialText {
+  font-family: Seville-Regular;
+  font-size: 14;
+  text-anchor: middle;   
+}
+
+.monthDialJanText {
+  x: 0%;
+  y: -27%;
+}
+
+.monthDialAprText {
+  x: 29%;
+  y: 5%;
+}
+
+.monthDialJulText {
+  x: 0%;
+  y: 36%;
+}
+
+.monthDialOctText {
+  x: -27%;
+  y: 5%;
+}
+
+.batteryText {
+  x: 50%+3; 
+  y: 73%;
+  text-anchor: middle;
+  font-family: Seville-Bold;
+  font-size: 15;
+}

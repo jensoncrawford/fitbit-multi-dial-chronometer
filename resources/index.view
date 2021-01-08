@@ -1,0 +1,484 @@
+<svg id="clock">
+  <defs>
+    <symbol id="maindial">
+      <!-- Minute Markers -->
+      <g transform="rotate(  0)"><rect class="mainDialMinute minuteColor"/></g>  <!--  0 -->
+      <g transform="rotate(  6)"><rect class="mainDialMinute minuteColor"/></g>  <!--  1 -->
+      <g transform="rotate( 12)"><rect class="mainDialMinute minuteColor"/></g>  <!--  2 -->
+      <g transform="rotate( 18)"><rect class="mainDialMinute minuteColor"/></g>  <!--  3 -->
+      <g transform="rotate( 24)"><rect class="mainDialMinute minuteColor"/></g>  <!--  4 -->
+      <g transform="rotate( 30)"><rect class="mainDialMinute minuteColor"/></g>  <!--  5 -->
+      <g transform="rotate( 36)"><rect class="mainDialMinute minuteColor"/></g>  <!--  6 -->
+      <g transform="rotate( 42)"><rect class="mainDialMinute minuteColor"/></g>  <!--  7 -->
+      <g transform="rotate( 48)"><rect class="mainDialMinute minuteColor"/></g>  <!--  8 -->
+      <g transform="rotate( 54)"><rect class="mainDialMinute minuteColor"/></g>  <!--  9 -->
+      <g transform="rotate( 60)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 10 -->
+      <g transform="rotate( 66)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 11 -->
+      <g transform="rotate( 72)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 12 -->
+      <g transform="rotate( 78)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 13 -->
+      <g transform="rotate( 84)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 14 -->
+      <g transform="rotate( 90)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 15 -->
+      <g transform="rotate( 96)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 16 -->
+      <g transform="rotate(102)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 17 -->
+      <g transform="rotate(108)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 18 -->
+      <g transform="rotate(114)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 19 -->
+      <g transform="rotate(120)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 20 -->
+      <g transform="rotate(126)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 21 -->
+      <g transform="rotate(132)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 22 -->
+      <g transform="rotate(138)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 23 -->
+      <g transform="rotate(144)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 24 -->
+      <g transform="rotate(150)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 25 -->
+      <g transform="rotate(156)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 26 -->
+      <g transform="rotate(162)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 27 -->
+      <g transform="rotate(168)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 28 -->
+      <g transform="rotate(174)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 29 -->
+      <g transform="rotate(180)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 30 -->
+      <g transform="rotate(186)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 31 -->
+      <g transform="rotate(192)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 32 -->
+      <g transform="rotate(198)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 33 -->
+      <g transform="rotate(204)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 34 -->
+      <g transform="rotate(210)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 35 -->
+      <g transform="rotate(216)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 36 -->
+      <g transform="rotate(222)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 37 -->
+      <g transform="rotate(228)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 38 -->
+      <g transform="rotate(234)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 39 -->
+      <g transform="rotate(240)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 40 -->
+      <g transform="rotate(246)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 41 -->
+      <g transform="rotate(252)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 42 -->
+      <g transform="rotate(258)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 43 -->
+      <g transform="rotate(264)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 44 -->
+      <g transform="rotate(270)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 45 -->
+      <g transform="rotate(276)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 46 -->
+      <g transform="rotate(282)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 47 -->
+      <g transform="rotate(288)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 48 -->
+      <g transform="rotate(294)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 49 -->
+      <g transform="rotate(300)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 50 -->
+      <g transform="rotate(306)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 51 -->
+      <g transform="rotate(312)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 52 -->
+      <g transform="rotate(318)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 53 -->
+      <g transform="rotate(324)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 54 -->
+      <g transform="rotate(330)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 55 -->
+      <g transform="rotate(336)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 56 -->
+      <g transform="rotate(342)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 57 -->
+      <g transform="rotate(348)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 58 -->
+      <g transform="rotate(354)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 59 -->
+ 
+      <!-- Sub-Minute Markers -->
+      <g transform="rotate(  1.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!--  0.25 -->
+      <g transform="rotate(  3.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!--  0.50 -->
+      <g transform="rotate(  4.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!--  0.75 -->
+
+      <g transform="rotate(  7.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!--  1.25 -->
+      <g transform="rotate(  9.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!--  1.50 -->
+      <g transform="rotate( 10.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!--  1.75 -->
+
+      <g transform="rotate( 13.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!--  2.25 -->
+      <g transform="rotate( 15.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!--  2.50 -->
+      <g transform="rotate( 16.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!--  2.75 -->
+
+      <g transform="rotate( 19.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!--  3.25 -->
+      <g transform="rotate( 21.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!--  3.50 -->
+      <g transform="rotate( 22.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!--  3.75 -->
+
+      <g transform="rotate( 25.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!--  4.25 -->
+      <g transform="rotate( 27.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!--  4.50 -->
+      <g transform="rotate( 28.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!--  4.75 -->
+
+      <g transform="rotate( 31.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!--  5.25 -->
+      <g transform="rotate( 33.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!--  5.50 -->
+      <g transform="rotate( 34.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!--  5.75 -->
+
+      <g transform="rotate( 37.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!--  6.25 -->
+      <g transform="rotate( 39.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!--  6.50 -->
+      <g transform="rotate( 40.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!--  6.75 -->
+
+      <g transform="rotate( 43.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!--  7.25 -->
+      <g transform="rotate( 45.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!--  7.50 -->
+      <g transform="rotate( 46.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!--  7.75 -->
+
+      <g transform="rotate( 49.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!--  8.25 -->
+      <g transform="rotate( 51.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!--  8.50 -->
+      <g transform="rotate( 52.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!--  8.75 -->
+
+      <g transform="rotate( 55.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!--  9.25 -->
+      <g transform="rotate( 57.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!--  9.50 -->
+      <g transform="rotate( 58.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!--  9.75 -->
+
+      <g transform="rotate( 61.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 10.25 -->
+      <g transform="rotate( 63.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 10.50 -->
+      <g transform="rotate( 64.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 10.75 -->
+
+      <g transform="rotate( 67.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 11.25 -->
+      <g transform="rotate( 69.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 11.50 -->
+      <g transform="rotate( 70.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 11.75 -->
+
+      <g transform="rotate( 73.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 12.25 -->
+      <g transform="rotate( 75.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 12.50 -->
+      <g transform="rotate( 76.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 12.75 -->
+
+      <g transform="rotate( 79.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 13.25 -->
+      <g transform="rotate( 81.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 13.50 -->
+      <g transform="rotate( 82.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 13.75 -->
+
+     <g transform="rotate( 85.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 14.25 -->
+     <g transform="rotate( 87.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 14.50 -->
+     <g transform="rotate( 88.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 14.75 -->
+
+     <g transform="rotate( 91.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 15.25 -->
+     <g transform="rotate( 93.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 15.50 -->
+     <g transform="rotate( 94.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 15.75 -->
+
+     <g transform="rotate( 97.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 16.25 -->
+     <g transform="rotate( 99.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 16.50 -->
+     <g transform="rotate(100.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 16.75 -->
+
+     <g transform="rotate(103.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 17.25 -->
+     <g transform="rotate(105.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 17.50 -->
+     <g transform="rotate(106.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 17.75 -->
+
+     <g transform="rotate(109.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 18.25 -->
+     <g transform="rotate(111.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 18.50 -->
+     <g transform="rotate(112.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 18.75 -->
+
+     <g transform="rotate(115.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 19.25 -->
+     <g transform="rotate(117.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 19.50 -->
+     <g transform="rotate(118.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 19.75 -->
+
+     <g transform="rotate(121.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 20.25 -->
+     <g transform="rotate(123.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 20.50 -->
+     <g transform="rotate(124.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 20.75 -->
+
+     <g transform="rotate(127.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 21.25 -->
+     <g transform="rotate(129.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 21.50 -->
+     <g transform="rotate(130.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 21.75 -->
+
+     <g transform="rotate(133.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 22.25 -->
+     <g transform="rotate(135.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 22.50 -->
+     <g transform="rotate(136.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 22.75 -->
+
+     <g transform="rotate(139.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 23.25 -->
+     <g transform="rotate(141.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 23.50 -->
+     <g transform="rotate(142.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 23.75 -->
+
+     <g transform="rotate(145.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 24.25 -->
+     <g transform="rotate(147.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 24.50 -->
+     <g transform="rotate(148.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 24.75 -->
+
+     <g transform="rotate(151.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 25.25 -->
+     <g transform="rotate(153.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 25.50 -->
+     <g transform="rotate(154.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 25.75 -->
+
+     <g transform="rotate(157.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 26.25 -->
+     <g transform="rotate(159.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 26.50 -->
+     <g transform="rotate(160.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 26.75 -->
+
+     <g transform="rotate(163.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 27.25 -->
+     <g transform="rotate(165.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 27.50 -->
+     <g transform="rotate(166.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 27.75 -->
+
+     <g transform="rotate(169.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 28.25 -->
+     <g transform="rotate(171.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 28.50 -->
+     <g transform="rotate(172.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 28.75 -->
+
+     <g transform="rotate(175.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 29.25 -->
+     <g transform="rotate(177.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 29.50 -->
+     <g transform="rotate(178.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 29.75 -->
+
+     <g transform="rotate(181.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 30.25 -->
+     <g transform="rotate(183.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 30.50 -->
+     <g transform="rotate(184.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 30.75 -->
+
+     <g transform="rotate(187.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 31.25 -->
+     <g transform="rotate(189.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 31.50 -->
+     <g transform="rotate(190.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 31.75 -->
+
+     <g transform="rotate(193.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 32.25 -->
+     <g transform="rotate(195.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 32.50 -->
+     <g transform="rotate(196.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 32.75 -->
+
+     <g transform="rotate(199.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 33.25 -->
+     <g transform="rotate(201.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 33.50 -->
+     <g transform="rotate(202.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 33.75 -->
+
+     <g transform="rotate(205.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 34.25 -->
+     <g transform="rotate(207.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 34.50 -->
+     <g transform="rotate(208.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 34.75 -->
+
+     <g transform="rotate(211.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 35.25 -->
+     <g transform="rotate(213.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 35.50 -->
+     <g transform="rotate(214.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 35.75 -->
+
+     <g transform="rotate(217.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 36.25 -->
+     <g transform="rotate(219.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 36.50 -->
+     <g transform="rotate(220.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 36.75 -->
+
+     <g transform="rotate(223.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 37.25 -->
+     <g transform="rotate(225.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 37.50 -->
+     <g transform="rotate(226.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 37.75 -->
+
+     <g transform="rotate(229.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 38.25 -->
+     <g transform="rotate(231.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 38.50 -->
+     <g transform="rotate(232.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 38.75 -->
+
+     <g transform="rotate(235.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 39.25 -->
+     <g transform="rotate(237.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 39.50 -->
+     <g transform="rotate(238.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 39.75 -->
+
+     <g transform="rotate(241.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 40.25 -->
+     <g transform="rotate(243.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 40.50 -->
+     <g transform="rotate(244.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 40.75 -->
+
+     <g transform="rotate(247.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 41.25 -->
+     <g transform="rotate(249.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 41.50 -->
+     <g transform="rotate(250.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 41.75 -->
+
+     <g transform="rotate(253.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 42.25 -->
+     <g transform="rotate(255.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 42.50 -->
+     <g transform="rotate(256.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 42.75 -->
+
+     <g transform="rotate(259.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 43.25 -->
+     <g transform="rotate(261.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 43.50 -->
+     <g transform="rotate(262.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 43.75 -->
+
+     <g transform="rotate(265.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 44.25 -->
+     <g transform="rotate(267.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 44.50 -->
+     <g transform="rotate(268.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 44.75 -->
+
+     <g transform="rotate(271.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 45.25 -->
+     <g transform="rotate(273.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 45.50 -->
+     <g transform="rotate(274.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 45.75 -->
+
+     <g transform="rotate(277.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 46.25 -->
+     <g transform="rotate(279.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 46.50 -->
+     <g transform="rotate(280.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 46.75 -->
+
+     <g transform="rotate(283.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 47.25 -->
+     <g transform="rotate(285.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 47.50 -->
+     <g transform="rotate(286.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 47.75 -->
+
+     <g transform="rotate(289.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 48.25 -->
+     <g transform="rotate(291.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 48.50 -->
+     <g transform="rotate(292.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 48.75 -->
+
+     <g transform="rotate(295.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 49.25 -->
+     <g transform="rotate(297.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 49.50 -->
+     <g transform="rotate(298.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 49.75 -->
+
+     <g transform="rotate(301.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 50.25 -->
+     <g transform="rotate(303.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 50.50 -->
+     <g transform="rotate(304.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 50.75 -->
+
+     <g transform="rotate(307.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 51.25 -->
+     <g transform="rotate(309.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 51.50 -->
+     <g transform="rotate(310.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 51.75 -->
+
+     <g transform="rotate(313.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 52.25 -->
+     <g transform="rotate(315.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 52.50 -->
+     <g transform="rotate(316.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 52.75 -->
+
+     <g transform="rotate(319.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 53.25 -->
+     <g transform="rotate(321.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 53.50 -->
+     <g transform="rotate(322.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 53.75 -->
+
+     <g transform="rotate(325.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 54.25 -->
+     <g transform="rotate(327.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 54.50 -->
+     <g transform="rotate(328.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 54.75 -->
+
+     <g transform="rotate(331.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 55.25 -->
+     <g transform="rotate(333.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 55.50 -->
+     <g transform="rotate(334.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 55.75 -->
+
+     <g transform="rotate(337.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 56.25 -->
+     <g transform="rotate(339.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 56.50 -->
+     <g transform="rotate(340.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 56.75 -->
+
+      <g transform="rotate(343.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 57.25 -->
+      <g transform="rotate(345.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 57.50 -->
+      <g transform="rotate(346.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 57.75 -->
+
+      <g transform="rotate(349.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 58.25 -->
+      <g transform="rotate(351.0)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 58.50 -->
+      <g transform="rotate(352.5)"><rect class="mainDialSubMinuteOuter subMinuteColor"/></g>  <!-- 58.75 -->
+
+      <g transform="rotate(355.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 59.25 -->
+      <g transform="rotate(357.0)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 59.50 -->
+      <g transform="rotate(358.5)"><rect class="mainDialSubMinuteInner subMinuteColor"/></g>  <!-- 59.75 -->
+
+      <!-- Quarter Hour Markers -->
+      <g transform="rotate(  0)"><rect class="mainDialQuarter quarterHourColor"/></g>
+      <g transform="rotate( 90)"><rect class="mainDialQuarter quarterHourColor"/></g>
+      <g transform="rotate(180)"><rect class="mainDialQuarter quarterHourColor"/></g>
+      <g transform="rotate(270)"><rect class="mainDialQuarter quarterHourColor"/></g>
+
+      <!-- 5-Minute Outer Markers -->
+      <g transform="rotate( 30)"><rect class="mainDialFiveOuter fiveMinuteOuterColor"/></g>
+      <g transform="rotate( 60)"><rect class="mainDialFiveOuter fiveMinuteOuterColor"/></g>
+      <g transform="rotate(120)"><rect class="mainDialFiveOuter fiveMinuteOuterColor"/></g>
+      <g transform="rotate(150)"><rect class="mainDialFiveOuter fiveMinuteOuterColor"/></g>
+      <g transform="rotate(210)"><rect class="mainDialFiveOuter fiveMinuteOuterColor"/></g>
+      <g transform="rotate(240)"><rect class="mainDialFiveOuter fiveMinuteOuterColor"/></g>
+      <g transform="rotate(300)"><rect class="mainDialFiveOuter fiveMinuteOuterColor"/></g>
+      <g transform="rotate(330)"><rect class="mainDialFiveOuter fiveMinuteOuterColor"/></g>
+
+      <!-- 5-Minute Outer Markers -->
+      <circle cx="0%-10" cy="-50%+48" r="4" class="fiveMinuteInnerColor"/>
+      <circle cx="0%+11" cy="-50%+48" r="4" class="fiveMinuteInnerColor"/>
+      <g transform="rotate(  0)"><rect class="mainDialTwelveInner fiveMinuteInnerColor"/></g>
+      <g transform="rotate( 30)"><rect class="mainDialFiveInner fiveMinuteInnerColor"/></g>
+      <g transform="rotate( 60)"><rect class="mainDialFiveInner fiveMinuteInnerColor"/></g>
+      <g transform="rotate(120)"><rect class="mainDialFiveInner fiveMinuteInnerColor"/></g>
+      <g transform="rotate(150)"><rect class="mainDialFiveInner fiveMinuteInnerColor"/></g>
+      <g transform="rotate(210)"><rect class="mainDialFiveInner fiveMinuteInnerColor"/></g>
+      <g transform="rotate(240)"><rect class="mainDialFiveInner fiveMinuteInnerColor"/></g>
+      <g transform="rotate(300)"><rect class="mainDialFiveInner fiveMinuteInnerColor"/></g>
+      <g transform="rotate(330)"><rect class="mainDialFiveInner fiveMinuteInnerColor"/></g>
+    </symbol>
+    
+    <symbol id="hourmarker24">
+      <text class="hourmarker24text markercolour">24</text>
+      <g transform="rotate(  0)"><rect class="hourmarker24tickS markercolour"/></g>
+      <g transform="rotate( 30)"><rect class="hourmarker24tickL markercolour"/></g>
+      <g transform="rotate( 60)"><rect class="hourmarker24tickL markercolour"/></g>
+      <g transform="rotate( 90)"><rect class="hourmarker24tickL markercolour"/></g>
+      
+      <text class="hourmarker8text markercolour">8</text>
+      <g transform="rotate(120)"><rect class="hourmarker24tickS markercolour"/></g>
+      <g transform="rotate(150)"><rect class="hourmarker24tickL markercolour"/></g>
+      <g transform="rotate(180)"><rect class="hourmarker24tickL markercolour"/></g>
+      <g transform="rotate(210)"><rect class="hourmarker24tickL markercolour"/></g>
+      
+      <text class="hourmarker16text markercolour">16</text>
+      <g transform="rotate(240)"><rect class="hourmarker24tickS markercolour"/></g>
+      <g transform="rotate(270)"><rect class="hourmarker24tickL markercolour"/></g>
+      <g transform="rotate(300)"><rect class="hourmarker24tickL markercolour"/></g>
+      <g transform="rotate(330)"><rect class="hourmarker24tickL markercolour"/></g>
+    </symbol>
+    
+    <symbol id="hrDial">
+      <text class="hrDial120Text markercolour">120</text>
+      <g transform="rotate(  0)"><rect class="hrMarkerTickS markercolour"/></g>
+      <g transform="rotate( 36)"><rect class="hrMarkerTickL markercolour"/></g>
+
+      <text class="hrDial160Text markercolour">160</text>
+      <g transform="rotate( 72)"><rect class="hrMarkerTickS markercolour"/></g>
+      <g transform="rotate(108)"><rect class="hrMarkerTickL markercolour"/></g>
+
+      <text class="hrDial200Text markercolour">200</text>
+      <g transform="rotate(144)"><rect class="hrMarkerTickS markercolour"/></g>
+    </symbol>
+    
+     <symbol id="monthDial">
+      <text class="monthDialJanText monthDialText markercolour">JAN</text>
+      <g transform="rotate(  0)"><rect class="monthDialTickS markercolour"/></g>
+      <g transform="rotate( 30)"><rect class="monthDialTickL markercolour"/></g>
+      <g transform="rotate( 60)"><rect class="monthDialTickL markercolour"/></g>
+      <text class="monthDialAprText monthDialText markercolour">APR</text>
+      <g transform="rotate( 90)"><rect class="monthDialTickS markercolour"/></g>
+      <g transform="rotate(120)"><rect class="monthDialTickL markercolour"/></g>
+      <g transform="rotate(150)"><rect class="monthDialTickL markercolour"/></g>
+      <text class="monthDialJulText monthDialText markercolour">JUL</text>
+      <g transform="rotate(180)"><rect class="monthDialTickS markercolour"/></g>
+      <g transform="rotate(210)"><rect class="monthDialTickL markercolour"/></g>
+      <g transform="rotate(240)"><rect class="monthDialTickL markercolour"/></g>
+      <text class="monthDialOctText monthDialText markercolour">OCT</text>
+      <g transform="rotate(270)"><rect class="monthDialTickS markercolour"/></g>
+      <g transform="rotate(300)"><rect class="monthDialTickL markercolour"/></g>
+      <g transform="rotate(330)"><rect class="monthDialTickL markercolour"/></g>
+    </symbol>
+
+    <symbol id="complication">
+      <circle cx="58" cy="58" r="58" fill="black" opacity="0.1"/>
+      <arc x="0" y="0" width="116" height="116" arc-width="3" start-angle="0" sweep-angle="360" opacity="0.2" fill="black"/>
+    </symbol>
+  </defs>
+
+  <section x="0" y="0" width="100%" height="100%">
+    <circle cx="50%" cy="50%" r="50%" class="faceColor"/>
+    <arc id="bezelring" x="0%" y="0%" width="100%" height="100%" arc-width="7" opacity="1.00" class="bezelColor"/>
+    
+      
+    <!-- Left mini-dial - 24 Hour hand / Battery level -->
+    <section x="50%-140" y="50%-58" width="116" height="116">
+      <use href="#complication">
+          <arc id="batteryMeter" class="batteryColor" x="3" y="3" width="110" height="110" arc-width="7" start-angle="180" opacity="0.50"/>
+          <text id="batteryPercent" class="batteryText batteryColor" opacity="0.75" text-length="4"/>
+          <g id="hourhand24" transform="translate(50%,50%)">
+            <line x1="0" y1="0" x2="0" y2="-30%" stroke-width="2" class="minuteColor"/>
+          </g>
+          <g transform="translate(50%,50%)">
+            <use href="#hourmarker24"/>
+            <circle cx="0" cy="0" r="4" opacity="0.7" class="accentcolour"/>
+            <circle cx="0" cy="0" r="2" class="minuteColor"/>
+          </g>
+      </use>
+    </section>
+
+    <!-- right sub-dial - Date and Time -->
+    <section x="50%+24" y="50%-58" width="116" height="116">
+      <use href="#complication">
+        <rect x="35%" y="30%" height="13%" width="30%" class="dateBackgroundColor"/>
+        <text id="dayField" x="50%" y="40%" class="dayMonthText dateTextColor"/>
+        <rect x="40%" y="57%" height="13%" width="20%" class="dateBackgroundColor"/>
+        <text id="dateField" x="51%" y="68%" class="dateText dateTextColor"/>
+        <g id="monthHand" transform="translate(50%,50%)">
+          <line x1="0" y1="0" x2="0" y2="-30%" stroke-width="2" class="minuteColor"/>
+        </g>
+        <g transform="translate(50%,50%)">
+          <use href="#monthDial"/>
+          <circle cx="0" cy="0" r="4" opacity="0.7" class="accentcolour"/>
+          <circle cx="0" cy="0" r="2" class="minuteColor"/>
+        </g>
+      </use>
+    </section>
+ <!-- 40 to 200 BPM -->
+    <!-- bottom sub-dial - Health Stats -->
+    <section x="50%-58" y="50%+25" width="116" height="116">
+      <use href="#complication">
+          <g transform="translate(50%,50%)">
+            <use href="#hrDial"/>
+          </g>
+
+<!--
+        <use id="stats-cycle" href="#cycleview">
+          <use href="#cycleview-item">
+            <image id="hrIcon" href="stat_hr_open_48px.png" class="statsicon markercolour"/>
+            <text id="hrField" x="50%" y="68%"  class="statsfield markercolour" text-length="8"/>
+          </use>
+
+          <use href="#cycleview-item">
+            <image href="stat_am_open_48px.png" class="statsicon markercolour"/>
+            <text id="amField" class="statsfield markercolour" text-length="8"/>
+          </use>
+          <use href="#cycleview-item">
+            <image href="stat_steps_open_48px.png" class="statsicon markercolour"/>
+            <text id="stepsField" class="statsfield markercolour" text-length="8"/>
+          </use>
+
+          <use href="#cycleview-item">
+            <image href="stat_dist_open_48px.png" class="statsicon markercolour"/>
+            <text id="distField" class="statsfield markercolour" text-length="8"/>
+          </use>
+          <use href="#cycleview-item">
+            <image href="stat_floors_open_48px.png" class="statsicon markercolour"/>
+            <text id="floorsField" class="statsfield markercolour" text-length="8"/>
+          </use>
+          <use href="#cycleview-item">
+            <image href="stat_cals_open_48px.png" class="statsicon markercolour"/>
+            <text id="calsField" class="statsfield markercolour" text-length="8"/>
+          </use>
+        </use>
+-->
+      </use>
+    </section>
+
+    <!-- Clock Face -->
+    <g transform="translate(50%,50%)">
+      <use href="#maindial"/>
+      <g id="hourhand"><line x1="0" y1="4%" x2="0" y2="-30%" stroke-width="5" class="minuteColor"/></g>
+      <g id="minutehand"><line x1="0" y1="4%" x2="0" y2="-39%" stroke-width="5" class="minuteHandColor"/></g>
+      <g id="secondhand"><line x1="0" y1="4%" x2="0" y2="-39%" stroke-width="3" class="secondHandColor"/></g>
+      <circle id="outercenterdot" cx="0" cy="0" r="6" class="secondHandColor"/>
+      <circle id="innercenterdot" cx="0" cy="0" r="3" class="minuteHandColor"/>
+    </g>
+  </section>
+</svg>
