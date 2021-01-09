@@ -178,6 +178,47 @@
   height: 15; 
 }
 
+.hrDial40Text {
+  x: -20%;
+  y: +30%;
+  font-family: Seville-Regular;
+  font-size: 18;
+  text-anchor: middle;
+}
+
+.hrDial80Text {
+  x: -29%;
+  y: -5%;
+  font-family: Seville-Regular;
+  font-size: 18;
+  text-anchor: middle;
+}
+
+.hrDial120Text {
+  x: 0%;
+  y: -27%;
+  font-family: Seville-Regular;
+  font-size: 18;
+  text-anchor: middle;
+}
+
+.hrDial160Text {
+  x: 25%;
+  y: -5%;
+  font-family: Seville-Regular;
+  font-size: 18;
+  text-anchor: middle;
+}
+
+.hrDial200Text {
+  x: 18%;
+  y: +30%;
+  font-family: Seville-Regular;
+  font-size: 18;
+  text-anchor: middle;
+}
+
+
 .hrMarkerTickS {
   x: 0%;
   y: -45%;

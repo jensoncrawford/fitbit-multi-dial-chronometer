@@ -355,6 +355,14 @@
     </symbol>
     
     <symbol id="hrDial">
+      <text class="hrDial40Text markercolour">40</text>
+      <g transform="rotate(216)"><rect class="hrMarkerTickS markercolour"/></g>
+      <g transform="rotate(252)"><rect class="hrMarkerTickL markercolour"/></g>
+
+      <text class="hrDial80Text markercolour">80</text>
+      <g transform="rotate(288)"><rect class="hrMarkerTickS markercolour"/></g>
+      <g transform="rotate(324)"><rect class="hrMarkerTickL markercolour"/></g>
+
       <text class="hrDial120Text markercolour">120</text>
       <g transform="rotate(  0)"><rect class="hrMarkerTickS markercolour"/></g>
       <g transform="rotate( 36)"><rect class="hrMarkerTickL markercolour"/></g>
