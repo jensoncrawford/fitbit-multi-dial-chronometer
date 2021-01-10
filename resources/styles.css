@@ -27,7 +27,7 @@
 }
 
 .faceColor {
-  fill: #505050; 
+  fill: #505050;
 }
 
 .bezelColor {
@@ -37,11 +37,18 @@
   fill: #c7c7c7;
 }
 .secondHandColor {
-  fill: #cc0000;  
+  fill: #cc0000;
 }
 .batteryColor {
   fill: #6f1a21;
 }
+.hrMaxColor {
+  fill: #6f1a21;
+}
+.hrRestingColor {
+  fill: #6f1a21;
+}
+
 .statsicon {
   x: 50%-17;
   y: 18%;
@@ -50,7 +57,7 @@
 }
 
 .statsfield {
-  x: 50%+1; 
+  x: 50%+1;
   y: -50%;
   text-anchor: middle;
   font-family: Seville-Regular;
@@ -99,14 +106,7 @@
   height: 24;
 }
 
-.mainDialSubMinuteInner {
-  x: 0%;
-  y: -50%+12;
-  width: 1;
-  height: 12;
-}
-
-.mainDialSubMinuteOuter {
+.mainDialHalfMinute {
   x: 0%;
   y: -50%;
   width: 1;
@@ -114,18 +114,18 @@
 }
 
 .dateTextColor {
-  fill: #202020;
+  fill: black;
 }
 
 .dateBackgroundColor {
-  fill: #707070;
+  fill: #A0A0A0;
 }
 
 
 .dayMonthText {
   x: 0;
   y: -7%;
-  font-family: Seville-Regular;
+  font-family: Seville-Bold;
   font-size: 14;
   text-anchor: middle;
   text-length: 8;
@@ -134,7 +134,7 @@
 .dateText {
   x: 0;
   y: +15%;
-  font-family: Seville-Regular;
+  font-family: Seville-Bold;
   font-size: 14;
   text-anchor: middle;
   text-length: 4;
@@ -168,18 +168,18 @@
   x: 0%;
   y: -45%;
   width: 2;
-  height: 4; 
+  height: 4;
 }
 
 .hourmarker24tickL {
   x: 0%;
   y: -45%;
   width: 1;
-  height: 15; 
+  height: 15;
 }
 
 .hrDial40Text {
-  x: -20%;
+  x: -19%;
   y: +30%;
   font-family: Seville-Regular;
   font-size: 18;
@@ -223,34 +223,48 @@
   x: 0%;
   y: -45%;
   width: 2;
-  height: 4; 
+  height: 4;
 }
 
 .hrMarkerTickL {
   x: 0%;
   y: -45%;
   width: 1;
-  height: 15; 
+  height: 15;
+}
+
+.hrResting {
+  x: 0%;
+  y: -45%;
+  width: 3;
+  height: 15;
+}
+
+.hrMax {
+  x: 0%;
+  y: -45%;
+  width: 3;
+  height: 15;
 }
 
 .monthDialTickS {
   x: 0%;
   y: -45%;
   width: 2;
-  height: 4; 
+  height: 4;
 }
 
 .monthDialTickL {
   x: 0%;
   y: -45%;
   width: 1;
-  height: 15; 
+  height: 15;
 }
 
 .monthDialText {
   font-family: Seville-Regular;
   font-size: 14;
-  text-anchor: middle;   
+  text-anchor: middle;
 }
 
 .monthDialJanText {
@@ -274,8 +288,16 @@
 }
 
 .batteryText {
-  x: 50%+3; 
+  x: 50%+3;
   y: 73%;
+  text-anchor: middle;
+  font-family: Seville-Bold;
+  font-size: 15;
+}
+
+.heartRateText {
+  x: 50%;
+  y: 68%;
   text-anchor: middle;
   font-family: Seville-Bold;
   font-size: 15;
