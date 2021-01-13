@@ -12,6 +12,7 @@ import * as fs from "fs";
 
 const SETTINGS_TYPE = "cbor";
 const SETTINGS_FILE = "settings.cbor";
+/* Heart Rate Constants */
 const HR_DIAL_MIN = 40;
 const HR_DIAL_MAX = 200;
 const HR_OUT_OF_RANGE = "out-of-range";
@@ -31,17 +32,8 @@ let secondhand = document.getElementById("secondhand");
 let outercenterdot = document.getElementById("outercenterdot");
 let innercenterdot = document.getElementById("innercenterdot");
 let hourhand24 = document.getElementById("hourhand24");
-let backgroundGradient = document.getElementById("backgroundGradient");
-let dayField = document.getElementById("dayField");
 let dateField = document.getElementById("dateField");
 let monthHand = document.getElementById("monthHand");
-let hrField = document.getElementById("hrField");
-let amField = document.getElementById("amField");
-let distField = document.getElementById("distField");
-let dist = 0;
-let stepsField = document.getElementById("stepsField");
-let floorsField = document.getElementById("floorsField");
-let calsField = document.getElementById("calsField");
 let batteryMeter = document.getElementById("batteryMeter");
 let hrHand = document.getElementById("hrHand");
 let hrMax = document.getElementById("hrMax");
@@ -98,7 +90,6 @@ function setColours(accentcolour, markercolour) {
   elements.forEach(function (element) {
     element.style.fill = accentcolour;
   });
-  // backgroundGradient.gradient.colors.c1 = accentcolour;
 
   elements = document.getElementsByClassName("markercolour");
   elements.forEach(function (element) {
@@ -119,7 +110,7 @@ function setBackgroundGradient(showBackgroundGradient, accentColour) {
 }
 
 /*
- * Heartrate Handling
+ * Heart Rate Event Handling
  */
 let hrm = null;
 if (HeartRateSensor) {
@@ -186,12 +177,11 @@ if ( BodyPresenceSensor ) {
 }
 
 /*
- * Clock handling
+ * Clock event handling
  */
 clock.granularity = "seconds";
 let evtDateDay=-1;
-let evtDateDayOfMonth=-1;
-let evtDateMonth=-1;
+let evtDateDayOfMonth=-1;let evtDateMonth=-1;
 let evtDateMinutes=-1;
 let batteryChargeLevel=-1
 clock.ontick = (evt) => {
@@ -204,12 +194,6 @@ clock.ontick = (evt) => {
     evtDateDayOfMonth = evt.date.getDate();
     dateField.text = evtDateDayOfMonth;
   }
-  /*
-  if (evt.date.getMonth() != evtDateMonth ) {
-    evtDateMonth = evt.date.getMonth();
-    monthHand.groupTransform.rotate.angle = (30 * evtDateMonth);
-  }
-  */
   if (evt.date.getMinutes() != evtDateMinutes) {
     evtDateMinutes = evt.date.getMinutes();
     hourhand24.groupTransform.rotate.angle = (15 * evt.date.getHours()) + (0.25 * evtDateMinutes);
@@ -217,14 +201,6 @@ clock.ontick = (evt) => {
   }
   minutehand.groupTransform.rotate.angle = (6 * evtDateMinutes) + (0.1 * evt.date.getSeconds());
   secondhand.groupTransform.rotate.angle = (6 * evt.date.getSeconds());
-  /*
-    amField.text = today.adjusted.activeMinutes;
-    stepsField.text = today.adjusted.steps;
-    dist = (units.distance === "metric" ? today.adjusted.distance * 0.001 : today.adjusted.distance * 0.000621371);
-    distField.text = Math.floor(dist * 100) / 100;
-    floorsField.text = today.adjusted.elevationGain;
-    calsField.text = today.adjusted.calories;
-  */
   if (batteryChargeLevel != battery.chargeLevel) {
     batteryChargeLevel = battery.chargeLevel;
     batteryMeter.sweepAngle = 3.6 * batteryChargeLevel;
