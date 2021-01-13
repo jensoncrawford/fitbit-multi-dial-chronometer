@@ -156,16 +156,19 @@ let batteryChargeLevel=-1
 clock.ontick = (evt) => {
   if (evt.date.getDay() != evtDateDay) {
     evtDateDay = evt.date.getDay();
-    dayField.text = days[evtDateDay];
+    monthHand.groupTransform.rotate.angle = (51.428714 * evtDateDay)
+    // dayField.text = days[evtDateDay];
   }
   if (evt.date.getDate() != evtDateDayOfMonth) {
     evtDateDayOfMonth = evt.date.getDate();
     dateField.text = evtDateDayOfMonth;
   }
+  /*
   if (evt.date.getMonth() != evtDateMonth ) {
     evtDateMonth = evt.date.getMonth();
     monthHand.groupTransform.rotate.angle = (30 * evtDateMonth);
   }
+  */
   if (evt.date.getMinutes() != evtDateMinutes) {
     evtDateMinutes = evt.date.getMinutes();
     hourhand24.groupTransform.rotate.angle = (15 * evt.date.getHours()) + (0.25 * evtDateMinutes);
@@ -173,6 +176,14 @@ clock.ontick = (evt) => {
   }
   minutehand.groupTransform.rotate.angle = (6 * evtDateMinutes) + (0.1 * evt.date.getSeconds());
   secondhand.groupTransform.rotate.angle = (6 * evt.date.getSeconds());
+  /*
+    amField.text = today.adjusted.activeMinutes;
+    stepsField.text = today.adjusted.steps;
+    dist = (units.distance === "metric" ? today.adjusted.distance * 0.001 : today.adjusted.distance * 0.000621371);
+    distField.text = Math.floor(dist * 100) / 100;
+    floorsField.text = today.adjusted.elevationGain;
+    calsField.text = today.adjusted.calories;
+  */
   if (batteryChargeLevel != battery.chargeLevel) {
     batteryChargeLevel = battery.chargeLevel;
     batteryMeter.sweepAngle = 3.6 * batteryChargeLevel;

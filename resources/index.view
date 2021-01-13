@@ -1,5 +1,11 @@
 <svg id="clock">
   <defs>
+    <!-- Main dial
+      --   * minute markers
+      --   * half minute markers
+      --   * quarter hour markers
+      --   * five minute markers (inner and outer)
+      -->
     <symbol id="maindial">
       <!-- Minute Markers -->
       <g transform="rotate(  0)"><rect class="mainDialMinute minuteColor"/></g>  <!--  0 -->
@@ -62,7 +68,7 @@
       <g transform="rotate(342)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 57 -->
       <g transform="rotate(348)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 58 -->
       <g transform="rotate(354)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 59 -->
- 
+
       <!-- Sub-Minute Markers -->
       <g transform="rotate(  3.0)"><rect class="mainDialHalfMinute subMinuteColor"/></g>  <!--  0.50 -->
       <g transform="rotate(  9.0)"><rect class="mainDialHalfMinute subMinuteColor"/></g>  <!--  1.50 -->
@@ -153,27 +159,37 @@
       <g transform="rotate(300)"><rect class="mainDialFiveInner fiveMinuteInnerColor"/></g>
       <g transform="rotate(330)"><rect class="mainDialFiveInner fiveMinuteInnerColor"/></g>
     </symbol>
-    
+
+    <!-- Left mini-dial
+      --   * 24 clock
+      --     * hour markers
+      --     * hour names
+      -->
     <symbol id="hourmarker24">
       <text class="hourmarker24text markercolour">24</text>
       <g transform="rotate(  0)"><rect class="hourmarker24tickS markercolour"/></g>
       <g transform="rotate( 30)"><rect class="hourmarker24tickL markercolour"/></g>
       <g transform="rotate( 60)"><rect class="hourmarker24tickL markercolour"/></g>
       <g transform="rotate( 90)"><rect class="hourmarker24tickL markercolour"/></g>
-      
+
       <text class="hourmarker8text markercolour">8</text>
       <g transform="rotate(120)"><rect class="hourmarker24tickS markercolour"/></g>
       <g transform="rotate(150)"><rect class="hourmarker24tickL markercolour"/></g>
       <g transform="rotate(180)"><rect class="hourmarker24tickL markercolour"/></g>
       <g transform="rotate(210)"><rect class="hourmarker24tickL markercolour"/></g>
-      
+
       <text class="hourmarker16text markercolour">16</text>
       <g transform="rotate(240)"><rect class="hourmarker24tickS markercolour"/></g>
       <g transform="rotate(270)"><rect class="hourmarker24tickL markercolour"/></g>
       <g transform="rotate(300)"><rect class="hourmarker24tickL markercolour"/></g>
       <g transform="rotate(330)"><rect class="hourmarker24tickL markercolour"/></g>
     </symbol>
-    
+
+    <!-- Bottom mini-dial
+      --   * heart rate
+      --     * heart rate markers
+      --     * heart rate numbers
+      -->
     <symbol id="hrDial">
       <text class="hrDial40Text markercolour">40</text>
       <g transform="rotate(216)"><rect class="hrMarkerTickS markercolour"/></g>
@@ -194,26 +210,28 @@
       <text class="hrDial200Text markercolour">200</text>
       <g transform="rotate(144)"><rect class="hrMarkerTickS markercolour"/></g>
     </symbol>
-    
-     <symbol id="monthDial">
-      <text class="monthDialJanText monthDialText markercolour">JAN</text>
-      <g transform="rotate(  0)"><rect class="monthDialTickS markercolour"/></g>
-      <g transform="rotate( 30)"><rect class="monthDialTickL markercolour"/></g>
-      <g transform="rotate( 60)"><rect class="monthDialTickL markercolour"/></g>
-      <text class="monthDialAprText monthDialText markercolour">APR</text>
-      <g transform="rotate( 90)"><rect class="monthDialTickS markercolour"/></g>
-      <g transform="rotate(120)"><rect class="monthDialTickL markercolour"/></g>
-      <g transform="rotate(150)"><rect class="monthDialTickL markercolour"/></g>
-      <text class="monthDialJulText monthDialText markercolour">JUL</text>
-      <g transform="rotate(180)"><rect class="monthDialTickS markercolour"/></g>
-      <g transform="rotate(210)"><rect class="monthDialTickL markercolour"/></g>
-      <g transform="rotate(240)"><rect class="monthDialTickL markercolour"/></g>
-      <text class="monthDialOctText monthDialText markercolour">OCT</text>
-      <g transform="rotate(270)"><rect class="monthDialTickS markercolour"/></g>
-      <g transform="rotate(300)"><rect class="monthDialTickL markercolour"/></g>
-      <g transform="rotate(330)"><rect class="monthDialTickL markercolour"/></g>
+
+    <!-- Right mini-dial
+      --   * Days of week
+      --   * day markers
+      -->
+    <symbol id="weekDial">
+      <text class="weekDialSunText weekDialText markercolour">SUN</text>
+      <g transform="rotate(  0)"><rect class="weekDialTickS markercolour"/></g>
+      <g transform="rotate( 51.4)"><rect class="weekDialTickL markercolour"/></g>
+      <text class="weekDialTueText weekDialText markercolour">TUE</text>
+      <g transform="rotate(102.8)"><rect class="weekDialTickS markercolour"/></g>
+      <g transform="rotate(154.3)"><rect class="weekDialTickL markercolour"/></g>
+      <g transform="rotate(205.7)"><rect class="weekDialTickL markercolour"/></g>
+      <text class="weekDialFriText weekDialText markercolour">FRI</text>
+      <g transform="rotate(257.1)"><rect class="weekDialTickS markercolour"/></g>
+      <g transform="rotate(308.6)"><rect class="weekDialTickL markercolour"/></g>
     </symbol>
 
+    <!-- Mini-dial
+      --   * background
+      --   * bezel
+      -->
     <symbol id="complication">
       <circle cx="58" cy="58" r="58" fill="black" opacity="0.1"/>
       <arc x="0" y="0" width="116" height="116" arc-width="3" start-angle="0" sweep-angle="360" opacity="0.2" fill="black"/>
@@ -223,8 +241,11 @@
   <section x="0" y="0" width="100%" height="100%">
     <circle cx="50%" cy="50%" r="50%" class="faceColor"/>
     <arc id="bezelring" x="0%" y="0%" width="100%" height="100%" arc-width="7" opacity="1.00" class="bezelColor"/>
-         
-    <!-- Left mini-dial - 24 Hour hand / Battery level -->
+
+    <!-- Left mini-dial
+      --   * 24 Hour hand
+      --   * Battery level
+      -->
     <section x="50%-140" y="50%-58" width="116" height="116">
       <use href="#complication">
           <arc id="batteryMeter" class="batteryColor" x="3" y="3" width="110" height="110" arc-width="7" start-angle="180"/>
@@ -240,18 +261,18 @@
       </use>
     </section>
 
-    <!-- right sub-dial - Date and Time -->
+    <!-- Right sub-dial
+      -- * Date
+      -- * Day of week -->
     <section x="50%+24" y="50%-58" width="116" height="116">
       <use href="#complication">
-        <rect x="35%" y="30%" height="13%" width="30%" class="dateBackgroundColor"/>
-        <text id="dayField" x="50%" y="40%" class="dayMonthText dateTextColor"/>
-        <rect x="40%" y="57%" height="13%" width="20%" class="dateBackgroundColor"/>
-        <text id="dateField" x="51%" y="68%" class="dateText dateTextColor"/>
+        <rect x="40%" y="62%" height="18%" width="20%" class="dateBackgroundColor"/>
+        <text id="dateField" x="50%" y="75%" class="dateText dateTextColor"/>
         <g id="monthHand" transform="translate(50%,50%)">
           <line x1="0" y1="0" x2="0" y2="-30%" stroke-width="2" class="minuteColor"/>
         </g>
         <g transform="translate(50%,50%)">
-          <use href="#monthDial"/>
+          <use href="#weekDial"/>
           <circle cx="0" cy="0" r="4" opacity="0.7" class="accentcolour"/>
           <circle cx="0" cy="0" r="2" class="minuteColor"/>
         </g>

@@ -122,20 +122,11 @@
 }
 
 
-.dayMonthText {
-  x: 0;
-  y: -7%;
-  font-family: Seville-Bold;
-  font-size: 14;
-  text-anchor: middle;
-  text-length: 8;
-}
-
 .dateText {
   x: 0;
-  y: +15%;
-  font-family: Seville-Bold;
-  font-size: 14;
+  y: +25%;
+  font-family: Seville-Regular;
+  font-size: 18;
   text-anchor: middle;
   text-length: 4;
 }
@@ -247,44 +238,39 @@
   height: 15;
 }
 
-.monthDialTickS {
+.weekDialTickS {
   x: 0%;
   y: -45%;
   width: 2;
   height: 4;
 }
 
-.monthDialTickL {
+.weekDialTickL {
   x: 0%;
   y: -45%;
   width: 1;
   height: 15;
 }
 
-.monthDialText {
+.weekDialText {
   font-family: Seville-Regular;
-  font-size: 14;
+  font-size: 18;
   text-anchor: middle;
 }
 
-.monthDialJanText {
+.weekDialSunText {
   x: 0%;
   y: -27%;
 }
 
-.monthDialAprText {
-  x: 29%;
-  y: 5%;
+.weekDialTueText {
+  x: 24%;
+  y: 10%;
 }
 
-.monthDialJulText {
-  x: 0%;
-  y: 36%;
-}
-
-.monthDialOctText {
-  x: -27%;
-  y: 5%;
+.weekDialFriText {
+  x: -28%;
+  y: 10%;
 }
 
 .batteryText {
