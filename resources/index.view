@@ -262,8 +262,8 @@
     </section>
 
     <!-- Right sub-dial
-      -- * Date
-      -- * Day of week -->
+      -- * Date text
+      -- * Day of week dial -->
     <section x="50%+24" y="50%-58" width="116" height="116">
       <use href="#complication">
         <rect x="40%" y="62%" height="18%" width="20%" class="dateBackgroundColor"/>
@@ -279,13 +279,17 @@
       </use>
     </section>
 
-    <!-- bottom sub-dial - Health Stats -->
+    <!-- bottom sub-dial
+      --   * resting heart rate arc
+      --   * max heart rate arc
+      --   * current heart rate -->
     <section x="50%-58" y="50%+25" width="116" height="116">
       <use href="#complication">
-          <g id="hrResting" transform="translate(50%,50%)">
-            <rect class="hrResting hrRestingColor"/>
-          </g>
           <arc id="hrMax" class="hrMaxColor" x="3" y="3" width="110" height="110" arc-width="7" start-angle="144"/>
+          <arc id="hrResting" class="hrMaxColor" x="3" y="3" width="110" height="110" arc-width="7" start-angle="216"/>
+          <arc id="hrFatBurn" class="hrFatBurnColor" x="3" y="3" width="110" height="110" arc-width="7" start-angle="0"/>
+          <arc id="hrCardio" class="hrCardioColor" x="3" y="3" width="110" height="110" arc-width="7" start-angle="0"/>
+          <arc id="hrPeak" class="hrPeakColor" x="3" y="3" width="110" height="110" arc-width="7" start-angle="0"/>
           <g transform="translate(50%,50%)">
             <use href="#hrDial"/>
             <circle cx="0" cy="0" r="4" opacity="0.7" class="accentcolour"/>

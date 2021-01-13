@@ -48,6 +48,15 @@
 .hrRestingColor {
   fill: #6f1a21;
 }
+.hrFatBurnColor {
+  fill: #00ff00;
+}
+.hrCardioColor {
+  fill: #cccc00;
+}
+.hrPeakColor {
+  fill: #ff0000;
+}
 
 .statsicon {
   x: 50%-17;

@@ -12,6 +12,15 @@ import * as fs from "fs";
 
 const SETTINGS_TYPE = "cbor";
 const SETTINGS_FILE = "settings.cbor";
+const HR_DIAL_MIN = 40;
+const HR_DIAL_MAX = 200;
+const HR_OUT_OF_RANGE = "out-of-range";
+const HR_FAT_BURN = "fat-burn";
+const HR_CARDIO = "cardio"
+const HR_PEAK = "peak"
+const HR_BELOW_CUSTOM = "below-custom";
+const HR_CUSTOM = "custom";
+const HR_ABOVE_CUSTOM = "above-custom";
 
 let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
 let months = ["JAN ", "FEB", "MAR", "APR", "MAY", "JUN ", "JUL ", "AUG", "SEP", "OCT", "NOV", "DEC"];
@@ -37,6 +46,9 @@ let batteryMeter = document.getElementById("batteryMeter");
 let hrHand = document.getElementById("hrHand");
 let hrMax = document.getElementById("hrMax");
 let hrResting = document.getElementById("hrResting");
+let hrFatBurn = document.getElementById("hrFatBurn");
+let hrCardio = document.getElementById("hrCardio");
+let hrPeak = document.getElementById("hrPeak");
 
 let settings = loadSettings();
 function loadSettings() {
@@ -113,9 +125,38 @@ let hrm = null;
 if (HeartRateSensor) {
   hrm = new HeartRateSensor();
   hrm.onreading = () => {
-    hrHand.groupTransform.rotate.angle = (144 + 36/20 * hrm.heartRate) % 360;
-    hrMax.sweepAngle = - 36 / 20 * ( 200 - user.maxHeartRate);
-    hrResting.groupTransform.rotate.angle = (144 + 36/20 * user.restingHeartRate) % 360;
+    hrHand.groupTransform.rotate.angle = (144 + 36 / 20 * hrm.heartRate) % 360;
+    hrMax.sweepAngle = - 36 / 20 * ( HR_DIAL_MAX - user.maxHeartRate);
+    hrResting.sweepAngle = 36 / 20 * (user.restingHeartRate - HR_DIAL_MIN) % 360;
+    let section_one = 0;
+    let section_two = 0;
+    let section_three = 0;
+    let i=0;
+    for (i=user.restingHeartRate;i<user.maxHeartRate;i++) {
+      if (section_one == 0 && user.heartRateZone(i) == HR_FAT_BURN ) {
+        section_one = i;
+        // console.info(HR_FAT_BURN + " = " + i);
+      }
+      if (section_two == 0 && user.heartRateZone(i) == HR_CARDIO ) {
+        section_two = i;
+        // console.info(HR_CARDIO + " = " + i);
+      }
+      if (section_three == 0 && user.heartRateZone(i) == HR_PEAK ) {
+        section_three = i;
+        // console.info(HR_PEAK + " = " + i);
+      }
+    }
+    // fat burn : fat-burn to cardio - 1
+    hrFatBurn.startAngle = (144 + 36 / 20 * section_one) % 360;
+    hrFatBurn.sweepAngle = 36 / 20 * ( section_two - section_one );
+
+    // cardio   : cardio to peak - 1
+    hrCardio.startAngle = (144 + 36 / 20 * section_two) % 360;
+    hrCardio.sweepAngle = 36 / 20 * ( section_three - section_two );
+
+    // peak     : peak to user.maxHeartRate - 1
+    hrPeak.startAngle = (144 + 36 / 20 * section_three) % 360;
+    hrPeak.sweepAngle = 36 / 20 * ( user.maxHeartRate - section_three );
   };
 
 } else {
