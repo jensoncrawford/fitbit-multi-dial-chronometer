@@ -1,6 +1,10 @@
-# fitbit-analog-stats
+# fitbit-watch-cmeister
 Fitbit analog clock face for Versa series watches
 
-This is an analog clock face showing the day, date and month and a separate 24 hour hand. The stats dial on the lower right can be tapped to cycle between heart rate, active minutes, steps, distance, floors and calories burned. The colors of the hands, minute markers and background can be configured in the settings in the companion app. You can also set the transparency of the hands to better see the stats underneath.
+This is an analog clock face that is a tribute to the classic Omega Speedmaster Series of 
+analog watches. This watch face showing the day, date and day of week,
+a separate 24-hour hand is shared with the battery level. The heart rate dial on the 
+bottom shows the current heart rate with a hand against a scale of the resting to maximum
+heart rate, along with indicators for fat-burning, cardio and peak heart rates.
 
-![Analog Stats](./AnalogStats.png)
+![Omega Speedmaster Tribute screenshot](./Omega-Speedmaster-Tribute-screenshot.png)
