@@ -2,36 +2,33 @@
   fill: #c7c7c7;
 }
 
-.minuteColor {
-  fill: #c7c7c7;
-}
-
-.subMinuteColor {
-  fill: #b8b8b8;
-}
-
-.fiveMinuteOuterColor {
-  fill: #f47c47;
-}
-
-.fiveMinuteInnerColor {
-  fill: #b8b8b8;
-}
-
-.quarterHourColor {
-  fill: #f47c47;
-}
-
 .accentcolour {
   fill: #2F77D4;
 }
 
-.faceColor {
-  fill: #505050;
+.batteryColor {
+  fill: #6f1a21;
 }
 
-.bezelColor {
-  fill: #6f1a21;
+
+/*
+ * Main dial
+ */
+
+.minuteColor {
+  fill: #c7c7c7;
+}
+.subMinuteColor {
+  fill: #b8b8b8;
+}
+.fiveMinuteOuterColor {
+  fill: #f47c47;
+}
+.fiveMinuteInnerColor {
+  fill: #b8b8b8;
+}
+.quarterHourColor {
+  fill: #f47c47;
 }
 .minuteHandColor {
   fill: #c7c7c7;
@@ -39,40 +36,12 @@
 .secondHandColor {
   fill: #cc0000;
 }
-.batteryColor {
+.faceColor {
+  fill: #505050;
+}
+.bezelColor {
   fill: #6f1a21;
 }
-.hrMaxColor {
-  fill: #6f1a21;
-}
-.hrRestingColor {
-  fill: #6f1a21;
-}
-.hrFatBurnColor {
-  fill: #00ff00;
-}
-.hrCardioColor {
-  fill: #cccc00;
-}
-.hrPeakColor {
-  fill: #ff0000;
-}
-
-.statsicon {
-  x: 50%-17;
-  y: 18%;
-  width: 34;
-  height: 34;
-}
-
-.statsfield {
-  x: 50%+1;
-  y: -50%;
-  text-anchor: middle;
-  font-family: Seville-Regular;
-  font-size: 26;
-}
-
 
 .maindialtwelve {
   y: -49%;
@@ -122,24 +91,9 @@
   height: 12;
 }
 
-.dateTextColor {
-  fill: black;
-}
-
-.dateBackgroundColor {
-  fill: #A0A0A0;
-}
-
-
-.dateText {
-  x: 0;
-  y: +25%;
-  font-family: Seville-Regular;
-  font-size: 18;
-  text-anchor: middle;
-  text-length: 4;
-}
-
+/*
+ * 24 hour mini-dial
+ */
 .hourmarker8text {
   x: 30%;
   y: +21%;
@@ -175,6 +129,109 @@
   x: 0%;
   y: -45%;
   width: 1;
+  height: 15;
+}
+
+/*
+ * Day of week and date mini-dial
+ */
+.weekDialTickS {
+  x: 0%;
+  y: -45%;
+  width: 2;
+  height: 4;
+}
+
+.weekDialTickL {
+  x: 0%;
+  y: -45%;
+  width: 1;
+  height: 15;
+}
+
+.weekDialText {
+  font-family: Seville-Regular;
+  font-size: 18;
+  text-anchor: middle;
+}
+
+.weekDialSunText {
+  x: 0%;
+  y: -27%;
+}
+
+.weekDialTueText {
+  x: 24%;
+  y: 10%;
+}
+
+.weekDialFriText {
+  x: -28%;
+  y: 10%;
+}
+
+.dateTextColor {
+  fill: black;
+}
+
+.dateBackgroundColor {
+  fill: #A0A0A0;
+}
+
+
+.dateText {
+  x: 0;
+  y: +25%;
+  font-family: Seville-Regular;
+  font-size: 18;
+  text-anchor: middle;
+  text-length: 4;
+}
+
+
+/*
+ * Heart Rate mini-dial
+ */
+.hrMaxColor {
+  fill: #6f1a21;
+}
+.hrRestingColor {
+  fill: #6f1a21;
+}
+.hrFatBurnColor {
+  fill: #00ff00;
+}
+.hrCardioColor {
+  fill: #cccc00;
+}
+.hrPeakColor {
+  fill: #ff0000;
+}
+.hrMarkerTickS {
+  x: 0%;
+  y: -45%;
+  width: 2;
+  height: 4;
+}
+
+.hrMarkerTickL {
+  x: 0%;
+  y: -45%;
+  width: 1;
+  height: 15;
+}
+
+.hrResting {
+  x: 0%;
+  y: -45%;
+  width: 3;
+  height: 15;
+}
+
+.hrMax {
+  x: 0%;
+  y: -45%;
+  width: 3;
   height: 15;
 }
 
@@ -219,81 +276,3 @@
 }
 
 
-.hrMarkerTickS {
-  x: 0%;
-  y: -45%;
-  width: 2;
-  height: 4;
-}
-
-.hrMarkerTickL {
-  x: 0%;
-  y: -45%;
-  width: 1;
-  height: 15;
-}
-
-.hrResting {
-  x: 0%;
-  y: -45%;
-  width: 3;
-  height: 15;
-}
-
-.hrMax {
-  x: 0%;
-  y: -45%;
-  width: 3;
-  height: 15;
-}
-
-.weekDialTickS {
-  x: 0%;
-  y: -45%;
-  width: 2;
-  height: 4;
-}
-
-.weekDialTickL {
-  x: 0%;
-  y: -45%;
-  width: 1;
-  height: 15;
-}
-
-.weekDialText {
-  font-family: Seville-Regular;
-  font-size: 18;
-  text-anchor: middle;
-}
-
-.weekDialSunText {
-  x: 0%;
-  y: -27%;
-}
-
-.weekDialTueText {
-  x: 24%;
-  y: 10%;
-}
-
-.weekDialFriText {
-  x: -28%;
-  y: 10%;
-}
-
-.batteryText {
-  x: 50%+3;
-  y: 73%;
-  text-anchor: middle;
-  font-family: Seville-Bold;
-  font-size: 15;
-}
-
-.heartRateText {
-  x: 50%;
-  y: 68%;
-  text-anchor: middle;
-  font-family: Seville-Bold;
-  font-size: 15;
-}
