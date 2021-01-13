@@ -69,7 +69,7 @@
       <g transform="rotate(348)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 58 -->
       <g transform="rotate(354)"><rect class="mainDialMinute minuteColor"/></g>  <!-- 59 -->
 
-      <!-- Sub-Minute Markers -->
+      <!-- Malf-Minute Markers -->
       <g transform="rotate(  3.0)"><rect class="mainDialHalfMinute subMinuteColor"/></g>  <!--  0.50 -->
       <g transform="rotate(  9.0)"><rect class="mainDialHalfMinute subMinuteColor"/></g>  <!--  1.50 -->
       <g transform="rotate( 15.0)"><rect class="mainDialHalfMinute subMinuteColor"/></g>  <!--  2.50 -->
@@ -131,6 +131,7 @@
       <g transform="rotate(351.0)"><rect class="mainDialHalfMinute subMinuteColor"/></g>  <!-- 58.50 -->
       <g transform="rotate(357.0)"><rect class="mainDialHalfMinute subMinuteColor"/></g>  <!-- 59.50 -->
 
+      <!-- Quarter-hour markers -->
       <g transform="rotate(  0)"><rect class="mainDialQuarter quarterHourColor"/></g>
       <g transform="rotate( 90)"><rect class="mainDialQuarter quarterHourColor"/></g>
       <g transform="rotate(180)"><rect class="mainDialQuarter quarterHourColor"/></g>
