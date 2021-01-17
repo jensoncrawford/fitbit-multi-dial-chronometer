@@ -9,6 +9,7 @@ import { battery } from "power";
 import { user } from "user-profile";
 import * as messaging from "messaging";
 import * as fs from "fs";
+import { memory } from "system";
 
 const SETTINGS_TYPE = "cbor";
 const SETTINGS_FILE = "settings.cbor";
@@ -205,9 +206,11 @@ clock.ontick = (evt) => {
     batteryChargeLevel = battery.chargeLevel;
     batteryMeter.sweepAngle = 3.6 * batteryChargeLevel;
   }
-
 };
 
 setColours(settings.accentcolor, settings.markercolor);
 setBackgroundGradient(settings.showBackgroundGradient, settings.accentcolor);
 setHandsOpacity(settings.handsopacity);
+console.log("js memory: " + memory.js.used + "/" + memory.js.total + " peak:" + memory.js.peak);
+console.log("native memory: " + memory.native.used + "/" + memory.native.total + " peak:" + memory.native.peak);
+

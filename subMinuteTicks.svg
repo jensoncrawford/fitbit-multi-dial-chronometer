@@ -1,0 +1,69 @@
+<svg viewBox="0 0 336 336" id="clock" xmlns="http://www.w3.org/2000/svg">
+        <!-- Clock Face
+          - -   * half minute markers
+          -->
+        <g transform="translate(50%,50%)">
+            <!-- Half-Minute Markers -->
+            <g transform="rotate(  3.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!--  0.50 -->
+            <g transform="rotate(  9.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!--  1.50 -->
+            <g transform="rotate( 15.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!--  2.50 -->
+            <g transform="rotate( 21.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!--  3.50 -->
+            <g transform="rotate( 27.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!--  4.50 -->
+            <g transform="rotate( 33.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!--  5.50 -->
+            <g transform="rotate( 39.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!--  6.50 -->
+            <g transform="rotate( 45.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!--  7.50 -->
+            <g transform="rotate( 51.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!--  8.50 -->
+            <g transform="rotate( 57.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!--  9.50 -->
+            <g transform="rotate( 63.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 10.50 -->
+            <g transform="rotate( 69.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 11.50 -->
+            <g transform="rotate( 75.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 12.50 -->
+            <g transform="rotate( 81.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 13.50 -->
+            <g transform="rotate( 87.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 14.50 -->
+            <g transform="rotate( 93.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 15.50 -->
+            <g transform="rotate( 99.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 16.50 -->
+            <g transform="rotate(105.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 17.50 -->
+            <g transform="rotate(111.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 18.50 -->
+            <g transform="rotate(117.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 19.50 -->
+            <g transform="rotate(123.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 20.50 -->
+            <g transform="rotate(129.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 21.50 -->
+            <g transform="rotate(135.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 22.50 -->
+            <g transform="rotate(141.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 23.50 -->
+            <g transform="rotate(147.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 24.50 -->
+            <g transform="rotate(153.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 25.50 -->
+            <g transform="rotate(159.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 26.50 -->
+            <g transform="rotate(165.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 27.50 -->
+            <g transform="rotate(171.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 28.50 -->
+            <g transform="rotate(177.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 29.50 -->
+            <g transform="rotate(183.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 30.50 -->
+            <g transform="rotate(189.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 31.50 -->
+            <g transform="rotate(195.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 32.50 -->
+            <g transform="rotate(201.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 33.50 -->
+            <g transform="rotate(207.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 34.50 -->
+            <g transform="rotate(213.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 35.50 -->
+            <g transform="rotate(219.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 36.50 -->
+            <g transform="rotate(225.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 37.50 -->
+            <g transform="rotate(231.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 38.50 -->
+            <g transform="rotate(237.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 39.50 -->
+            <g transform="rotate(243.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 40.50 -->
+            <g transform="rotate(249.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 41.50 -->
+            <g transform="rotate(255.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 42.50 -->
+            <g transform="rotate(261.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 43.50 -->
+            <g transform="rotate(267.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 44.50 -->
+            <g transform="rotate(273.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 45.50 -->
+            <g transform="rotate(279.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 46.50 -->
+            <g transform="rotate(285.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 47.50 -->
+            <g transform="rotate(291.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 48.50 -->
+            <g transform="rotate(297.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 49.50 -->
+            <g transform="rotate(303.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 50.50 -->
+            <g transform="rotate(309.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 51.50 -->
+            <g transform="rotate(315.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 52.50 -->
+            <g transform="rotate(321.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 53.50 -->
+            <g transform="rotate(327.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 54.50 -->
+            <g transform="rotate(333.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 55.50 -->
+            <g transform="rotate(339.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 56.50 -->
+            <g transform="rotate(345.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 57.50 -->
+            <g transform="rotate(351.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 58.50 -->
+            <g transform="rotate(357.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!-- 59.50 -->
+
+        </g>
+</svg>
