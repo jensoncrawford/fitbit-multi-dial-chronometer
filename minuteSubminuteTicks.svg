@@ -66,7 +66,7 @@
             <g transform="rotate(348)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="24"/></g>  <!-- 58 -->
             <g transform="rotate(354)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="24"/></g>  <!-- 59 -->
 
-            <!-- Malf-Minute Markers -->
+            <!-- Half-Minute Markers -->
             <g transform="rotate(  3.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!--  0.50 -->
             <g transform="rotate(  9.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!--  1.50 -->
             <g transform="rotate( 15.0)"><rect style="fill: white;" x="0%" y="-50%" width="1" height="12"/></g>  <!--  2.50 -->
