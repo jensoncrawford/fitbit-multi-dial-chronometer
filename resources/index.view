@@ -23,9 +23,6 @@
                 <arc id="batteryMeter" class="batteryColor" x="3" y="3" width="110" height="110" arc-width="7"
                      start-angle="180"/>
                 <text id="batteryPercent" class="batteryText batteryColor" text-length="4"/>
-                <g id="hourhand24" transform="translate(50%,50%)">
-                    <line x1="0" y1="0" x2="0" y2="-30%" stroke-width="2" class="minuteColor"/>
-                </g>
                 <g transform="translate(50%,50%)">
                     <text class="hourmarker24text markercolour">24</text>
                     <g transform="rotate(  0)"><rect class="hourmarker24tickS markercolour"/></g>
@@ -44,8 +41,11 @@
                     <g transform="rotate(270)"><rect class="hourmarker24tickL markercolour"/></g>
                     <g transform="rotate(300)"><rect class="hourmarker24tickL markercolour"/></g>
                     <g transform="rotate(330)"><rect class="hourmarker24tickL markercolour"/></g>
+                </g>
+                <g id="hourhand24" transform="translate(50%,50%)">
+                    <line x1="0" y1="0" x2="0" y2="-30%" stroke-width="2" class="miniHandColor"/>
                     <circle cx="0" cy="0" r="4" class="accentcolour"/>
-                    <circle cx="0" cy="0" r="2" class="minuteColor"/>
+                    <circle cx="0" cy="0" r="2" class="miniHandColor"/>
                 </g>
             </use>
         </section>
@@ -59,9 +59,6 @@
             <use href="#complication">
                 <rect x="40%" y="62%" height="18%" width="20%" class="dateBackgroundColor"/>
                 <text id="dateField" x="50%" y="75%" class="dateText dateTextColor"/>
-                <g id="monthHand" transform="translate(50%,50%)">
-                    <line x1="0" y1="0" x2="0" y2="-30%" stroke-width="2" class="minuteColor"/>
-                </g>
                 <g transform="translate(50%,50%)">
                     <text class="weekDialSunText weekDialText markercolour">SUN</text>
                     <g transform="rotate(  0)"><rect class="weekDialTickS markercolour"/></g>
@@ -73,8 +70,11 @@
                     <text class="weekDialFriText weekDialText markercolour">FRI</text>
                     <g transform="rotate(257.1)"><rect class="weekDialTickS markercolour"/></g>
                     <g transform="rotate(308.6)"><rect class="weekDialTickL markercolour"/></g>
-                    <circle cx="0" cy="0" r="4" opacity="0.7" class="accentcolour"/>
-                    <circle cx="0" cy="0" r="2" class="minuteColor"/>
+                </g>
+                <g id="monthHand" transform="translate(50%,50%)">
+                    <line x1="0" y1="0" x2="0" y2="-30%" stroke-width="2" class="miniHandColor"/>
+                    <circle cx="0" cy="0" r="4" class="accentcolour"/>
+                    <circle cx="0" cy="0" r="2" class="miniHandColor"/>
                 </g>
             </use>
         </section>
@@ -91,16 +91,16 @@
           -    * current heart rate -->
         <section x="50%-58" y="50%+25" width="116" height="116">
             <use href="#complication">
-                <arc id="hrMax" class="hrMaxColor" x="3" y="3" width="110" height="110" arc-width="7"
-                     start-angle="144"/>
-                <arc id="hrResting" class="hrMaxColor" x="3" y="3" width="110" height="110" arc-width="7"
-                     start-angle="216"/>
-                <arc id="hrFatBurn" class="hrFatBurnColor" x="3" y="3" width="110" height="110" arc-width="7"
-                     start-angle="0"/>
-                <arc id="hrCardio" class="hrCardioColor" x="3" y="3" width="110" height="110" arc-width="7"
-                     start-angle="0"/>
-                <arc id="hrPeak" class="hrPeakColor" x="3" y="3" width="110" height="110" arc-width="7"
-                     start-angle="0"/>
+                <arc id="hrMax" class="hrMaxColor hr" x="3" y="3" width="110" height="110" arc-width="7"
+                     start-angle="144" sweep-angle="0"/>
+                <arc id="hrResting" class="hrMaxColor hr" x="3" y="3" width="110" height="110" arc-width="7"
+                     start-angle="216" sweep-angle="0"/>
+                <arc id="hrFatBurn" class="hrFatBurnColor hr" x="3" y="3" width="110" height="110" arc-width="7"
+                     start-angle="0" sweep-angle="0"/>
+                <arc id="hrCardio" class="hrCardioColor hr" x="3" y="3" width="110" height="110" arc-width="7"
+                     start-angle="0" sweep-angle="0"/>
+                <arc id="hrPeak" class="hrPeakColor hr" x="3" y="3" width="110" height="110" arc-width="7"
+                     start-angle="0" sweep-angle="0"/>
                 <g transform="translate(50%,50%)">
                     <text class="hrDial40Text markercolour">40</text>
                     <g transform="rotate(216)"><rect class="hrMarkerTickS markercolour"/></g>
@@ -120,11 +120,11 @@
 
                     <text class="hrDial200Text markercolour">200</text>
                     <g transform="rotate(144)"><rect class="hrMarkerTickS markercolour"/></g>
-                    <circle cx="0" cy="0" r="4" opacity="0.7" class="accentcolour"/>
-                    <circle cx="0" cy="0" r="2" class="minuteColor"/>
                 </g>
-                <g id="hrHand" transform="translate(50%,50%)">
-                    <line x1="0" y1="0" x2="0" y2="-30%" stroke-width="2" class="minuteColor"/>
+                <g id="hrHand" class="hr" transform="translate(50%,50%)">
+                    <line x1="0" y1="0" x2="0" y2="-30%" stroke-width="2" class="miniHandColor"/>
+                    <circle cx="0" cy="0" r="4" class="accentcolour"/>
+                    <circle cx="0" cy="0" r="2" class="miniHandColor"/>
                 </g>
             </use>
         </section>
@@ -169,35 +169,63 @@
             <g transform="rotate(330)"><rect class="mainDialFiveInner fiveMinuteInnerColor"/></g>
             <g id="hourhand">
                 <!-- sides -->
-                <line x1="-3" y1="0%" x2="-3" y2="-20%" stroke-width="3" stroke-linecap="butt" class="minuteHandColor"/>
-                <line x1="3" y1="0%" x2="3" y2="-20%" stroke-width="3" stroke-linecap="butt" class="minuteHandColor"/>
+                <line x1="-3" y1="0%"   x2="-3" y2="-20%" stroke-width="3" stroke-linecap="butt"
+                      class="minuteHandColor"/>
+                <line x1="3"  y1="0%"   x2="3"  y2="-20%" stroke-width="3" stroke-linecap="butt"
+                      class="minuteHandColor"/>
                 <!-- point -->
-                <line x1="-3" y1="-20%" x2="0" y2="-25%" stroke-width="3" stroke-linecap="butt"
+                <line x1="-3" y1="-20%" x2="0"  y2="-25%" stroke-width="3" stroke-linecap="butt"
                       class="minuteHandColor"/>
-                <line x1="3" y1="-20%" x2="0" y2="-25%" stroke-width="3" stroke-linecap="butt" class="minuteHandColor"/>
+                <line x1="3"  y1="-20%" x2="0"  y2="-25%" stroke-width="3" stroke-linecap="butt"
+                      class="minuteHandColor"/>
                 <!-- point fill -->
-                <line x1="-3" y1="-20%" x2="3" y2="-20%" stroke-width="3" stroke-linecap="butt"
+                <line x1="-3" y1="-20%" x2="3"  y2="-20%" stroke-width="3" stroke-linecap="butt"
                       class="minuteHandColor"/>
-                <line x1="0" y1="-20%" x2="0" y2="-24%" stroke-width="3" stroke-linecap="butt" class="minuteHandColor"/>
+                <line x1="0"  y1="-20%" x2="0"  y2="-24%" stroke-width="3" stroke-linecap="butt"
+                      class="minuteHandColor"/>
             </g>
             <g id="minutehand">
                 <!-- sides -->
-                <line x1="-3" y1="0%" x2="-3" y2="-37%" stroke-width="3" stroke-linecap="butt" class="minuteHandColor"/>
-                <line x1="3" y1="0%" x2="3" y2="-37%" stroke-width="3" stroke-linecap="butt" class="minuteHandColor"/>
+                <line x1="-3" y1="0%"   x2="-3" y2="-37%" stroke-width="3" stroke-linecap="butt"
+                      class="minuteHandColor"/>
+                <line x1="3"  y1="0%"   x2="3"  y2="-37%" stroke-width="3" stroke-linecap="butt"
+                      class="minuteHandColor"/>
                 <!-- point -->
-                <line x1="-3" y1="-37%" x2="0" y2="-42%" stroke-width="3" stroke-linecap="butt"
+                <line x1="-3" y1="-37%" x2="0"  y2="-42%" stroke-width="3" stroke-linecap="butt"
                       class="minuteHandColor"/>
-                <line x1="3" y1="-37%" x2="0" y2="-42%" stroke-width="3" stroke-linecap="butt" class="minuteHandColor"/>
+                <line x1="3"  y1="-37%" x2="0"  y2="-42%" stroke-width="3" stroke-linecap="butt"
+                      class="minuteHandColor"/>
                 <!-- point fill -->
-                <line x1="-3" y1="-37%" x2="3" y2="-37%" stroke-width="3" stroke-linecap="butt"
+                <line x1="-3" y1="-37%" x2="3"  y2="-37%" stroke-width="3" stroke-linecap="butt"
                       class="minuteHandColor"/>
-                <line x1="0" y1="-37%" x2="0" y2="-40%" stroke-width="3" stroke-linecap="butt" class="minuteHandColor"/>
+                <line x1="0"  y1="-37%" x2="0"  y2="-40%" stroke-width="3" stroke-linecap="butt"
+                      class="minuteHandColor"/>
             </g>
             <!-- minute hand center -->
             <circle cx="0" cy="0" r="8" class="minuteHandColor"/>
             <!-- second hand -->
             <g id="secondhand">
-                <line x1="0" y1="4%" x2="0" y2="-39%" stroke-width="3" class="secondHandColor"/>
+                <!-- body -->
+                <line x1="0"  y1="0%"   x2="0"  y2="-37%" stroke-width="3" stroke-linecap="butt"
+                      class="secondHandColor"/>
+                <!-- point -->
+                <line x1="3"  y1="-37%" x2="0"  y2="-42%" stroke-width="2" stroke-linecap="butt"
+                      class="secondHandColor"/>
+                <line x1="-3" y1="-37%" x2="0"  y2="-42%" stroke-width="2" stroke-linecap="butt"
+                      class="secondHandColor"/>
+                <line x1="-3" y1="-37%" x2="3"  y2="-37%" stroke-width="2" stroke-linecap="butt"
+                      class="secondHandColor"/>
+                <line x1="0"  y1="-37%" x2="0"  y2="-40%" stroke-width="3" stroke-linecap="butt"
+                      class="secondHandColor"/>
+                <!-- butt -->
+                <line x1="0"  y1="0%"   x2="3"  y2="9%"   stroke-width="3" stroke-linecap="butt"
+                      class="secondHandColor"/>
+                <line x1="0"  y1="0%"   x2="-3" y2="9%"   stroke-width="3" stroke-linecap="butt"
+                      class="secondHandColor"/>
+                <line x1="3"  y1="9%"   x2="-3" y2="9%"   stroke-width="3" stroke-linecap="butt"
+                      class="secondHandColor"/>
+                <line x1="0"  y1="0%"   x2="0"  y2="9%"   stroke-width="3" stroke-linecap="butt"
+                      class="secondHandColor"/>
             </g>
             <circle id="outercenterdot" cx="0" cy="0" r="6" class="secondHandColor"/>
             <circle id="innercenterdot" cx="0" cy="0" r="3" class="minuteHandColor"/>

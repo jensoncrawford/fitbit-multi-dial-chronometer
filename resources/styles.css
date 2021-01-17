@@ -18,35 +18,30 @@
 .minuteTickColor {
     fill: #c7c7c7;
 }
-
 .subMinuteTickColor {
     fill: #b8b8b8;
 }
-
 .fiveMinuteOuterColor {
     fill: #f47c47;
 }
-
 .fiveMinuteInnerColor {
     fill: #b8b8b8;
 }
-
 .quarterHourColor {
     fill: #f47c47;
 }
-
 .minuteHandColor {
     fill: white;
 }
-
 .secondHandColor {
     fill: #cc0000;
 }
-
+.miniHandColor {
+    fill: #c8c8c8;
+}
 .faceColor {
     fill: #505050;
 }
-
 .bezelColor {
     fill: #6f1a21;
 }
@@ -58,29 +53,29 @@
 }
 
 .mainDialQuarter {
-    x: 0% -3;
+    x: 0%-3;
     y: -50%;
     width: 8;
     height: 15;
 }
 
 .mainDialFiveOuter {
-    x: 0% -3;
+    x: 0%-3;
     y: -50%;
     width: 7;
     height: 15;
 }
 
 .mainDialFiveInner {
-    x: 0% -3;
-    y: -50% +28;
+    x: 0%-3;
+    y: -50%+28;
     width: 7;
     height: 17;
 }
 
 .mainDialTwelveInner {
-    x: 0% -3;
-    y: -50% +28;
+    x: 0%-3;
+    y: -50%+28;
     width: 7;
     height: 25;
 }
@@ -203,23 +198,18 @@
 .hrMaxColor {
     fill: #6f1a21;
 }
-
 .hrRestingColor {
     fill: #6f1a21;
 }
-
 .hrFatBurnColor {
-    fill: #00ff00;
+    fill: #00a000;
 }
-
 .hrCardioColor {
-    fill: #cccc00;
+    fill: #a7a700;
 }
-
 .hrPeakColor {
-    fill: #ff0000;
+    fill: #a00000;
 }
-
 .hrMarkerTickS {
     x: 0%;
     y: -45%;

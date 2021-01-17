@@ -42,6 +42,7 @@ let hrResting = document.getElementById("hrResting");
 let hrFatBurn = document.getElementById("hrFatBurn");
 let hrCardio = document.getElementById("hrCardio");
 let hrPeak = document.getElementById("hrPeak");
+let hr = document.getElementsByClassName("hr");
 
 let settings = loadSettings();
 function loadSettings() {
@@ -113,8 +114,16 @@ function setBackgroundGradient(showBackgroundGradient, accentColour) {
 /*
  * Heart Rate Event Handling
  */
+function hrOpacity(opacity) {
+  // console.info("hrOpacity("+opacity+")");
+  for (var i=0, len=hr.length|0; i<len; i=i+1|0) {
+    let hrElement = hr[i];
+    hrElement.style.opacity = opacity;
+  }
+}
 let hrm = null;
 if (HeartRateSensor) {
+  console.info("Heart rate sensor present");
   hrm = new HeartRateSensor();
   hrm.onreading = () => {
     hrHand.groupTransform.rotate.angle = (144 + 36 / 20 * hrm.heartRate) % 360;
@@ -124,6 +133,7 @@ if (HeartRateSensor) {
     let section_two = 0;
     let section_three = 0;
     let i=0;
+    // console.info("user.restingHeartRate="+user.restingHeartRate+"; user.maxHeartRate="+user.maxHeartRate);
     for (i=user.restingHeartRate;i<user.maxHeartRate;i++) {
       if (section_one == 0 && user.heartRateZone(i) == HR_FAT_BURN ) {
         section_one = i;
@@ -139,22 +149,24 @@ if (HeartRateSensor) {
       }
     }
     // fat burn : fat-burn to cardio - 1
+    // console.info("fat-burn = "+section_one+" to "+section_two);
     hrFatBurn.startAngle = (144 + 36 / 20 * section_one) % 360;
     hrFatBurn.sweepAngle = 36 / 20 * ( section_two - section_one );
 
     // cardio   : cardio to peak - 1
+    // console.info("fat-burn = "+section_two+" to "+section_three);
     hrCardio.startAngle = (144 + 36 / 20 * section_two) % 360;
     hrCardio.sweepAngle = 36 / 20 * ( section_three - section_two );
 
     // peak     : peak to user.maxHeartRate - 1
+    // console.info("fat-burn = "+section_three+" to "+user.maxHeartRate);
     hrPeak.startAngle = (144 + 36 / 20 * section_three) % 360;
     hrPeak.sweepAngle = 36 / 20 * ( user.maxHeartRate - section_three );
   };
 
 } else {
-  hrHand.style.opacity = 0;
-  hrMax.style.opacity = 0;
-  hrResting.style.opacity = 0;
+  // console.info("no heart rate sensor");
+  hrOpacity(0);
 }
 
 if ( BodyPresenceSensor ) {
@@ -163,14 +175,10 @@ if ( BodyPresenceSensor ) {
     if (hrm) {
       if (!body.present) {
         hrm.stop();
-        hrHand.style.opacity = 0;
-        hrMax.style.opacity = 0;
-        hrResting.style.opacity = 0;
+        hrOpacity(0);
       } else {
         hrm.start();
-        hrHand.style.opacity = 1;
-        hrMax.style.opacity = 1;
-        hrResting.style.opacity = 1;
+        hrOpacity(1);
       }
     }
   };
