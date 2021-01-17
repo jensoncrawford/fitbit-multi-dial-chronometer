@@ -1,116 +1,289 @@
-Fitbit Studio
-Built
-Download
-SimulatorVersa 3 Simulator
-                 RunScreenshot
-                 Help
-
-                 white
-10
-fill: #6f1a21;
-11
+.markercolour {
+    fill: #c7c7c7;
 }
-12
-​
-13
-​
-14
+
+.accentcolour {
+    fill: #2F77D4;
+}
+
+.batteryColor {
+    fill: #6f1a21;
+}
+
+
 /*
-15
  * Main dial
-16
  */
-17
-​
-18
-.minuteTickColor {
-  19
-  fill: red; /* #c7c7c7; */
-  20
-}
-21
-.subMinuteColor {
-  22
-  fill: #b8b8b8;
-  23
-}
-24
-.fiveMinuteOuterColor {
-  25
-  fill: #f47c47;
-  26
-}
-27
-.fiveMinuteInnerColor {
-  28
-  fill: #b8b8b8;
-  29
-}
-30
-.quarterHourColor {
-  31
-  fill: #f47c47;
-  32
-}
-33
-.minuteHandColor {
-  34
-  fill: white;
-  35
-}
-36
-.secondHandColor {
-  37
-  fill: #cc0000;
-  38
-}
-39
-.faceColor {
-  40
-  fill: #505050;
-  41
-}
-42
-.bezelColor {
-  43
-  fill: #6f1a21;
-  44
-}
-45
-​
-46
-.maindialtwelve {
-  47
-  y: -49%;
-  48
-  width: 2;
-  49
-  height: 25;
-  50
-}
-51
-​
-52
-.mainDialQuarter {
-  53
-  x: 0%-3;
-  54
-  y: -50%;
-  55
-  width: 8;
-  56
-  height: 15;
-  57
-}
-58
-​
-59
-.mainDialFiveOuter {
-  60
-  x: 0%-3;
-  Console
-  Build Output
 
-  [10:16:30 AM]Sideload successful![HOST][10:16:30 AM]App Closedmnt/sysassets/widgets/cycleview_widget.defs:13,1[10:16:30 AM]Error 22 Conflicting use of attribute 'data-size' in cycleview-item[HOST][10:16:30 AM]App Startedapp/index.js:188,1[10:16:30 AM]js memory: 23672/262136 peak:23752app/index.js:188,1[10:16:30 AM]native memory: 0/1 peak:0
-  User: Jenson Crawford (jensoncrawford@gmail.com)
-Project: Omega Speedmaster Tribute
+.minuteTickColor {
+    fill: #c7c7c7;
+}
+
+.subMinuteTickColor {
+    fill: #b8b8b8;
+}
+
+.fiveMinuteOuterColor {
+    fill: #f47c47;
+}
+
+.fiveMinuteInnerColor {
+    fill: #b8b8b8;
+}
+
+.quarterHourColor {
+    fill: #f47c47;
+}
+
+.minuteHandColor {
+    fill: white;
+}
+
+.secondHandColor {
+    fill: #cc0000;
+}
+
+.faceColor {
+    fill: #505050;
+}
+
+.bezelColor {
+    fill: #6f1a21;
+}
+
+.maindialtwelve {
+    y: -49%;
+    width: 2;
+    height: 25;
+}
+
+.mainDialQuarter {
+    x: 0% -3;
+    y: -50%;
+    width: 8;
+    height: 15;
+}
+
+.mainDialFiveOuter {
+    x: 0% -3;
+    y: -50%;
+    width: 7;
+    height: 15;
+}
+
+.mainDialFiveInner {
+    x: 0% -3;
+    y: -50% +28;
+    width: 7;
+    height: 17;
+}
+
+.mainDialTwelveInner {
+    x: 0% -3;
+    y: -50% +28;
+    width: 7;
+    height: 25;
+}
+
+.mainDialMinute {
+    x: 0%;
+    y: -50%;
+    width: 1;
+    height: 24;
+}
+
+.mainDialHalfMinute {
+    x: 0%;
+    y: -50%;
+    width: 1;
+    height: 12;
+}
+
+/*
+ * 24 hour mini-dial
+ */
+.hourmarker8text {
+    x: 30%;
+    y: +21%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
+
+.hourmarker16text {
+    x: -27%;
+    y: +21%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
+
+.hourmarker24text {
+    x: 0%;
+    y: -27%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
+
+.hourmarker24tickS {
+    x: 0%;
+    y: -45%;
+    width: 2;
+    height: 4;
+}
+
+.hourmarker24tickL {
+    x: 0%;
+    y: -45%;
+    width: 1;
+    height: 15;
+}
+
+/*
+ * Day of week and date mini-dial
+ */
+.weekDialTickS {
+    x: 0%;
+    y: -45%;
+    width: 2;
+    height: 4;
+}
+
+.weekDialTickL {
+    x: 0%;
+    y: -45%;
+    width: 1;
+    height: 15;
+}
+
+.weekDialText {
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
+
+.weekDialSunText {
+    x: 0%;
+    y: -27%;
+}
+
+.weekDialTueText {
+    x: 24%;
+    y: 10%;
+}
+
+.weekDialFriText {
+    x: -28%;
+    y: 10%;
+}
+
+.dateTextColor {
+    fill: black;
+}
+
+.dateBackgroundColor {
+    fill: #A0A0A0;
+}
+
+
+.dateText {
+    x: 0;
+    y: +25%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+    text-length: 4;
+}
+
+
+/*
+ * Heart Rate mini-dial
+ */
+.hrMaxColor {
+    fill: #6f1a21;
+}
+
+.hrRestingColor {
+    fill: #6f1a21;
+}
+
+.hrFatBurnColor {
+    fill: #00ff00;
+}
+
+.hrCardioColor {
+    fill: #cccc00;
+}
+
+.hrPeakColor {
+    fill: #ff0000;
+}
+
+.hrMarkerTickS {
+    x: 0%;
+    y: -45%;
+    width: 2;
+    height: 4;
+}
+
+.hrMarkerTickL {
+    x: 0%;
+    y: -45%;
+    width: 1;
+    height: 15;
+}
+
+.hrResting {
+    x: 0%;
+    y: -45%;
+    width: 3;
+    height: 15;
+}
+
+.hrMax {
+    x: 0%;
+    y: -45%;
+    width: 3;
+    height: 15;
+}
+
+.hrDial40Text {
+    x: -19%;
+    y: +30%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
+
+.hrDial80Text {
+    x: -29%;
+    y: -5%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
+
+.hrDial120Text {
+    x: 0%;
+    y: -27%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
+
+.hrDial160Text {
+    x: 25%;
+    y: -5%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
+
+.hrDial200Text {
+    x: 18%;
+    y: +30%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
