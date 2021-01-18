@@ -1,21 +1,7 @@
-.markercolour {
-    fill: #c7c7c7;
-}
-
-.accentcolour {
-    fill: #2F77D4;
-}
-
-.batteryColor {
-    fill: #6f1a21;
-}
-
-
 /*
- * Main dial
+ * Main Dial Colors
  */
-
-.minuteTickColor {
+.tickColor {
     fill: #c7c7c7;
 }
 .subMinuteTickColor {
@@ -45,7 +31,34 @@
 .bezelColor {
     fill: #6f1a21;
 }
+/*
+ * Mini Dial Colors
+ */
+.miniDialColor {
+    fill: #484848;
+}
+.miniDialTextColor {
+    fill: #c7c7c7;
+}
+.dateTextColor {
+    fill: black;
+}
+.dateBackgroundColor {
+    fill: #A0A0A0;
+}
+.hrFatBurnColor {
+    fill: green;
+}
+.hrCardioColor {
+    fill: goldenrod;
+}
+.hrPeakColor {
+    fill: firebrick;
+}
 
+/*
+ * Main dial
+ */
 .maindialtwelve {
     y: -49%;
     width: 2;
@@ -144,44 +157,29 @@
     width: 2;
     height: 4;
 }
-
 .weekDialTickL {
     x: 0%;
     y: -45%;
     width: 1;
     height: 15;
 }
-
 .weekDialText {
     font-family: Seville-Regular;
     font-size: 18;
     text-anchor: middle;
 }
-
 .weekDialSunText {
     x: 0%;
     y: -27%;
 }
-
 .weekDialTueText {
     x: 24%;
     y: 10%;
 }
-
 .weekDialFriText {
     x: -28%;
     y: 10%;
 }
-
-.dateTextColor {
-    fill: black;
-}
-
-.dateBackgroundColor {
-    fill: #A0A0A0;
-}
-
-
 .dateText {
     x: 0;
     y: +25%;
@@ -195,49 +193,30 @@
 /*
  * Heart Rate mini-dial
  */
-.hrMaxColor {
-    fill: #6f1a21;
-}
-.hrRestingColor {
-    fill: #6f1a21;
-}
-.hrFatBurnColor {
-    fill: #00a000;
-}
-.hrCardioColor {
-    fill: #a7a700;
-}
-.hrPeakColor {
-    fill: #a00000;
-}
 .hrMarkerTickS {
     x: 0%;
     y: -45%;
     width: 2;
     height: 4;
 }
-
 .hrMarkerTickL {
     x: 0%;
     y: -45%;
     width: 1;
     height: 15;
 }
-
 .hrResting {
     x: 0%;
     y: -45%;
     width: 3;
     height: 15;
 }
-
 .hrMax {
     x: 0%;
     y: -45%;
     width: 3;
     height: 15;
 }
-
 .hrDial40Text {
     x: -19%;
     y: +30%;
@@ -245,7 +224,6 @@
     font-size: 18;
     text-anchor: middle;
 }
-
 .hrDial80Text {
     x: -29%;
     y: -5%;
@@ -253,7 +231,6 @@
     font-size: 18;
     text-anchor: middle;
 }
-
 .hrDial120Text {
     x: 0%;
     y: -27%;
@@ -261,7 +238,6 @@
     font-size: 18;
     text-anchor: middle;
 }
-
 .hrDial160Text {
     x: 25%;
     y: -5%;
@@ -269,7 +245,6 @@
     font-size: 18;
     text-anchor: middle;
 }
-
 .hrDial200Text {
     x: 18%;
     y: +30%;
