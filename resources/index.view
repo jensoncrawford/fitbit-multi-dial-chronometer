@@ -1,6 +1,6 @@
 <svg id="clock">
     <defs>
-        <symbol id="complication">
+        <symbol id="miniDial">
             <circle cx="58" cy="58" r="58" fill="black" opacity="0.1"/>
             <arc x="0" y="0" width="116" height="116" arc-width="3" start-angle="0" sweep-angle="360" opacity="0.2"
                  fill="black"/>
@@ -19,7 +19,7 @@
           -  * Battery level
           -->
         <section x="50%-140" y="50%-58" width="116" height="116">
-            <use href="#complication">
+            <use href="#miniDial">
                 <arc id="batteryMeter" class="batteryColor" x="3" y="3" width="110" height="110" arc-width="7"
                      start-angle="180"/>
                 <text id="batteryPercent" class="batteryText batteryColor" text-length="4"/>
@@ -56,7 +56,7 @@
           -  * Date text
           -  * Day of week dial -->
         <section x="50%+24" y="50%-58" width="116" height="116">
-            <use href="#complication">
+            <use href="#miniDial">
                 <rect x="40%" y="62%" height="18%" width="20%" class="dateBackgroundColor"/>
                 <text id="dateField" x="50%" y="75%" class="dateText dateTextColor"/>
                 <g transform="translate(50%,50%)">
@@ -90,7 +90,7 @@
           -    * peak range arc
           -    * current heart rate -->
         <section x="50%-58" y="50%+25" width="116" height="116">
-            <use href="#complication">
+            <use href="#miniDial">
                 <arc id="hrMax" class="hrMaxColor hr" x="3" y="3" width="110" height="110" arc-width="7"
                      start-angle="144" sweep-angle="0"/>
                 <arc id="hrResting" class="hrMaxColor hr" x="3" y="3" width="110" height="110" arc-width="7"
@@ -234,7 +234,7 @@
 </svg>
 <svg id="clock">
     <defs>
-        <symbol id="complication">
+        <symbol id="miniDial">
         <circle cx="58" cy="58" r="58" fill="black" class="miniDialColor" opacity="0.1"/>
             <arc x="0" y="0" width="116" height="116" arc-width="1" start-angle="0" sweep-angle="360" opacity="0.7"
                  fill="black"/>
@@ -253,7 +253,7 @@
           -  * Battery level
           -->
         <section x="50%-140" y="50%-58" width="116" height="116">
-            <use href="#complication">
+            <use href="#miniDial">
                 <arc id="batteryMeter" class="bezelColor" x="3" y="3" width="110" height="110" arc-width="7"
                      start-angle="180"/>
                 <g transform="translate(50%,50%)">
@@ -289,7 +289,7 @@
           -  * Date text
           -  * Day of week dial -->
         <section x="50%+24" y="50%-58" width="116" height="116">
-            <use href="#complication">
+            <use href="#miniDial">
                 <rect x="40%" y="62%" height="18%" width="20%" class="dateBackgroundColor"/>
                 <text id="dateField" x="50%" y="75%" class="dateText dateTextColor"/>
                 <g transform="translate(50%,50%)">
@@ -323,7 +323,7 @@
           -    * peak range arc
           -    * current heart rate -->
         <section x="50%-58" y="50%+25" width="116" height="116">
-            <use href="#complication">
+            <use href="#miniDial">
                 <arc id="hrMax" class="bezelColor hr" x="3" y="3" width="110" height="110" arc-width="7"
                      start-angle="144" sweep-angle="0"/>
                 <arc id="hrResting" class="bezelColor hr" x="3" y="3" width="110" height="110" arc-width="7"
