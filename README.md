@@ -1,5 +1,6 @@
 # fitbit-analog-watch-speedmaster
-Fitbit analog clock face for Versa series watches
+Fitbit analog clock face for Fitbit Versa 3 and Fitbit Sense watches using Fitbit SDK 3
+
 
 This is an analog clock face that is a tribute to the classic [Omega Speedmaster](https://www.omegawatches.com/en-us/watches/speedmaster)
 analog watches. This watch face shows the day, date and day of week,
