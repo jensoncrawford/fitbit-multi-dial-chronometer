@@ -43,6 +43,12 @@ let hrFatBurn = document.getElementById("hrFatBurn");
 let hrCardio = document.getElementById("hrCardio");
 let hrPeak = document.getElementById("hrPeak");
 let hr = document.getElementsByClassName("hr");
+let amField = document.getElementById("amField");
+let distField = document.getElementById("distField");
+
+let stepsField = document.getElementById("stepsField");
+let floorsField = document.getElementById("floorsField");
+let calsField = document.getElementById("calsField");
 
 let settings = loadSettings();
 function loadSettings() {
@@ -214,6 +220,27 @@ clock.ontick = (evt) => {
     batteryChargeLevel = battery.chargeLevel;
     batteryMeter.sweepAngle = 3.6 * batteryChargeLevel;
   }
+  if (today.adjusted.activeMinutes !== undefined) {
+    amField.text = today.adjusted.activeMinutes;
+  } else {
+    amField.text = "N/A";
+  }
+  let steps = today.adjusted.steps;
+  stepsField.text = steps.toLocaleString();
+  let dist = (units.distance === "metric" ? today.adjusted.distance * 0.001 : today.adjusted.distance * 0.000621371);
+  dist = Math.floor(dist * 100) / 100;
+  distField.text = dist.toLocaleString();
+  console.info("dist="+dist);
+  console.info("dist.toLocaleString()="+dist.toLocaleString());
+  if (today.local.elevationGain !== undefined) {
+    floorsField.text = today.adjusted.elevationGain;
+  } else {
+    floorsField.text = "N/A";
+  }
+  console.info("today.adjusted.calories="+today.adjusted.calories);
+  let calories = today.adjusted.calories;
+  console.info("today.adjusted.calories="+calories.toLocaleString());
+  calsField.text = calories.toLocaleString();
 };
 
 setColours(settings.accentcolor, settings.markercolor);

@@ -57,6 +57,15 @@
 }
 
 /*
+ * Status colors
+ */
+.statsIconColor {
+    fill: #6f1a21;
+}
+.statsTextColor {
+    fill: #c7c7c7;
+}
+/*
  * Main dial
  */
 .maindialtwelve {
@@ -107,6 +116,22 @@
     height: 12;
 }
 
+/*
+ * Stats
+ */
+.statsIcon {
+    width: 36;
+    height: 36;
+    x: 50%-18;
+    y: 0;
+}
+.statsField {
+    x: 50%;
+    y: 55%;
+    font-family: Seville-Bold;
+    font-size: 24;
+    text-anchor: middle;
+}
 /*
  * 24 hour mini-dial
  */
