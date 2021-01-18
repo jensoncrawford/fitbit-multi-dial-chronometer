@@ -246,6 +246,3 @@ clock.ontick = (evt) => {
 setColours(settings.accentcolor, settings.markercolor);
 setBackgroundGradient(settings.showBackgroundGradient, settings.accentcolor);
 setHandsOpacity(settings.handsopacity);
-console.log("js memory: " + memory.js.used + "/" + memory.js.total + " peak:" + memory.js.peak);
-console.log("native memory: " + memory.native.used + "/" + memory.native.total + " peak:" + memory.native.peak);
-

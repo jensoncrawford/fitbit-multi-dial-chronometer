@@ -20,10 +20,19 @@
     fill: white;
 }
 .secondHandColor {
-    fill: #cc0000;
+    fill: #f47c47;
 }
-.miniHandColor {
-    fill: #c8c8c8;
+.miniHandLColor {
+    fill: white;
+}
+.miniHandRColor {
+    fill: #f47c47;
+}
+.miniHandBColor {
+    fill: #f47c47;
+}
+.handDotColor {
+    fill: black;
 }
 .faceColor {
     fill: #505050;
@@ -60,7 +69,7 @@
  * Status colors
  */
 .statsIconColor {
-    fill: #6f1a21;
+    fill: #f47c47;
 }
 .statsTextColor {
     fill: #c7c7c7;

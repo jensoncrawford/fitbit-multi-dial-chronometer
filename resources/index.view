@@ -42,9 +42,9 @@
                     <g transform="rotate(330)"><rect class="hourmarker24tickL tickColor"/></g>
                 </g>
                 <g id="hourhand24" transform="translate(50%,50%)">
-                    <line x1="0" y1="0" x2="0" y2="-30%" stroke-width="2" class="miniHandColor"/>
-                    <circle cx="0" cy="0" r="4" class="bezelColor"/>
-                    <circle cx="0" cy="0" r="2" class="miniHandColor"/>
+                    <line x1="0" y1="0" x2="0" y2="-30%" stroke-width="2" class="miniHandLColor"/>
+                    <circle cx="0" cy="0" r="4" class="miniHandLColor"/>
+                    <circle cx="0" cy="0" r="1" class="handDotColor"/>
                 </g>
             </use>
         </section>
@@ -71,9 +71,9 @@
                     <g transform="rotate(308.6)"><rect class="weekDialTickL tickColor"/></g>
                 </g>
                 <g id="monthHand" transform="translate(50%,50%)">
-                    <line x1="0" y1="0" x2="0" y2="-30%" stroke-width="2" class="miniHandColor"/>
-                    <circle cx="0" cy="0" r="4" class="bezelColor"/>
-                    <circle cx="0" cy="0" r="2" class="miniHandColor"/>
+                    <line x1="0" y1="0" x2="0" y2="-30%" stroke-width="2" class="miniHandRColor"/>
+                    <circle cx="0" cy="0" r="4" class="miniHandRColor"/>
+                    <circle cx="0" cy="0" r="1" class="handDotColor"/>
                 </g>
             </use>
         </section>
@@ -122,9 +122,9 @@
                     <g transform="rotate(144)"><rect class="hrMarkerTickS tickColor"/></g>
                 </g>
                 <g id="hrHand" class="hr" transform="translate(50%,50%)">
-                    <line x1="0" y1="0" x2="0" y2="-30%" stroke-width="2" class="miniHandColor"/>
-                    <circle cx="0" cy="0" r="4" class="bezelColor"/>
-                    <circle cx="0" cy="0" r="2" class="miniHandColor"/>
+                    <line x1="0" y1="0" x2="0" y2="-30%" stroke-width="2" class="miniHandBColor"/>
+                    <circle cx="0" cy="0" r="4" class="miniHandBColor"/>
+                    <circle cx="0" cy="0" r="1" class="handDotColor"/>
                 </g>
             </use>
         </section>
@@ -198,36 +198,36 @@
       <g transform="translate(50%,50%)">
           <g id="hourhand">
                 <!-- sides -->
-                <line x1="-3" y1="0%"   x2="-3" y2="-20%" stroke-width="3" stroke-linecap="butt"
+                <line x1="-3" y1="0%"   x2="-3" y2="-30%" stroke-width="3" stroke-linecap="butt"
                       class="minuteHandColor"/>
-                <line x1="3"  y1="0%"   x2="3"  y2="-20%" stroke-width="3" stroke-linecap="butt"
+                <line x1="3"  y1="0%"   x2="3"  y2="-30%" stroke-width="3" stroke-linecap="butt"
                       class="minuteHandColor"/>
                 <!-- point -->
-                <line x1="-3" y1="-20%" x2="0"  y2="-25%" stroke-width="3" stroke-linecap="butt"
+                <line x1="-3" y1="-30%" x2="0"  y2="-35%" stroke-width="3" stroke-linecap="butt"
                       class="minuteHandColor"/>
-                <line x1="3"  y1="-20%" x2="0"  y2="-25%" stroke-width="3" stroke-linecap="butt"
+                <line x1="3"  y1="-30%" x2="0"  y2="-35%" stroke-width="3" stroke-linecap="butt"
                       class="minuteHandColor"/>
                 <!-- point fill -->
-                <line x1="-3" y1="-20%" x2="3"  y2="-20%" stroke-width="3" stroke-linecap="butt"
+                <line x1="-3" y1="-30%" x2="3"  y2="-30%" stroke-width="3" stroke-linecap="butt"
                       class="minuteHandColor"/>
-                <line x1="0"  y1="-20%" x2="0"  y2="-24%" stroke-width="3" stroke-linecap="butt"
+                <line x1="0"  y1="-30%" x2="0"  y2="-34%" stroke-width="3" stroke-linecap="butt"
                       class="minuteHandColor"/>
             </g>
             <g id="minutehand">
                 <!-- sides -->
-                <line x1="-3" y1="0%"   x2="-3" y2="-37%" stroke-width="3" stroke-linecap="butt"
+                <line x1="-3" y1="0%"   x2="-3" y2="-43%" stroke-width="3" stroke-linecap="butt"
                       class="minuteHandColor"/>
-                <line x1="3"  y1="0%"   x2="3"  y2="-37%" stroke-width="3" stroke-linecap="butt"
+                <line x1="3"  y1="0%"   x2="3"  y2="-43%" stroke-width="3" stroke-linecap="butt"
                       class="minuteHandColor"/>
                 <!-- point -->
-                <line x1="-3" y1="-37%" x2="0"  y2="-42%" stroke-width="3" stroke-linecap="butt"
+                <line x1="-3" y1="-43%" x2="0"  y2="-48%" stroke-width="3" stroke-linecap="butt"
                       class="minuteHandColor"/>
-                <line x1="3"  y1="-37%" x2="0"  y2="-42%" stroke-width="3" stroke-linecap="butt"
+                <line x1="3"  y1="-43%" x2="0"  y2="-48%" stroke-width="3" stroke-linecap="butt"
                       class="minuteHandColor"/>
                 <!-- point fill -->
-                <line x1="-3" y1="-37%" x2="3"  y2="-37%" stroke-width="3" stroke-linecap="butt"
+                <line x1="-3" y1="-43%" x2="3"  y2="-43%" stroke-width="3" stroke-linecap="butt"
                       class="minuteHandColor"/>
-                <line x1="0"  y1="-37%" x2="0"  y2="-40%" stroke-width="3" stroke-linecap="butt"
+                <line x1="0"  y1="-43%" x2="0"  y2="-46%" stroke-width="3" stroke-linecap="butt"
                       class="minuteHandColor"/>
             </g>
             <!-- minute hand center -->
@@ -235,16 +235,7 @@
             <!-- second hand -->
             <g id="secondhand">
                 <!-- body -->
-                <line x1="0"  y1="0%"   x2="0"  y2="-35%" stroke-width="3" stroke-linecap="butt"
-                      class="secondHandColor"/>
-                <!-- point -->
-                <line x1="3"  y1="-35%" x2="0"  y2="-42%" stroke-width="2" stroke-linecap="butt"
-                      class="secondHandColor"/>
-                <line x1="-3" y1="-35%" x2="0"  y2="-42%" stroke-width="2" stroke-linecap="butt"
-                      class="secondHandColor"/>
-                <line x1="-3" y1="-35%" x2="3"  y2="-37%" stroke-width="2" stroke-linecap="butt"
-                      class="secondHandColor"/>
-                <line x1="0"  y1="-35%" x2="0"  y2="-40%" stroke-width="3" stroke-linecap="butt"
+                <line x1="0"  y1="0%"   x2="0"  y2="-48%" stroke-width="3" stroke-linecap="butt"
                       class="secondHandColor"/>
                 <!-- butt -->
                 <line x1="0"  y1="0%"   x2="3"  y2="9%"   stroke-width="3" stroke-linecap="butt"
@@ -257,7 +248,7 @@
                       class="secondHandColor"/>
             </g>
             <circle id="outercenterdot" cx="0" cy="0" r="6" class="secondHandColor"/>
-            <circle id="innercenterdot" cx="0" cy="0" r="3" class="minuteHandColor"/>
+            <circle id="innercenterdot" cx="0" cy="0" r="1" class="handDotColor"/>
         </g>
     </section>
 </svg>
