@@ -9,7 +9,6 @@ import { battery } from "power";
 import { user } from "user-profile";
 import * as messaging from "messaging";
 import * as fs from "fs";
-import { memory } from "system";
 
 const SETTINGS_TYPE = "cbor";
 const SETTINGS_FILE = "settings.cbor";
@@ -24,18 +23,22 @@ const HR_BELOW_CUSTOM = "below-custom";
 const HR_CUSTOM = "custom";
 const HR_ABOVE_CUSTOM = "above-custom";
 
-let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
-let months = ["JAN ", "FEB", "MAR", "APR", "MAY", "JUN ", "JUL ", "AUG", "SEP", "OCT", "NOV", "DEC"];
-
+/* main dial elements */
 let hourhand = document.getElementById("hourhand");
 let minutehand = document.getElementById("minutehand");
 let secondhand = document.getElementById("secondhand");
 let outercenterdot = document.getElementById("outercenterdot");
 let innercenterdot = document.getElementById("innercenterdot");
+
+/* 24 hour mini-dial elements */
 let hourhand24 = document.getElementById("hourhand24");
+let batteryMeter = document.getElementById("batteryMeter");
+
+/* day/date mini-dial elements */
 let dateField = document.getElementById("dateField");
 let monthHand = document.getElementById("monthHand");
-let batteryMeter = document.getElementById("batteryMeter");
+
+/* heart rate mini-dial elements */
 let hrHand = document.getElementById("hrHand");
 let hrMax = document.getElementById("hrMax");
 let hrResting = document.getElementById("hrResting");
@@ -43,9 +46,10 @@ let hrFatBurn = document.getElementById("hrFatBurn");
 let hrCardio = document.getElementById("hrCardio");
 let hrPeak = document.getElementById("hrPeak");
 let hr = document.getElementsByClassName("hr");
+
+/* activity metric elements */
 let amField = document.getElementById("amField");
 let distField = document.getElementById("distField");
-
 let stepsField = document.getElementById("stepsField");
 let floorsField = document.getElementById("floorsField");
 let calsField = document.getElementById("calsField");
