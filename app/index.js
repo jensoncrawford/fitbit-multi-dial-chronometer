@@ -143,35 +143,29 @@ if (HeartRateSensor) {
     for (i=user.restingHeartRate;i<user.maxHeartRate;i++) {
       if (section_one == 0 && user.heartRateZone(i) == HR_FAT_BURN ) {
         section_one = i;
-        // console.info(HR_FAT_BURN + " = " + i);
       }
       if (section_two == 0 && user.heartRateZone(i) == HR_CARDIO ) {
         section_two = i;
-        // console.info(HR_CARDIO + " = " + i);
       }
       if (section_three == 0 && user.heartRateZone(i) == HR_PEAK ) {
         section_three = i;
-        // console.info(HR_PEAK + " = " + i);
       }
     }
     // fat burn : fat-burn to cardio - 1
-    // console.info("fat-burn = "+section_one+" to "+section_two);
     hrFatBurn.startAngle = (144 + 36 / 20 * section_one) % 360;
     hrFatBurn.sweepAngle = 36 / 20 * ( section_two - section_one );
 
     // cardio   : cardio to peak - 1
-    // console.info("fat-burn = "+section_two+" to "+section_three);
     hrCardio.startAngle = (144 + 36 / 20 * section_two) % 360;
     hrCardio.sweepAngle = 36 / 20 * ( section_three - section_two );
 
     // peak     : peak to user.maxHeartRate - 1
-    // console.info("fat-burn = "+section_three+" to "+user.maxHeartRate);
     hrPeak.startAngle = (144 + 36 / 20 * section_three) % 360;
     hrPeak.sweepAngle = 36 / 20 * ( user.maxHeartRate - section_three );
   };
 
 } else {
-  // console.info("no heart rate sensor");
+  // no heart sensor
   hrOpacity(0);
 }
 
@@ -202,8 +196,7 @@ let batteryChargeLevel=-1
 clock.ontick = (evt) => {
   if (evt.date.getDay() != evtDateDay) {
     evtDateDay = evt.date.getDay();
-    monthHand.groupTransform.rotate.angle = (51.428714 * evtDateDay)
-    // dayField.text = days[evtDateDay];
+    monthHand.groupTransform.rotate.angle = (360.0 / 7.0 * evtDateDay)
   }
   if (evt.date.getDate() != evtDateDayOfMonth) {
     evtDateDayOfMonth = evt.date.getDate();
@@ -230,16 +223,12 @@ clock.ontick = (evt) => {
   let dist = (units.distance === "metric" ? today.adjusted.distance * 0.001 : today.adjusted.distance * 0.000621371);
   dist = Math.floor(dist * 100) / 100;
   distField.text = dist.toLocaleString();
-  console.info("dist="+dist);
-  console.info("dist.toLocaleString()="+dist.toLocaleString());
   if (today.local.elevationGain !== undefined) {
     floorsField.text = today.adjusted.elevationGain;
   } else {
     floorsField.text = "N/A";
   }
-  console.info("today.adjusted.calories="+today.adjusted.calories);
   let calories = today.adjusted.calories;
-  console.info("today.adjusted.calories="+calories.toLocaleString());
   calsField.text = calories.toLocaleString();
 };
 
