@@ -2,58 +2,61 @@
  * Main Dial Colors
  */
 .tickColor {
-    fill: #c7c7c7;
+    fill: white;
 }
 .subMinuteTickColor {
-    fill: #b8b8b8;
+    fill: white;
 }
 .fiveMinuteOuterColor {
-    fill: #f47c47;
+    fill: white;
+}
+.fiveMinuteMiddleColor {
+    fill: white;
 }
 .fiveMinuteInnerColor {
-    fill: #b8b8b8;
+    fill: white;
 }
 .quarterHourColor {
-    fill: #f47c47;
+    fill: white;
 }
 .minuteHandColor {
     fill: white;
 }
 .secondHandColor {
-    fill: #f47c47;
+    fill: white;
 }
 .miniHandLColor {
     fill: white;
 }
 .miniHandRColor {
-    fill: #f47c47;
+    fill: white;
 }
 .miniHandBColor {
-    fill: #f47c47;
+    fill: white;
 }
 .handDotColor {
     fill: black;
 }
 .faceColor {
-    fill: #505050;
+    fill: #013153;
 }
 .bezelColor {
-    fill: #6f1a21;
+    fill: #025996;
 }
 /*
  * Mini Dial Colors
  */
 .miniDialColor {
-    fill: #484848;
+    fill: #012742;
 }
 .miniDialTextColor {
-    fill: #c7c7c7;
+    fill: white;
 }
 .dateTextColor {
-    fill: black;
+    fill: white;
 }
 .dateBackgroundColor {
-    fill: #A0A0A0;
+    fill: #011c30;
 }
 .hrFatBurnColor {
     fill: green;
@@ -69,10 +72,10 @@
  * Status colors
  */
 .statsIconColor {
-    fill: #f47c47;
+    fill: white;
 }
 .statsTextColor {
-    fill: #c7c7c7;
+    fill: white;
 }
 /*
  * Main dial
@@ -95,6 +98,13 @@
     y: -50%;
     width: 7;
     height: 15;
+}
+
+.mainDialFiveMiddle {
+    x: 0%-3;
+    y: -50%+15;
+    width: 7;
+    height: 13;
 }
 
 .mainDialFiveInner {

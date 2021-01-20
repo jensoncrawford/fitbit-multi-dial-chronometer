@@ -85,6 +85,9 @@ function loadSettings() {
           ["hrPeakColor", "firebrick"],
           ["statsIconColor", "#f47c47"],
           ["statsTextColor", "#c7c7c7"]
+        ],
+        opacities: [
+          ["fiveMinuteMiddleColor",0]
         ]},
       handsOpacity: 1.0,
     };
@@ -106,6 +109,10 @@ messaging.peerSocket.onmessage = evt => {
         colors.forEach(function (element) {
           setColors(element[0], element[1]);
         });
+        let opacities = settings.face.opacities;
+        opacities.forEach(function(element) {
+          setOpacity(element[0], element[1]);
+        })
         break;
       case "handsOpacity":
         settings.handsOpacity = JSON.parse(evt.data.newValue);
@@ -125,9 +132,9 @@ function setFace(face) {
 }
 function setColors(className, color) {
   if (className && color) {
-    console.info("className="+className+"; color="+color);
+    // console.info("className="+className+"; color="+color);
     let elements = document.getElementsByClassName(className);
-    console.info(elements.length+" elements of class "+className);
+    // console.info(elements.length+" elements of class "+className);
     let i;
     for(i = 0; i < elements.length; i++) {
       let element = elements[i];
@@ -135,15 +142,31 @@ function setColors(className, color) {
     }
   }
 }
+function setOpacity(className, opacity) {
+  if (className && opacity !== undefined) {
+    console.info("className="+className+"; opacity="+opacity);
+    let elements = document.getElementsByClassName(className);
+    console.info(elements.length+" elements of class "+className);
+    let i;
+    for(i = 0; i < elements.length; i++) {
+      let element = elements[i];
+      element.style.opacity = opacity;
+    }
+  }
+}
+function setHandsOpacity(opacity) {
+  setOpacity("mainHand",opacity);
+}
 /*
  * Heart Rate Event Handling
  */
 function hrOpacity(opacity) {
+  setOpacity("hr",opacity);
   // console.info("hrOpacity("+opacity+")");
-  for (var i=0, len=hr.length|0; i<len; i=i+1|0) {
-    let hrElement = hr[i];
-    hrElement.style.opacity = opacity;
-  }
+  /*  for (var i=0, len=hr.length|0; i<len; i=i+1|0) {
+      let hrElement = hr[i];
+      hrElement.style.opacity = opacity;
+    } */
 }
 let hrm = null;
 if (HeartRateSensor) {

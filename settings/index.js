@@ -1,30 +1,3 @@
-const colourSet = [
-    {color: "red"},
-    {color: "#F83C40"},
-    {color: "crimson"},
-    {color: "deeppink"},
-    {color: "pink"},
-    {color: "orangered"},
-    {color: "orange"},
-    {color: "#FFCC33"},
-    {color: "yellow"},
-    {color: "#B8FC68"},
-    {color: "darkgreen"},
-    {color: "seagreen"},
-    {color: "olivedrab"},
-    {color: "lightgreen"},
-    {color: "teal"},
-    {color: "lightskyblue"},
-    {color: "deepskyblue"},
-    {color: "dodgerblue"},
-    {color: "navy"},
-    {color: 'mediumpurple'},
-    {color: 'purple'},
-    {color: "lightgrey"},
-    {color: "grey"},
-    {color: "white"}
-];
-
 function mySettings(props) {
     return (
         <Page>
@@ -34,7 +7,7 @@ function mySettings(props) {
                     settingsKey="handsOpacity"
                     min="0.0"
                     max="1.0"
-                    step="0.25"
+                    step="0.1"
                 />
             </Section>
             <Section title={<Text bold align="center">Watch Face</Text>}>
@@ -67,10 +40,14 @@ function mySettings(props) {
                                     ["hrPeakColor", "firebrick"],
                                     ["statsIconColor", "#f47c47"],
                                     ["statsTextColor", "#c7c7c7"]
+                                ],
+                                opacities: [
+                                    ["fiveMinuteMiddleColor",0]
                                 ]}
                         },
                         {name:"MediumBlue", value: {
-                                "colors": [
+                                name: "Medium Blue",
+                                colors: [
                                     ["tickColor", "white"],
                                     ["subMinuteTickColor", "white"],
                                     ["fiveMinuteOuterColor", "white"],
@@ -94,6 +71,9 @@ function mySettings(props) {
                                     ["hrPeakColor", "firebrick"],
                                     ["statsIconColor", "white"],
                                     ["statsTextColor", "white"]
+                                ],
+                                opacities: [
+                                    ["fiveMinuteMiddleColor",1]
                                 ]}
                         }
                     ]}
