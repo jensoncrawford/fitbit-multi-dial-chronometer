@@ -61,10 +61,31 @@ function loadSettings() {
   }
   catch (ex) {
     return {
-      accentcolor: "dodgerblue",
-      markercolor: "lightgrey",
-      handsopacity: 1.0,
-      showBackgroundGradient: true
+        face: {colors: [
+        {className: "tickColor", color: "#c7c7c7"},
+        {className: "subMinuteTickColor", color: "#b8b8b8"},
+        {className: "fiveMinuteOuterColor", color: "#f47c47"},
+        {className: "fiveMinuteInnerColor", color: "#b8b8b8"},
+        {className: "quarterHourColor", color: "#f47c47"},
+        {className: "minuteHandColor", color: "white"},
+        {className: "secondHandColor", color: "#f47c47"},
+        {className: "miniHandLColor", color: "white"},
+        {className: "miniHandRColor", color: "#f47c47"},
+        {className: "miniHandBColor", color: "#f47c47"},
+        {className: "handDotColor", color: "black"},
+        {className: "faceColor", color: "#505050"},
+        {className: "bezelColor", color: "#6f1a21"},
+        {className: "miniDialColor", color: "#484848"},
+        {className: "miniDialTextColor", color: "#c7c7c7"},
+        {className: "dateTextColor", color: "black"},
+        {className: "dateBackgroundColor", color: "#a0a0a0"},
+        {className: "hrFatBurnColor", color: "green"},
+        {className: "hrCardioColor", color: "goldenrod"},
+        {className: "hrPeakColor", color: "firebrick"},
+        {className: "statsIconColor", color: "#f47c47"},
+        {className: "statsTextColor", color: "#c7c7c7"}
+      ]},
+      handsOpacity: 1.0,
     };
   }
 }
@@ -77,48 +98,35 @@ function saveSettings() {
 messaging.peerSocket.onmessage = evt => {
   if (evt.data.newValue){
     switch (evt.data.key) {
-      case "accentcolor":
-        settings.accentcolor = JSON.parse(evt.data.newValue);
-        setColours(settings.accentcolor, settings.markercolor);
-        break;
-      case "markercolor":
-        settings.markercolor = JSON.parse(evt.data.newValue);
-        setColours(settings.accentcolor, settings.markercolor);
-        break;
-      case "handsopacity":
-        settings.handsopacity = JSON.parse(evt.data.newValue);
-        setHandsOpacity(settings.handsopacity);
-        break;
-      case "showBackgroundGradient":
-        settings.showBackgroundGradient = JSON.parse(evt.data.newValue);
-        setBackgroundGradient(settings.showBackgroundGradient, settings.accentcolor);
+     case "face":
+       let face = JSON.parse(evt.data.newValue);
+       let colors = face.colors;
+       colors.forEach(function (element) {
+         setColors(element.className, element.color);
+       });
+       break;
+     case "handsOpacity":
+        settings.handsOpacity = JSON.parse(evt.data.newValue);
+        setHandsOpacity(settings.handsOpacity);
         break;
     }
   }
 };
 
-function setColours(accentcolour, markercolour) {
-  let elements = document.getElementsByClassName("accentcolour");
-  elements.forEach(function (element) {
-    element.style.fill = accentcolour;
-  });
-
-  elements = document.getElementsByClassName("markercolour");
-  elements.forEach(function (element) {
-    element.style.fill = markercolour;
-  });
+function setColors(className, color) {
+  let elements = document.getElementsByClassName(className);
+  let i;
+  for(i = 0; i < elements.length; i++) {
+    let element = elements[i];
+    element.style.fill = color;
+  }
 }
-
 function setHandsOpacity(handsopacity) {
   hourhand.style.opacity = handsopacity;
   minutehand.style.opacity = handsopacity;
   secondhand.style.opacity = handsopacity;
   outercenterdot.style.opacity = handsopacity;
   innercenterdot.style.opacity = handsopacity;
-}
-
-function setBackgroundGradient(showBackgroundGradient, accentColour) {
-  // backgroundGradient.gradient.colors.c1 = (showBackgroundGradient ? accentColour : "black");
 }
 
 /*
