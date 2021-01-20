@@ -61,10 +61,35 @@ function loadSettings() {
   }
   catch (ex) {
     return {
-      accentcolor: "dodgerblue",
-      markercolor: "lightgrey",
-      handsopacity: 1.0,
-      showBackgroundGradient: true
+      face: {colors: [
+          ["tickColor", "#c7c7c7"],
+          ["subMinuteTickColor", "#b8b8b8"],
+          ["fiveMinuteOuterColor", "#f47c47"],
+          ["fiveMinuteMiddleColor", ""],
+          ["fiveMinuteInnerColor", "#b8b8b8"],
+          ["quarterHourColor", "#f47c47"],
+          ["minuteHandColor", "white"],
+          ["secondHandColor", "#f47c47"],
+          ["miniHandLColor", "white"],
+          ["miniHandRColor", "#f47c47"],
+          ["miniHandBColor", "#f47c47"],
+          ["handDotColor", "black"],
+          ["faceColor", "#505050"],
+          ["bezelColor", "#6f1a21"],
+          ["miniDialColor", "#484848"],
+          ["miniDialTextColor", "#c7c7c7"],
+          ["dateTextColor", "black"],
+          ["dateBackgroundColor", "#a0a0a0"],
+          ["hrFatBurnColor", "green"],
+          ["hrCardioColor", "goldenrod"],
+          ["hrPeakColor", "firebrick"],
+          ["statsIconColor", "#f47c47"],
+          ["statsTextColor", "#c7c7c7"]
+        ],
+        opacities: [
+          ["fiveMinuteMiddleColor",0]
+        ]},
+      handsOpacity: 1.0,
     };
   }
 }
@@ -77,63 +102,74 @@ function saveSettings() {
 messaging.peerSocket.onmessage = evt => {
   if (evt.data.newValue){
     switch (evt.data.key) {
-      case "accentcolor":
-        settings.accentcolor = JSON.parse(evt.data.newValue);
-        setColours(settings.accentcolor, settings.markercolor);
+      case "face":
+        console.info("messaging.peerSocket.onmessage: "+evt.data.newValue);
+        settings.face = JSON.parse(evt.data.newValue).values[0].value;
+        let colors = settings.face.colors;
+        colors.forEach(function (element) {
+          setColors(element[0], element[1]);
+        });
+        let opacities = settings.face.opacities;
+        opacities.forEach(function(element) {
+          setOpacity(element[0], element[1]);
+        })
         break;
-      case "markercolor":
-        settings.markercolor = JSON.parse(evt.data.newValue);
-        setColours(settings.accentcolor, settings.markercolor);
-        break;
-      case "handsopacity":
-        settings.handsopacity = JSON.parse(evt.data.newValue);
-        setHandsOpacity(settings.handsopacity);
-        break;
-      case "showBackgroundGradient":
-        settings.showBackgroundGradient = JSON.parse(evt.data.newValue);
-        setBackgroundGradient(settings.showBackgroundGradient, settings.accentcolor);
+      case "handsOpacity":
+        settings.handsOpacity = JSON.parse(evt.data.newValue);
+        setHandsOpacity(settings.handsOpacity);
         break;
     }
   }
 };
 
-function setColours(accentcolour, markercolour) {
-  let elements = document.getElementsByClassName("accentcolour");
-  elements.forEach(function (element) {
-    element.style.fill = accentcolour;
-  });
-
-  elements = document.getElementsByClassName("markercolour");
-  elements.forEach(function (element) {
-    element.style.fill = markercolour;
-  });
+function setFace(face) {
+  let colors = settings.face.colors;
+  if (colors) {
+    colors.forEach(function (element) {
+      setColors(element.className, element.color);
+    });
+  }
 }
-
-function setHandsOpacity(handsopacity) {
-  hourhand.style.opacity = handsopacity;
-  minutehand.style.opacity = handsopacity;
-  secondhand.style.opacity = handsopacity;
-  outercenterdot.style.opacity = handsopacity;
-  innercenterdot.style.opacity = handsopacity;
+function setColors(className, color) {
+  if (className && color) {
+    // console.info("className="+className+"; color="+color);
+    let elements = document.getElementsByClassName(className);
+    // console.info(elements.length+" elements of class "+className);
+    let i;
+    for(i = 0; i < elements.length; i++) {
+      let element = elements[i];
+      element.style.fill = color;
+    }
+  }
 }
-
-function setBackgroundGradient(showBackgroundGradient, accentColour) {
-  // backgroundGradient.gradient.colors.c1 = (showBackgroundGradient ? accentColour : "black");
+function setOpacity(className, opacity) {
+  if (className && opacity !== undefined) {
+    console.info("className="+className+"; opacity="+opacity);
+    let elements = document.getElementsByClassName(className);
+    console.info(elements.length+" elements of class "+className);
+    let i;
+    for(i = 0; i < elements.length; i++) {
+      let element = elements[i];
+      element.style.opacity = opacity;
+    }
+  }
 }
-
+function setHandsOpacity(opacity) {
+  setOpacity("mainHand",opacity);
+}
 /*
  * Heart Rate Event Handling
  */
 function hrOpacity(opacity) {
+  setOpacity("hr",opacity);
   // console.info("hrOpacity("+opacity+")");
-  for (var i=0, len=hr.length|0; i<len; i=i+1|0) {
-    let hrElement = hr[i];
-    hrElement.style.opacity = opacity;
-  }
+  /*  for (var i=0, len=hr.length|0; i<len; i=i+1|0) {
+      let hrElement = hr[i];
+      hrElement.style.opacity = opacity;
+    } */
 }
 let hrm = null;
 if (HeartRateSensor) {
-  console.info("Heart rate sensor present");
   hrm = new HeartRateSensor();
   hrm.onreading = () => {
     hrHand.groupTransform.rotate.angle = (144 + 36 / 20 * hrm.heartRate) % 360;
@@ -236,6 +272,5 @@ clock.ontick = (evt) => {
   calsField.text = calories.toLocaleString();
 };
 
-setColours(settings.accentcolor, settings.markercolor);
-setBackgroundGradient(settings.showBackgroundGradient, settings.accentcolor);
+setFace(settings.face);
 setHandsOpacity(settings.handsopacity);
