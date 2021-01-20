@@ -61,30 +61,31 @@ function loadSettings() {
   }
   catch (ex) {
     return {
-        face: {colors: [
-        {className: "tickColor", color: "#c7c7c7"},
-        {className: "subMinuteTickColor", color: "#b8b8b8"},
-        {className: "fiveMinuteOuterColor", color: "#f47c47"},
-        {className: "fiveMinuteInnerColor", color: "#b8b8b8"},
-        {className: "quarterHourColor", color: "#f47c47"},
-        {className: "minuteHandColor", color: "white"},
-        {className: "secondHandColor", color: "#f47c47"},
-        {className: "miniHandLColor", color: "white"},
-        {className: "miniHandRColor", color: "#f47c47"},
-        {className: "miniHandBColor", color: "#f47c47"},
-        {className: "handDotColor", color: "black"},
-        {className: "faceColor", color: "#505050"},
-        {className: "bezelColor", color: "#6f1a21"},
-        {className: "miniDialColor", color: "#484848"},
-        {className: "miniDialTextColor", color: "#c7c7c7"},
-        {className: "dateTextColor", color: "black"},
-        {className: "dateBackgroundColor", color: "#a0a0a0"},
-        {className: "hrFatBurnColor", color: "green"},
-        {className: "hrCardioColor", color: "goldenrod"},
-        {className: "hrPeakColor", color: "firebrick"},
-        {className: "statsIconColor", color: "#f47c47"},
-        {className: "statsTextColor", color: "#c7c7c7"}
-      ]},
+      face: {colors: [
+          ["tickColor", "#c7c7c7"],
+          ["subMinuteTickColor", "#b8b8b8"],
+          ["fiveMinuteOuterColor", "#f47c47"],
+          ["fiveMinuteMiddleColor", ""],
+          ["fiveMinuteInnerColor", "#b8b8b8"],
+          ["quarterHourColor", "#f47c47"],
+          ["minuteHandColor", "white"],
+          ["secondHandColor", "#f47c47"],
+          ["miniHandLColor", "white"],
+          ["miniHandRColor", "#f47c47"],
+          ["miniHandBColor", "#f47c47"],
+          ["handDotColor", "black"],
+          ["faceColor", "#505050"],
+          ["bezelColor", "#6f1a21"],
+          ["miniDialColor", "#484848"],
+          ["miniDialTextColor", "#c7c7c7"],
+          ["dateTextColor", "black"],
+          ["dateBackgroundColor", "#a0a0a0"],
+          ["hrFatBurnColor", "green"],
+          ["hrCardioColor", "goldenrod"],
+          ["hrPeakColor", "firebrick"],
+          ["statsIconColor", "#f47c47"],
+          ["statsTextColor", "#c7c7c7"]
+        ]},
       handsOpacity: 1.0,
     };
   }
@@ -98,14 +99,15 @@ function saveSettings() {
 messaging.peerSocket.onmessage = evt => {
   if (evt.data.newValue){
     switch (evt.data.key) {
-     case "face":
-       let face = JSON.parse(evt.data.newValue);
-       let colors = face.colors;
-       colors.forEach(function (element) {
-         setColors(element.className, element.color);
-       });
-       break;
-     case "handsOpacity":
+      case "face":
+        console.info("messaging.peerSocket.onmessage: "+evt.data.newValue);
+        settings.face = JSON.parse(evt.data.newValue).values[0].value;
+        let colors = settings.face.colors;
+        colors.forEach(function (element) {
+          setColors(element[0], element[1]);
+        });
+        break;
+      case "handsOpacity":
         settings.handsOpacity = JSON.parse(evt.data.newValue);
         setHandsOpacity(settings.handsOpacity);
         break;
@@ -113,22 +115,26 @@ messaging.peerSocket.onmessage = evt => {
   }
 };
 
-function setColors(className, color) {
-  let elements = document.getElementsByClassName(className);
-  let i;
-  for(i = 0; i < elements.length; i++) {
-    let element = elements[i];
-    element.style.fill = color;
+function setFace(face) {
+  let colors = settings.face.colors;
+  if (colors) {
+    colors.forEach(function (element) {
+      setColors(element.className, element.color);
+    });
   }
 }
-function setHandsOpacity(handsopacity) {
-  hourhand.style.opacity = handsopacity;
-  minutehand.style.opacity = handsopacity;
-  secondhand.style.opacity = handsopacity;
-  outercenterdot.style.opacity = handsopacity;
-  innercenterdot.style.opacity = handsopacity;
+function setColors(className, color) {
+  if (className && color) {
+    console.info("className="+className+"; color="+color);
+    let elements = document.getElementsByClassName(className);
+    console.info(elements.length+" elements of class "+className);
+    let i;
+    for(i = 0; i < elements.length; i++) {
+      let element = elements[i];
+      element.style.fill = color;
+    }
+  }
 }
-
 /*
  * Heart Rate Event Handling
  */
@@ -141,7 +147,6 @@ function hrOpacity(opacity) {
 }
 let hrm = null;
 if (HeartRateSensor) {
-  console.info("Heart rate sensor present");
   hrm = new HeartRateSensor();
   hrm.onreading = () => {
     hrHand.groupTransform.rotate.angle = (144 + 36 / 20 * hrm.heartRate) % 360;
@@ -244,6 +249,5 @@ clock.ontick = (evt) => {
   calsField.text = calories.toLocaleString();
 };
 
-setColours(settings.accentcolor, settings.markercolor);
-setBackgroundGradient(settings.showBackgroundGradient, settings.accentcolor);
+setFace(settings.face);
 setHandsOpacity(settings.handsopacity);
