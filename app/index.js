@@ -87,7 +87,10 @@ function loadSettings() {
           ["statsTextColor", "#c7c7c7"]
         ],
         opacities: [
-          ["fiveMinuteMiddleColor",0]
+          ["fiveMinuteMiddleColor",0],
+          ["quarterHourColor", 1],
+          ["mainHandArrow", 0],
+          ["miniHandArrow", 0]
         ]},
       handsOpacity: 1.0,
     };
