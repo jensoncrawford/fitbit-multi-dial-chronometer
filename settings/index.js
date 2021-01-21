@@ -44,6 +44,7 @@ function mySettings(props) {
                                     ["statsTextColor", "#c7c7c7"]
                                 ],
                                 opacities: [
+                                    ["fiveMinuteInnerColor",1],
                                     ["fiveMinuteMiddleColor",0],
                                     ["fiveMinuteOuterColor",1],
                                     ["quarterHourColor", 1],
@@ -81,6 +82,7 @@ function mySettings(props) {
                                     ["statsTextColor", "white"]
                                 ],
                                 opacities: [
+                                    ["fiveMinuteInnerColor",1],
                                     ["fiveMinuteMiddleColor",1],
                                     ["fiveMinuteOuterColor",1],
                                     ["quarterHourColor", 1],
@@ -88,7 +90,8 @@ function mySettings(props) {
                                     ["miniHandArrow", 0]
                                 ]}
                         },
-                        {name:"SchumacherRed", value: {
+                        {
+                            name: "SchumacherRed", value: {
                                 name: "Schumacher Red",
                                 colors: [
                                     ["tickColor", "black"],
@@ -118,12 +121,15 @@ function mySettings(props) {
                                     ["statsTextColor", "white"]
                                 ],
                                 opacities: [
-                                    ["fiveMinuteMiddleColor",1],
-                                    ["fiveMinuteOuterColor",0],
+                                    ["fiveMinuteInnerColor",1],
+                                    ["fiveMinuteMiddleColor", 1],
+                                    ["fiveMinuteOuterColor", 0],
                                     ["quarterHourColor", 0],
                                     ["mainHandArrow", 1],
                                     ["miniHandArrow", 1]
-                                ]},
+                                ]
+                            }
+                        },
                         {name:"SchumacherYellow", value: {
                                 name: "Schumacher Yellow",
                                 colors: [
@@ -148,18 +154,59 @@ function mySettings(props) {
                                     ["dateTextColor", "black"],
                                     ["dateBackgroundColor", "#eae003"],
                                     ["hrFatBurnColor", "green"],
-                                    ["hrCardioColor", "goldenrod"],
+                                    ["hrCardioColor", "#ded403"],
                                     ["hrPeakColor", "firebrick"],
                                     ["statsIconColor", "black"],
                                     ["statsTextColor", "black"]
                                 ],
                                 opacities: [
+                                    ["fiveMinuteInnerColor",1],
                                     ["fiveMinuteMiddleColor",1],
                                     ["fiveMinuteOuterColor",0],
                                     ["quarterHourColor", 0],
                                     ["mainHandArrow", 1],
                                     ["miniHandArrow", 1]
-                                ]}
+                                ]
+                            }
+                        },
+                        {name:"MauruiWhite", value: {
+                                name: "Maurui White",
+                                colors: [
+                                    ["tickColor", "black"],
+                                    ["subMinuteTickColor", "black"],
+                                    ["fiveMinuteOuterColor", "#111111"],
+                                    ["fiveMinuteMiddleColor", "#111111"],
+                                    ["fiveMinuteInnerColor", "#111111"],
+                                    ["quarterHourColor", "#111111"],
+                                    ["minuteHandColor", "black"],
+                                    ["secondHandColor", "black"],
+                                    ["handDotColor", "#888888"],
+                                    ["faceColor", "white"],
+                                    ["bezelColor", "#dddddd"],
+                                    ["miniHandLColor", "#111111"],
+                                    ["miniHandRColor", "#111111"],
+                                    ["miniHandBColor", "#111111"],
+                                    ["miniBezelColor", "#cccccc"],
+                                    ["miniDialColor", "#f0f0f0"],
+                                    ["miniTickColor", "black"],
+                                    ["miniDialTextColor", "black"],
+                                    ["dateTextColor", "black"],
+                                    ["dateBackgroundColor", "#dddddd"],
+                                    ["hrFatBurnColor", "#bbbbbb"],
+                                    ["hrCardioColor", "#dddddd"],
+                                    ["hrPeakColor", "#bbbbbb"],
+                                    ["statsIconColor", "#111111"],
+                                    ["statsTextColor", "#111111"]
+                                ],
+                                opacities: [
+                                    ["fiveMinuteInnerColor",0],
+                                    ["fiveMinuteMiddleColor",1],
+                                    ["fiveMinuteOuterColor",1],
+                                    ["quarterHourColor", 0],
+                                    ["mainHandArrow", 1],
+                                    ["miniHandArrow", 0]
+                                ]
+                            }
                         }
                     ]}
                     renderItem={
