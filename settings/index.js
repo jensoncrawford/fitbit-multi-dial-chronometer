@@ -25,13 +25,15 @@ function mySettings(props) {
                                     ["quarterHourColor", "#f47c47"],
                                     ["minuteHandColor", "white"],
                                     ["secondHandColor", "#f47c47"],
-                                    ["miniHandLColor", "white"],
-                                    ["miniHandRColor", "#f47c47"],
-                                    ["miniHandBColor", "#f47c47"],
                                     ["handDotColor", "black"],
                                     ["faceColor", "#505050"],
                                     ["bezelColor", "#6f1a21"],
+                                    ["miniHandLColor", "white"],
+                                    ["miniHandRColor", "#f47c47"],
+                                    ["miniHandBColor", "#f47c47"],
+                                    ["miniBezelColor", "#6f1a21"],
                                     ["miniDialColor", "#484848"],
+                                    ["miniTickColor", "#c7c7c7"],
                                     ["miniDialTextColor", "#c7c7c7"],
                                     ["dateTextColor", "black"],
                                     ["dateBackgroundColor", "#a0a0a0"],
@@ -42,7 +44,9 @@ function mySettings(props) {
                                     ["statsTextColor", "#c7c7c7"]
                                 ],
                                 opacities: [
-                                    ["fiveMinuteMiddleColor",0]
+                                    ["fiveMinuteMiddleColor",0],
+                                    ["fiveMinuteOuterColor",1],
+                                    ["quarterHourColor", 1]
                                 ]}
                         },
                         {name:"MediumBlue", value: {
@@ -56,13 +60,15 @@ function mySettings(props) {
                                     ["quarterHourColor", "white"],
                                     ["minuteHandColor", "white"],
                                     ["secondHandColor", "white"],
-                                    ["miniHandLColor", "white"],
-                                    ["miniHandRColor", "white"],
-                                    ["miniHandBColor", "white"],
                                     ["handDotColor", "black"],
                                     ["faceColor", "#013153"],
                                     ["bezelColor", "#025996"],
+                                    ["miniHandLColor", "white"],
+                                    ["miniHandRColor", "white"],
+                                    ["miniHandBColor", "white"],
+                                    ["miniBezelColor", "#025996"],
                                     ["miniDialColor", "#012742"],
+                                    ["miniTickColor", "#c7c7c7"],
                                     ["miniDialTextColor", "white"],
                                     ["dateTextColor", "white"],
                                     ["dateBackgroundColor", "#011c30"],
@@ -73,7 +79,9 @@ function mySettings(props) {
                                     ["statsTextColor", "white"]
                                 ],
                                 opacities: [
-                                    ["fiveMinuteMiddleColor",1]
+                                    ["fiveMinuteMiddleColor",1],
+                                    ["fiveMinuteOuterColor",1],
+                                    ["quarterHourColor", 1]
                                 ]}
                         }
                     ]}
