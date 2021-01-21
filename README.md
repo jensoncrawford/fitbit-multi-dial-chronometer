@@ -11,4 +11,5 @@ heart rate, along with indicators for fat-burning, cardio and peak heart rates.
 <img src="./faceimages/WhiteOnBlueWatch.png" alt="White on Blue Speedmaster"
 width="25%">  <img src="./faceimages/OrangeOnGreyWatch.png" alt="Orange on White Speedmaster"
 width="25%">  <img src="./faceimages/SchumacherRedWatch.png" alt="Schumacher Red Speedmaster"
+width="25%">  <img src="./faceimages/SchumacherYellowWatch.png" alt="Schumacher Red Speedmaster"
 width="25%">
