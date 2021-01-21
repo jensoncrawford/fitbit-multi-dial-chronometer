@@ -169,8 +169,8 @@ function mySettings(props) {
                                 ]
                             }
                         },
-                        {name:"MauruiWhite", value: {
-                                name: "Maurui White",
+                        {name:"MaruiWhite", value: {
+                                name: "Marui White",
                                 colors: [
                                     ["tickColor", "black"],
                                     ["subMinuteTickColor", "black"],
