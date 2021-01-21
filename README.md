@@ -8,4 +8,5 @@ a separate 24-hour hand is shared with the battery level. The heart rate dial on
 bottom shows the current heart rate with a hand against a scale of the resting to maximum
 heart rate, along with indicators for fat-burning, cardio and peak heart rates.
 
-<img src="./Omega-Speedmaster-Tribute-screenshot.png" width=25%>
+<img src="./WhiteOnBlueWatch.png" alt="White on Blue Speedmaster" width="25%"> 
+<img src="./OrangeOnGreyWatch.png" alt="Orange on White Speedmaster" width="25%">
