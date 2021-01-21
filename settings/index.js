@@ -154,7 +154,7 @@ function mySettings(props) {
                                     ["dateTextColor", "black"],
                                     ["dateBackgroundColor", "#eae003"],
                                     ["hrFatBurnColor", "green"],
-                                    ["hrCardioColor", "goldenrod"],
+                                    ["hrCardioColor", "#ded403"],
                                     ["hrPeakColor", "firebrick"],
                                     ["statsIconColor", "black"],
                                     ["statsTextColor", "black"]
