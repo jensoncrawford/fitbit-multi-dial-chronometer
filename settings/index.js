@@ -300,6 +300,48 @@ function mySettings(props) {
                                 ]
                             }
                         },
+                        ,
+                        {name:"RedAndBlack", value: {
+                                name: "Red and Black",
+                                colors: [
+                                    ["tickClr", "white"],
+                                    ["subMinTickClr", "white"],
+                                    ["fiveMinOuterClr", "#dddddd"],
+                                    ["fiveMinMiddleClr", "#dddddd"],
+                                    ["fiveMinInnerClr", "#dddddd"],
+                                    ["quarterHourClr", "#dddddd"],
+                                    ["minHandClr", "white"],
+                                    ["secHandClr", "white"],
+                                    ["handDotClr", "black"],
+                                    ["faceClr", "#941212"],
+                                    ["bezelClr", "black"],
+                                    ["miniHandLClr", "white"],
+                                    ["miniHandRClr", "white"],
+                                    ["miniHandBClr", "white"],
+                                    ["miniBezelClr", "#222222"],
+                                    ["miniDialClr", "black"],
+                                    ["miniTickClr", "white"],
+                                    ["miniDialEdgeClr", "#888888"],
+                                    ["miniDialTextClr", "white"],
+                                    ["dateTextClr", "white"],
+                                    ["dateBgClr", "#222222"],
+                                    ["hrFatBurnClr", "green"],
+                                    ["hrCardioClr", "goldenrod"],
+                                    ["hrPeakClr", "firebrick"],
+                                    ["statsIconClr", "white"],
+                                    ["statsTextClr", "white"]
+                                ],
+                                opacities: [
+                                    ["fiveMinInnerClr",1],
+                                    ["fiveMinMiddleClr",1],
+                                    ["fiveMinOuterClr",0],
+                                    ["quarterHourClr", 0],
+                                    ["mainHandArrow", 0],
+                                    ["miniHandArrow", 0],
+                                    ["miniDialEdgeClr", 0.7]
+                                ]
+                            }
+                        },
                     ]}
                     renderItem={
                         (option) =>
