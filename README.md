@@ -15,4 +15,5 @@ width="25%"> &nbsp;  <img src="./faceimages/SchumacherRedWatch.png" alt="Schumac
 width="25%"> &nbsp;  <img src="./faceimages/SchumacherYellowWatch.png" alt="Schumacher Yellow Speedmaster"
 width="25%"> &nbsp;  <img src="./faceimages/WhiteAndBlackWatch.png" alt="Black Speedmaster"
 width="25%"> &nbsp;  <img src="./faceimages/RedAndBlackWatch.png" alt="Black Speedmaster"
+width="25%"> &nbsp;  <img src="./faceimages/BlackAndSilverWatch.png" alt="Black Speedmaster"
 width="25%"> &nbsp;
