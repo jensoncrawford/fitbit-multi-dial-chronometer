@@ -1,80 +1,80 @@
 /*
  * Main Dial Colors
  */
-.tickColor {
+.tickClr {
     fill: white;
 }
-.subMinuteTickColor {
+.subMinTickClr {
     fill: white;
 }
-.fiveMinuteOuterColor {
+.fiveMinOuterClr {
     fill: white;
 }
-.fiveMinuteMiddleColor {
+.fiveMinMiddleClr {
     fill: white;
 }
-.fiveMinuteInnerColor {
+.fiveMinInnerClr {
     fill: white;
 }
-.quarterHourColor {
+.quarterHourClr {
     fill: white;
 }
-.minuteHandColor {
+.minHandClr {
     fill: white;
 }
-.secondHandColor {
+.secHandClr {
     fill: white;
 }
-.miniHandLColor {
+.miniHandLClr {
     fill: white;
 }
-.miniHandRColor {
+.miniHandRClr {
     fill: white;
 }
-.miniHandBColor {
+.miniHandBClr {
     fill: white;
 }
-.handDotColor {
+.handDotClr {
     fill: black;
 }
-.faceColor {
+.faceClr {
     fill: #013153;
 }
-.bezelColor {
+.bezelClr {
     fill: #025996;
 }
 /*
  * Mini Dial Colors
  */
-.miniDialColor {
+.miniDialClr {
     fill: #012742;
 }
-.miniDialTextColor {
+.miniDialTextClr {
     fill: white;
 }
-.dateTextColor {
+.dateTextClr {
     fill: white;
 }
-.dateBackgroundColor {
+.dateBgClr {
     fill: #011c30;
 }
-.hrFatBurnColor {
+.hrFatBurnClr {
     fill: green;
 }
-.hrCardioColor {
+.hrCardioClr {
     fill: goldenrod;
 }
-.hrPeakColor {
+.hrPeakClr {
     fill: firebrick;
 }
 
 /*
  * Status colors
  */
-.statsIconColor {
+.statsIconClr {
     fill: white;
 }
-.statsTextColor {
+.statsTextClr {
     fill: white;
 }
 /*
@@ -121,14 +121,14 @@
     height: 25;
 }
 
-.mainDialMinute {
+.mainDialMin {
     x: 0%;
     y: -50%;
     width: 1;
     height: 24;
 }
 
-.mainDialHalfMinute {
+.mainDialHalfMin {
     x: 0%;
     y: -50%;
     width: 1;
