@@ -15,6 +15,88 @@ function mySettings(props) {
                     label={`Watch Face Selection`}
                     settingsKey="face"
                     options={[
+                        {name:"Black", value: {
+                                name: "Black",
+                                colors: [
+                                    ["tickClr", "white"],
+                                    ["subMinTickClr", "white"],
+                                    ["fiveMinOuterClr", "white"],
+                                    ["fiveMinMiddleClr", "white"],
+                                    ["fiveMinInnerClr", "white"],
+                                    ["quarterHourClr", "white"],
+                                    ["minHandClr", "white"],
+                                    ["secHandClr", "white"],
+                                    ["handDotClr", "#888888"],
+                                    ["faceClr", "black"],
+                                    ["bezelClr", "#444444"],
+                                    ["miniHandLClr", "white"],
+                                    ["miniHandRClr", "white"],
+                                    ["miniHandBClr", "white"],
+                                    ["miniBezelClr", "#cccccc"],
+                                    ["miniDialClr", "#111111"],
+                                    ["miniTickClr", "white"],
+                                    ["miniDialEdgeClr", "white"],
+                                    ["miniDialTextClr", "white"],
+                                    ["dateTextClr", "white"],
+                                    ["dateBgClr", "black"],
+                                    ["hrFatBurnClr", "#bbbbbb"],
+                                    ["hrCardioClr", "#dddddd"],
+                                    ["hrPeakClr", "#bbbbbb"],
+                                    ["statsIconClr", "white"],
+                                    ["statsTextClr", "white"]
+                                ],
+                                opacities: [
+                                    ["fiveMinInnerClr",1],
+                                    ["fiveMinMiddleClr",1],
+                                    ["fiveMinOuterClr",0],
+                                    ["quarterHourClr", 1],
+                                    ["mainHandArrow", 1],
+                                    ["miniHandArrow", 0],
+                                    ["miniDialEdgeClr", 0.5]
+                                ]
+                            }
+                        },
+                        {name:"MaruiWhite", value: {
+                                name: "Marui White",
+                                colors: [
+                                    ["tickClr", "black"],
+                                    ["subMinTickClr", "black"],
+                                    ["fiveMinOuterClr", "#111111"],
+                                    ["fiveMinMiddleClr", "#111111"],
+                                    ["fiveMinInnerClr", "#111111"],
+                                    ["quarterHourClr", "#111111"],
+                                    ["minHandClr", "black"],
+                                    ["secHandClr", "black"],
+                                    ["handDotClr", "#888888"],
+                                    ["faceClr", "white"],
+                                    ["bezelClr", "#dddddd"],
+                                    ["miniHandLClr", "#111111"],
+                                    ["miniHandRClr", "#111111"],
+                                    ["miniHandBClr", "#111111"],
+                                    ["miniBezelClr", "#cccccc"],
+                                    ["miniDialClr", "#f0f0f0"],
+                                    ["miniTickClr", "black"],
+                                    ["miniDialEdgeClr", "black"],
+                                    ["miniDialTextClr", "black"],
+                                    ["dateTextClr", "black"],
+                                    ["dateBgClr", "#dddddd"],
+                                    ["hrFatBurnClr", "#bbbbbb"],
+                                    ["hrCardioClr", "#dddddd"],
+                                    ["hrPeakClr", "#bbbbbb"],
+                                    ["statsIconClr", "#111111"],
+                                    ["statsTextClr", "#111111"]
+                                ],
+                                opacities: [
+                                    ["fiveMinInnerClr",0],
+                                    ["fiveMinMiddleClr",1],
+                                    ["fiveMinOuterClr",1],
+                                    ["quarterHourClr", 0],
+                                    ["mainHandArrow", 1],
+                                    ["miniHandArrow", 0],
+                                    ["miniDialEdgeClr", 0.7]
+                                ]
+                            }
+                        },
                         {name:"OrangeOnGray", value: {
                                 "colors": [
                                     ["tickClr", "#c7c7c7"],
@@ -177,88 +259,47 @@ function mySettings(props) {
                                 ]
                             }
                         },
-                        {name:"MaruiWhite", value: {
-                                name: "Marui White",
+                        {name:"WhiteAndBlack", value: {
+                                name: "White and Black",
                                 colors: [
                                     ["tickClr", "black"],
                                     ["subMinTickClr", "black"],
-                                    ["fiveMinOuterClr", "#111111"],
+                                    ["fiveMinOuterClr", "black"],
                                     ["fiveMinMiddleClr", "#111111"],
                                     ["fiveMinInnerClr", "#111111"],
                                     ["quarterHourClr", "#111111"],
-                                    ["minHandClr", "black"],
-                                    ["secHandClr", "black"],
-                                    ["handDotClr", "#888888"],
+                                    ["minHandClr", "#555555"],
+                                    ["secHandClr", "#941212"],
+                                    ["handDotClr", "black"],
                                     ["faceClr", "white"],
-                                    ["bezelClr", "#dddddd"],
-                                    ["miniHandLClr", "#111111"],
-                                    ["miniHandRClr", "#111111"],
-                                    ["miniHandBClr", "#111111"],
-                                    ["miniBezelClr", "#cccccc"],
-                                    ["miniDialClr", "#f0f0f0"],
-                                    ["miniTickClr", "black"],
-                                    ["miniDialEdgeClr", "black"],
-                                    ["miniDialTextClr", "black"],
-                                    ["dateTextClr", "black"],
-                                    ["dateBgClr", "#dddddd"],
-                                    ["hrFatBurnClr", "#bbbbbb"],
-                                    ["hrCardioClr", "#dddddd"],
-                                    ["hrPeakClr", "#bbbbbb"],
-                                    ["statsIconClr", "#111111"],
-                                    ["statsTextClr", "#111111"]
-                                ],
-                                opacities: [
-                                    ["fiveMinInnerClr",0],
-                                    ["fiveMinMiddleClr",1],
-                                    ["fiveMinOuterClr",1],
-                                    ["quarterHourClr", 0],
-                                    ["mainHandArrow", 1],
-                                    ["miniHandArrow", 0],
-                                    ["miniDialEdgeClr", 0.7]
-                                ]
-                            }
-                        },
-                        {name:"Black", value: {
-                                name: "Black",
-                                colors: [
-                                    ["tickClr", "white"],
-                                    ["subMinTickClr", "white"],
-                                    ["fiveMinOuterClr", "white"],
-                                    ["fiveMinMiddleClr", "white"],
-                                    ["fiveMinInnerClr", "white"],
-                                    ["quarterHourClr", "white"],
-                                    ["minHandClr", "white"],
-                                    ["secHandClr", "white"],
-                                    ["handDotClr", "#888888"],
-                                    ["faceClr", "black"],
-                                    ["bezelClr", "#444444"],
+                                    ["bezelClr", "#cccccc"],
                                     ["miniHandLClr", "white"],
-                                    ["miniHandRClr", "white"],
-                                    ["miniHandBClr", "white"],
-                                    ["miniBezelClr", "#cccccc"],
-                                    ["miniDialClr", "#111111"],
+                                    ["miniHandRClr", "#941212"],
+                                    ["miniHandBClr", "#941212"],
+                                    ["miniBezelClr", "#222222"],
+                                    ["miniDialClr", "black"],
                                     ["miniTickClr", "white"],
-                                    ["miniDialEdgeClr", "white"],
+                                    ["miniDialEdgeClr", "#888888"],
                                     ["miniDialTextClr", "white"],
                                     ["dateTextClr", "white"],
-                                    ["dateBgClr", "black"],
-                                    ["hrFatBurnClr", "#bbbbbb"],
-                                    ["hrCardioClr", "#dddddd"],
-                                    ["hrPeakClr", "#bbbbbb"],
-                                    ["statsIconClr", "white"],
-                                    ["statsTextClr", "white"]
+                                    ["dateBgClr", "#222222"],
+                                    ["hrFatBurnClr", "green"],
+                                    ["hrCardioClr", "goldenrod"],
+                                    ["hrPeakClr", "firebrick"],
+                                    ["statsIconClr", "#941212"],
+                                    ["statsTextClr", "black"]
                                 ],
                                 opacities: [
                                     ["fiveMinInnerClr",1],
                                     ["fiveMinMiddleClr",1],
                                     ["fiveMinOuterClr",0],
-                                    ["quarterHourClr", 1],
+                                    ["quarterHourClr", 0],
                                     ["mainHandArrow", 1],
-                                    ["miniHandArrow", 0],
-                                    ["miniDialEdgeClr", 0.5]
+                                    ["miniHandArrow", 1],
+                                    ["miniDialEdgeClr", 0.7]
                                 ]
                             }
-                        }
+                        },
                     ]}
                     renderItem={
                         (option) =>
