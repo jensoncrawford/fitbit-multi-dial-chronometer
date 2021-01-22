@@ -8,8 +8,9 @@ bottom shows the current heart rate with a hand against a scale of the resting t
 heart rate, along with indicators for fat-burning, cardio and peak heart rates.
 
 <img src="./faceimages/WhiteOnBlueWatch.png" alt="White on Blue Speedmaster"
-width="25%">  <img src="./faceimages/OrangeOnGreyWatch.png" alt="Orange on White Speedmaster"
-width="25%">  <img src="./faceimages/SchumacherRedWatch.png" alt="Schumacher Red Speedmaster"
-width="25%">  <img src="./faceimages/SchumacherYellowWatch.png" alt="Schumacher Yellow Speedmaster"
-width="25%">  <img src="./faceimages/MaruiWhiteWatch.png" alt="Marui White Speedmaster"
-width="25%">
+width="25%"> &nbsp;  <img src="./faceimages/OrangeOnGreyWatch.png" alt="Orange on White Speedmaster"
+width="25%"> &nbsp;  <img src="./faceimages/SchumacherRedWatch.png" alt="Schumacher Red Speedmaster"
+width="25%"> &nbsp;  <img src="./faceimages/SchumacherYellowWatch.png" alt="Schumacher Yellow Speedmaster"
+width="25%"> &nbsp;  <img src="./faceimages/MaruiWhiteWatch.png" alt="Marui White Speedmaster"
+width="25%"> &nbsp;  <img src="./faceimages/BlackWatch.png" alt="Black Speedmaster"
+width="25%"> &nbsp;

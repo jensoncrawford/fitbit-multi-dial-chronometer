@@ -62,32 +62,32 @@ function loadSettings() {
   catch (ex) {
     return {
       face: {colors: [
-          ["tickColor", "#c7c7c7"],
-          ["subMinuteTickColor", "#b8b8b8"],
-          ["fiveMinuteOuterColor", "#f47c47"],
-          ["fiveMinuteMiddleColor", ""],
-          ["fiveMinuteInnerColor", "#b8b8b8"],
-          ["quarterHourColor", "#f47c47"],
-          ["minuteHandColor", "white"],
-          ["secondHandColor", "#f47c47"],
-          ["miniHandLColor", "white"],
-          ["miniHandRColor", "#f47c47"],
-          ["miniHandBColor", "#f47c47"],
-          ["handDotColor", "black"],
-          ["faceColor", "#505050"],
-          ["bezelColor", "#6f1a21"],
-          ["miniDialColor", "#484848"],
-          ["miniDialTextColor", "#c7c7c7"],
-          ["dateTextColor", "black"],
-          ["dateBackgroundColor", "#a0a0a0"],
-          ["hrFatBurnColor", "green"],
-          ["hrCardioColor", "goldenrod"],
-          ["hrPeakColor", "firebrick"],
-          ["statsIconColor", "#f47c47"],
-          ["statsTextColor", "#c7c7c7"]
+          ["tickClr", "#c7c7c7"],
+          ["subMinTickClr", "#b8b8b8"],
+          ["fiveMinOuterClr", "#f47c47"],
+          ["fiveMinMiddleClr", ""],
+          ["fiveMinInnerClr", "#b8b8b8"],
+          ["quarterHourClr", "#f47c47"],
+          ["minHandClr", "white"],
+          ["secHandClr", "#f47c47"],
+          ["miniHandLClr", "white"],
+          ["miniHandRClr", "#f47c47"],
+          ["miniHandBClr", "#f47c47"],
+          ["handDotClr", "black"],
+          ["faceClr", "#505050"],
+          ["bezelClr", "#6f1a21"],
+          ["miniDialClr", "#484848"],
+          ["miniDialTextClr", "#c7c7c7"],
+          ["dateTextClr", "black"],
+          ["dateBgClr", "#a0a0a0"],
+          ["hrFatBurnClr", "green"],
+          ["hrCardioClr", "goldenrod"],
+          ["hrPeakClr", "firebrick"],
+          ["statsIconClr", "#f47c47"],
+          ["statsTextClr", "#c7c7c7"]
         ],
         opacities: [
-          ["fiveMinuteMiddleColor",0]
+          ["fiveMinMiddleClr",0]
         ]},
       handsOpacity: 1.0,
     };
@@ -107,7 +107,7 @@ messaging.peerSocket.onmessage = evt => {
         settings.face = JSON.parse(evt.data.newValue).values[0].value;
         let colors = settings.face.colors;
         colors.forEach(function (element) {
-          setColors(element[0], element[1]);
+          setClrs(element[0], element[1]);
         });
         let opacities = settings.face.opacities;
         opacities.forEach(function(element) {
@@ -126,11 +126,11 @@ function setFace(face) {
   let colors = settings.face.colors;
   if (colors) {
     colors.forEach(function (element) {
-      setColors(element.className, element.color);
+      setClrs(element.className, element.color);
     });
   }
 }
-function setColors(className, color) {
+function setClrs(className, color) {
   if (className && color) {
     // console.info("className="+className+"; color="+color);
     let elements = document.getElementsByClassName(className);
@@ -253,8 +253,8 @@ clock.ontick = (evt) => {
     batteryChargeLevel = battery.chargeLevel;
     batteryMeter.sweepAngle = 3.6 * batteryChargeLevel;
   }
-  if (today.adjusted.activeMinutes !== undefined) {
-    amField.text = today.adjusted.activeMinutes;
+  if (today.adjusted.activeMins !== undefined) {
+    amField.text = today.adjusted.activeMins;
   } else {
     amField.text = "N/A";
   }
