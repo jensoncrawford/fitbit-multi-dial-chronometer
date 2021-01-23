@@ -1,0 +1,306 @@
+/*
+ * Main Dial Colors
+ */
+.tickClr {
+    fill: white;
+}
+.subMinTickClr {
+    fill: white;
+}
+.fiveMinOuterClr {
+    fill: white;
+    opacity: 0;
+}
+.fiveMinMiddleClr {
+    fill: white;
+}
+.fiveMinInnerClr {
+    fill: white;
+}
+.quarterHourClr {
+    fill: white;
+    opacity: 1;
+}
+.minHandClr {
+    fill: white;
+}
+.secHandClr {
+    fill: #eeeeee;
+}
+.handDotClr {
+    fill: #888888;
+}
+.faceClr {
+    fill: black;
+}
+.bezelClr {
+    fill: #444444;
+}
+/*
+ * Mini Dial Colors
+ */
+.miniDialTextClr {
+    fill: black;
+}
+.miniHandLClr {
+    fill: black;
+}
+.miniHandRClr {
+    fill: black;
+}
+.miniHandBClr {
+    fill: black;
+}
+.miniBezelClr {
+  fill: #eeeeee;
+}
+.miniDialClr {
+    fill: silver;
+}
+.miniTickClr {
+  fill: black;
+}
+.dateTextClr {
+    fill: black;
+}
+.dateBgClr {
+    fill: #dddddd;
+}
+.hrFatBurnClr {
+    fill: #eeeeee;
+}
+.hrCardioClr {
+    fill: #cccccc;
+}
+.hrPeakClr {
+    fill: #eeeeee;
+}
+
+/*
+ * Status colors
+ */
+.statsIconClr {
+    fill: white;
+}
+.statsTextClr {
+    fill: white;
+}
+/*
+ * Main dial
+ */
+.maindialtwelve {
+    y: -49%;
+    width: 2;
+    height: 25;
+}
+
+.mainDialQuarter {
+    x: 0%-3;
+    y: -50%;
+    width: 8;
+    height: 15;
+}
+
+.mainDialFiveOuter {
+    x: 0%-3;
+    y: -50%;
+    width: 7;
+    height: 15;
+}
+
+.mainDialFiveMiddle {
+    x: 0%-3;
+    y: -50%+15;
+    width: 7;
+    height: 13;
+}
+
+.mainDialFiveInner {
+    x: 0%-3;
+    y: -50%+28;
+    width: 7;
+    height: 17;
+}
+
+.mainDialTwelveInner {
+    x: 0%-3;
+    y: -50%+28;
+    width: 7;
+    height: 25;
+}
+
+.mainDialMin {
+    x: 0%;
+    y: -50%;
+    width: 1;
+    height: 24;
+}
+
+.mainDialHalfMin {
+    x: 0%;
+    y: -50%;
+    width: 1;
+    height: 12;
+}
+
+/*
+ * Stats
+ */
+.statsIcon {
+    width: 36;
+    height: 36;
+    x: 50%-18;
+    y: 0;
+}
+.statsField {
+    x: 50%;
+    y: 55%;
+    font-family: Seville-Bold;
+    font-size: 24;
+    text-anchor: middle;
+}
+/*
+ * 24 hour mini-dial
+ */
+.hourmarker8text {
+    x: 30%;
+    y: +21%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
+
+.hourmarker16text {
+    x: -27%;
+    y: +21%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
+
+.hourmarker24text {
+    x: 0%;
+    y: -27%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
+
+.hourmarker24tickS {
+    x: 0%;
+    y: -45%;
+    width: 2;
+    height: 4;
+}
+
+.hourmarker24tickL {
+    x: 0%;
+    y: -45%;
+    width: 1;
+    height: 15;
+}
+
+/*
+ * Day of week and date mini-dial
+ */
+.weekDialTickS {
+    x: 0%;
+    y: -45%;
+    width: 2;
+    height: 4;
+}
+.weekDialTickL {
+    x: 0%;
+    y: -45%;
+    width: 1;
+    height: 15;
+}
+.weekDialText {
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
+.weekDialSunText {
+    x: 0%;
+    y: -27%;
+}
+.weekDialTueText {
+    x: 24%;
+    y: 10%;
+}
+.weekDialFriText {
+    x: -28%;
+    y: 10%;
+}
+.dateText {
+    x: 0;
+    y: +25%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+    text-length: 4;
+}
+
+
+/*
+ * Heart Rate mini-dial
+ */
+.hrMarkerTickS {
+    x: 0%;
+    y: -45%;
+    width: 2;
+    height: 4;
+}
+.hrMarkerTickL {
+    x: 0%;
+    y: -45%;
+    width: 1;
+    height: 15;
+}
+.hrResting {
+    x: 0%;
+    y: -45%;
+    width: 3;
+    height: 15;
+}
+.hrMax {
+    x: 0%;
+    y: -45%;
+    width: 3;
+    height: 15;
+}
+.hrDial40Text {
+    x: -19%;
+    y: +30%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
+.hrDial80Text {
+    x: -29%;
+    y: -5%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
+.hrDial120Text {
+    x: 0%;
+    y: -27%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
+.hrDial160Text {
+    x: 25%;
+    y: -5%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
+.hrDial200Text {
+    x: 18%;
+    y: +30%;
+    font-family: Seville-Regular;
+    font-size: 18;
+    text-anchor: middle;
+}
