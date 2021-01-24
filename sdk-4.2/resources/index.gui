@@ -256,24 +256,24 @@
             <g id="secondhand">
                 <!-- body -->
                 <line x1="0"  y1="0%"   x2="0"  y2="-48%" stroke-width="3" stroke-linecap="butt"
-                      class="secHandClr mainHand"/>
+                      class="secHandClr"/>
                 <!-- butt -->
                 <line x1="0"  y1="0%"   x2="3"  y2="9%"   stroke-width="3" stroke-linecap="butt"
-                      class="secHandClr mainHand"/>
+                      class="secHandClr"/>
                 <line x1="0"  y1="0%"   x2="-3" y2="9%"   stroke-width="3" stroke-linecap="butt"
-                      class="secHandClr mainHand"/>
+                      class="secHandClr"/>
                 <line x1="3"  y1="9%"   x2="-3" y2="9%"   stroke-width="3" stroke-linecap="butt"
-                      class="secHandClr mainHand"/>
+                      class="secHandClr"/>
                 <line x1="0"  y1="0%"   x2="0"  y2="9%"   stroke-width="3" stroke-linecap="butt"
-                      class="secHandClr mainHand"/>
+                      class="secHandClr"/>
                 <!-- arrow -->
                 <line x1="0"  y1="-48%" x2="-3" y2="9%" stroke-width="2" stroke-linecap="butt"
-                      class="secHandClr mainHand mainHandArrow"/>
+                      class="secHandClr mainHandArrow"/>
                 <line x1="0"  y1="-48%" x2="3"  y2="9%" stroke-width="2" stroke-linecap="butt"
-                      class="secHandClr mainHand mainHandArrow"/>
+                      class="secHandClr mainHandArrow"/>
             </g>
-            <circle id="outercenterdot" cx="0" cy="0" r="6" class="secHandClr mainHand"/>
-            <circle id="innercenterdot" cx="0" cy="0" r="1" class="handDotClr mainHand"/>
+            <circle id="outercenterdot" cx="0" cy="0" r="6" class="secHandClr"/>
+            <circle id="innercenterdot" cx="0" cy="0" r="1" class="handDotClr"/>
         </g>
     </section>
 </svg>
