@@ -342,7 +342,7 @@ function mySettings(props) {
                             }
                         },
                         {name:"Black and Silver", value: {
-                                name: "Red and Black",
+                                name: "Black and Silver",
                                 colors: [
                                     ["tickClr", "white"],
                                     ["subMinTickClr", "white"],
@@ -375,6 +375,47 @@ function mySettings(props) {
                                     ["fiveMinInnerClr",1],
                                     ["fiveMinMiddleClr",1],
                                     ["fiveMinOuterClr",0],
+                                    ["quarterHourClr", 1],
+                                    ["mainHandArrow", 0],
+                                    ["miniHandArrow", 0],
+                                    ["miniDialEdgeClr", 0.7]
+                                ]
+                            }
+                        },
+                        {name:"Blue and White", value: {
+                                name: "Blue and White",
+                                colors: [
+                                    ["tickClr", "white"],
+                                    ["subMinTickClr", "white"],
+                                    ["fiveMinOuterClr", "white"],
+                                    ["fiveMinMiddleClr", "white"],
+                                    ["fiveMinInnerClr", "white"],
+                                    ["quarterHourClr", "white"],
+                                    ["minHandClr", "silver"],
+                                    ["secHandClr", "silver"],
+                                    ["handDotClr", "black"],
+                                    ["faceClr", "#013153"],
+                                    ["bezelClr", "#025996"],
+                                    ["miniHandLClr", "silver"],
+                                    ["miniHandRClr", "silver"],
+                                    ["miniHandBClr", "silver"],
+                                    ["miniBezelClr", "#eeeeee"],
+                                    ["miniDialClr", "white"],
+                                    ["miniTickClr", "black"],
+                                    ["miniDialEdgeClr", "#eeeeee"],
+                                    ["miniDialTextClr", "black"],
+                                    ["dateTextClr", "black"],
+                                    ["dateBgClr", "#eeeeee"],
+                                    ["hrFatBurnClr", "#dddddd"],
+                                    ["hrCardioClr", "#bbbbbb"],
+                                    ["hrPeakClr", "#dddddd"],
+                                    ["statsIconClr", "white"],
+                                    ["statsTextClr", "white"]
+                                ],
+                                opacities: [
+                                    ["fiveMinInnerClr",0],
+                                    ["fiveMinMiddleClr",1],
+                                    ["fiveMinOuterClr",1],
                                     ["quarterHourClr", 1],
                                     ["mainHandArrow", 0],
                                     ["miniHandArrow", 0],
