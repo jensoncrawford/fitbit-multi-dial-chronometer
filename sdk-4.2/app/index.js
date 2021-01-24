@@ -54,12 +54,12 @@ let stepsField = document.getElementById("stepsField");
 let floorsField = document.getElementById("floorsField");
 let calsField = document.getElementById("calsField");
 
-let settings = loadSettings();
 function loadSettings() {
   try {
     return fs.readFileSync(SETTINGS_FILE, SETTINGS_TYPE);
   }
   catch (ex) {
+    console.error("ERROR fs.readFileSync("+SETTINGS_FILE+", "+SETTINGS_TYPE+")");
     return {
       face: {colors: [
           ["tickClr", "#c7c7c7"],
@@ -70,13 +70,16 @@ function loadSettings() {
           ["quarterHourClr", "#f47c47"],
           ["minHandClr", "white"],
           ["secHandClr", "#f47c47"],
-          ["miniHandLClr", "white"],
-          ["miniHandRClr", "#f47c47"],
-          ["miniHandBClr", "#f47c47"],
           ["handDotClr", "black"],
           ["faceClr", "#505050"],
           ["bezelClr", "#6f1a21"],
+          ["miniHandLClr", "white"],
+          ["miniHandRClr", "#f47c47"],
+          ["miniHandBClr", "#f47c47"],
+          ["miniBezelClr", "#6f1a21"],
           ["miniDialClr", "#484848"],
+          ["miniDialEdgeClr", "black"],
+          ["miniTickClr", "#c7c7c7"],
           ["miniDialTextClr", "#c7c7c7"],
           ["dateTextClr", "black"],
           ["dateBgClr", "#a0a0a0"],
@@ -87,23 +90,34 @@ function loadSettings() {
           ["statsTextClr", "#c7c7c7"]
         ],
         opacities: [
-          ["fiveMinMiddleClr",0]
+          ["fiveMinInnerClr",1],
+          ["fiveMinMiddleClr",0],
+          ["fiveMinOuterClr",1],
+          ["quarterHourClr", 1],
+          ["mainHandArrow", 0],
+          ["miniHandArrow", 0],
+          ["miniDialEdgeClr", 0.7]
         ]},
       handsOpacity: 1.0,
     };
   }
 }
+let settings = loadSettings();
 
 me.addEventListener("unload", saveSettings);
 function saveSettings() {
-  fs.writeFileSync(SETTINGS_FILE, settings, SETTINGS_TYPE);
+  try {
+    fs.writeFileSync(SETTINGS_FILE, settings, SETTINGS_TYPE);
+  }
+  catch (ex) {
+    console.error("ERROR fs.readFileSync("+SETTINGS_FILE+", settings, "+SETTINGS_TYPE+")");
+  }
 }
 
 messaging.peerSocket.onmessage = evt => {
   if (evt.data.newValue){
     switch (evt.data.key) {
       case "face":
-        console.info("messaging.peerSocket.onmessage: "+evt.data.newValue);
         settings.face = JSON.parse(evt.data.newValue).values[0].value;
         let colors = settings.face.colors;
         colors.forEach(function (element) {
@@ -112,29 +126,36 @@ messaging.peerSocket.onmessage = evt => {
         let opacities = settings.face.opacities;
         opacities.forEach(function(element) {
           setOpacity(element[0], element[1]);
-        })
+        });
+        saveSettings();
         break;
       case "handsOpacity":
         settings.handsOpacity = JSON.parse(evt.data.newValue);
         setHandsOpacity(settings.handsOpacity);
+        saveSettings();
         break;
     }
   }
 };
 
 function setFace(face) {
-  let colors = settings.face.colors;
+  let colors = face.colors;
   if (colors) {
-    colors.forEach(function (element) {
-      setClrs(element.className, element.color);
+    colors.forEach(function (color) {
+      setClrs(color[0], color[1]);
+    });
+  }
+  let opacities = face.opacities;
+  if (opacities) {
+    opacities.forEach(function (opacity) {
+      setOpacity(opacity[0], opacity[1]);
     });
   }
 }
+
 function setClrs(className, color) {
   if (className && color) {
-    // console.info("className="+className+"; color="+color);
     let elements = document.getElementsByClassName(className);
-    // console.info(elements.length+" elements of class "+className);
     let i;
     for(i = 0; i < elements.length; i++) {
       let element = elements[i];
@@ -144,9 +165,7 @@ function setClrs(className, color) {
 }
 function setOpacity(className, opacity) {
   if (className && opacity !== undefined) {
-    console.info("className="+className+"; opacity="+opacity);
     let elements = document.getElementsByClassName(className);
-    console.info(elements.length+" elements of class "+className);
     let i;
     for(i = 0; i < elements.length; i++) {
       let element = elements[i];
@@ -162,46 +181,43 @@ function setHandsOpacity(opacity) {
  */
 function hrOpacity(opacity) {
   setOpacity("hr",opacity);
-  // console.info("hrOpacity("+opacity+")");
-  /*  for (var i=0, len=hr.length|0; i<len; i=i+1|0) {
-      let hrElement = hr[i];
-      hrElement.style.opacity = opacity;
-    } */
 }
+
 let hrm = null;
 if (HeartRateSensor) {
   hrm = new HeartRateSensor();
   hrm.onreading = () => {
     hrHand.groupTransform.rotate.angle = (144 + 36 / 20 * hrm.heartRate) % 360;
-    hrMax.sweepAngle = - 36 / 20 * ( HR_DIAL_MAX - user.maxHeartRate);
-    hrResting.sweepAngle = 36 / 20 * (user.restingHeartRate - HR_DIAL_MIN) % 360;
-    let section_one = 0;
-    let section_two = 0;
-    let section_three = 0;
-    let i=0;
-    // console.info("user.restingHeartRate="+user.restingHeartRate+"; user.maxHeartRate="+user.maxHeartRate);
-    for (i=user.restingHeartRate;i<user.maxHeartRate;i++) {
-      if (section_one == 0 && user.heartRateZone(i) == HR_FAT_BURN ) {
-        section_one = i;
+    if (user && user.maxHeartRate ) {
+      hrMax.sweepAngle = - 36 / 20 * ( HR_DIAL_MAX - user.maxHeartRate);
+      hrResting.sweepAngle = 36 / 20 * (user.restingHeartRate - HR_DIAL_MIN) % 360;
+      let section_one = 0;
+      let section_two = 0;
+      let section_three = 0;
+      let i=0;
+      for (i=user.restingHeartRate;i<user.maxHeartRate;i++) {
+        if (section_one == 0 && user.heartRateZone(i) == HR_FAT_BURN ) {
+          section_one = i;
+        }
+        if (section_two == 0 && user.heartRateZone(i) == HR_CARDIO ) {
+          section_two = i;
+        }
+        if (section_three == 0 && user.heartRateZone(i) == HR_PEAK ) {
+          section_three = i;
+        }
       }
-      if (section_two == 0 && user.heartRateZone(i) == HR_CARDIO ) {
-        section_two = i;
-      }
-      if (section_three == 0 && user.heartRateZone(i) == HR_PEAK ) {
-        section_three = i;
-      }
+      // fat burn : fat-burn to cardio - 1
+      hrFatBurn.startAngle = (144 + 36 / 20 * section_one) % 360;
+      hrFatBurn.sweepAngle = 36 / 20 * ( section_two - section_one );
+
+      // cardio   : cardio to peak - 1
+      hrCardio.startAngle = (144 + 36 / 20 * section_two) % 360;
+      hrCardio.sweepAngle = 36 / 20 * ( section_three - section_two );
+
+      // peak     : peak to user.maxHeartRate - 1
+      hrPeak.startAngle = (144 + 36 / 20 * section_three) % 360;
+      hrPeak.sweepAngle = 36 / 20 * ( user.maxHeartRate - section_three );
     }
-    // fat burn : fat-burn to cardio - 1
-    hrFatBurn.startAngle = (144 + 36 / 20 * section_one) % 360;
-    hrFatBurn.sweepAngle = 36 / 20 * ( section_two - section_one );
-
-    // cardio   : cardio to peak - 1
-    hrCardio.startAngle = (144 + 36 / 20 * section_two) % 360;
-    hrCardio.sweepAngle = 36 / 20 * ( section_three - section_two );
-
-    // peak     : peak to user.maxHeartRate - 1
-    hrPeak.startAngle = (144 + 36 / 20 * section_three) % 360;
-    hrPeak.sweepAngle = 36 / 20 * ( user.maxHeartRate - section_three );
   };
 
 } else {
@@ -231,7 +247,7 @@ if ( BodyPresenceSensor ) {
 clock.granularity = "seconds";
 let evtDateDay=-1;
 let evtDateDayOfMonth=-1;let evtDateMonth=-1;
-let evtDateMins=-1;
+let evtDateMinutes=-1;
 let batteryChargeLevel=-1
 clock.ontick = (evt) => {
   if (evt.date.getDay() != evtDateDay) {
@@ -242,12 +258,12 @@ clock.ontick = (evt) => {
     evtDateDayOfMonth = evt.date.getDate();
     dateField.text = evtDateDayOfMonth;
   }
-  if (evt.date.getMinutes() != evtDateMins) {
-    evtDateMins = evt.date.getMinutes();
-    hourhand24.groupTransform.rotate.angle = (15 * evt.date.getHours()) + (0.25 * evtDateMins);
-    hourhand.groupTransform.rotate.angle = (30 * (evt.date.getHours() % 12)) + (0.5 * evtDateMins);
+  if (evt.date.getMinutes() != evtDateMinutes) {
+    evtDateMinutes = evt.date.getMinutes();
+    hourhand24.groupTransform.rotate.angle = (15 * evt.date.getHours()) + (0.25 * evtDateMinutes);
+    hourhand.groupTransform.rotate.angle = (30 * (evt.date.getHours() % 12)) + (0.5 * evtDateMinutes);
   }
-  minutehand.groupTransform.rotate.angle = (6 * evtDateMins) + (0.1 * evt.date.getSeconds());
+  minutehand.groupTransform.rotate.angle = (6 * evtDateMinutes) + (0.1 * evt.date.getSeconds());
   secondhand.groupTransform.rotate.angle = (6 * evt.date.getSeconds());
   if (batteryChargeLevel != battery.chargeLevel) {
     batteryChargeLevel = battery.chargeLevel;
