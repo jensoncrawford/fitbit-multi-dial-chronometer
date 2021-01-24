@@ -56,7 +56,7 @@ function mySettings(props) {
                                 ]
                             }
                         },
-                        {name:"MaruiWhite", value: {
+                        {name:"Marui White", value: {
                                 name: "Marui White",
                                 colors: [
                                     ["tickClr", "black"],
@@ -97,7 +97,7 @@ function mySettings(props) {
                                 ]
                             }
                         },
-                        {name:"OrangeOnGray", value: {
+                        {name:"Orange on Gray", value: {
                                 "colors": [
                                     ["tickClr", "#c7c7c7"],
                                     ["subMinTickClr", "#b8b8b8"],
@@ -136,7 +136,7 @@ function mySettings(props) {
                                     ["miniDialEdgeClr", 0.7]
                                 ]}
                         },
-                        {name:"MediumBlue", value: {
+                        {name:"Medium Blue", value: {
                                 name: "Medium Blue",
                                 colors: [
                                     ["tickClr", "white"],
@@ -177,7 +177,7 @@ function mySettings(props) {
                                 ]}
                         },
                         {
-                            name: "SchumacherRed", value: {
+                            name: "Schumacher Red", value: {
                                 name: "Schumacher Red",
                                 colors: [
                                     ["tickClr", "black"],
@@ -218,7 +218,7 @@ function mySettings(props) {
                                 ]
                             }
                         },
-                        {name:"SchumacherYellow", value: {
+                        {name:"Schumacher Yellow", value: {
                                 name: "Schumacher Yellow",
                                 colors: [
                                     ["tickClr", "black"],
@@ -259,7 +259,7 @@ function mySettings(props) {
                                 ]
                             }
                         },
-                        {name:"WhiteAndBlack", value: {
+                        {name:"White and Black", value: {
                                 name: "White and Black",
                                 colors: [
                                     ["tickClr", "black"],
@@ -300,7 +300,7 @@ function mySettings(props) {
                                 ]
                             }
                         },
-                        {name:"RedAndBlack", value: {
+                        {name:"Red and Black", value: {
                                 name: "Red and Black",
                                 colors: [
                                     ["tickClr", "white"],
@@ -341,7 +341,7 @@ function mySettings(props) {
                                 ]
                             }
                         },
-                        {name:"BlackAndSilver", value: {
+                        {name:"Black and Silver", value: {
                                 name: "Red and Black",
                                 colors: [
                                     ["tickClr", "white"],
