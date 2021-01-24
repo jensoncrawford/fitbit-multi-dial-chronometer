@@ -417,7 +417,7 @@ function mySettings(props) {
                                     ["fiveMinMiddleClr",1],
                                     ["fiveMinOuterClr",1],
                                     ["quarterHourClr", 1],
-                                    ["mainHandArrow", 0],
+                                    ["mainHandArrow", 1],
                                     ["miniHandArrow", 0],
                                     ["miniDialEdgeClr", 0.7]
                                 ]
