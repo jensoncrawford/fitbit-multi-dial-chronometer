@@ -18,4 +18,5 @@ width="20%"> &nbsp;  <img src="./faceimages/BlackAndSilverWatch.png" alt="Black 
 width="20%"> &nbsp;  <img src="./faceimages/WhiteAndBlackWatch.png" alt="White andBlack Speedmaster"
 width="20%"> &nbsp;  <img src="./faceimages/RedAndBlackWatch.png" alt="Red and Black Speedmaster"
 width="20%"> &nbsp;  <img src="./faceimages/BlueAndWhiteWatch.png" alt="Blue and White Speedmaster"
+width="20%"> &nbsp;  <img src="./faceimages/GrayAndBlackWatch.png" alt="Gray and Black Speedmaster"
 width="20%"> &nbsp;
