@@ -259,6 +259,47 @@ function mySettings(props) {
                                 ]
                             }
                         },
+                        {name:"Schumacher Blue", value: {
+                                name: "Schumacher Blue",
+                                colors: [
+                                    ["tickClr", "black"],
+                                    ["subMinTickClr", "black"],
+                                    ["fiveMinOuterClr", "white"],
+                                    ["fiveMinMiddleClr", "white"],
+                                    ["fiveMinInnerClr", "white"],
+                                    ["quarterHourClr", "white"],
+                                    ["minHandClr", "silver"],
+                                    ["secHandClr", "#731b0f"],
+                                    ["handDotClr", "black"],
+                                    ["faceClr", "#062276"],
+                                    ["bezelClr", "white"],
+                                    ["miniHandLClr", "#731b0f"],
+                                    ["miniHandRClr", "white"],
+                                    ["miniHandBClr", "#731b0f"],
+                                    ["miniBezelClr", "#eeeeee"],
+                                    ["miniDialClr", "#062276"],
+                                    ["miniDialEdgeClr", "black"],
+                                    ["miniTickClr", "white"],
+                                    ["miniDialTextClr", "white"],
+                                    ["dateTextClr", "#062276"],
+                                    ["dateBgClr", "#eeeeee"],
+                                    ["hrFatBurnClr", "green"],
+                                    ["hrCardioClr", "#ded403"],
+                                    ["hrPeakClr", "firebrick"],
+                                    ["statsIconClr", "white"],
+                                    ["statsTextClr", "white"]
+                                ],
+                                opacities: [
+                                    ["fiveMinInnerClr",1],
+                                    ["fiveMinMiddleClr",1],
+                                    ["fiveMinOuterClr",0],
+                                    ["quarterHourClr", 0],
+                                    ["mainHandArrow", 1],
+                                    ["miniHandArrow", 1],
+                                    ["miniDialEdgeClr", 0.7]
+                                ]
+                            }
+                        },
                         {name:"White and Black", value: {
                                 name: "White and Black",
                                 colors: [

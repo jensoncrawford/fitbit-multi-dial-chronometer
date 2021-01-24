@@ -13,6 +13,7 @@ width="25%"> &nbsp;  <img src="./faceimages/MaruiWhiteWatch.png" alt="Marui Whit
 width="25%"> &nbsp;  <img src="./faceimages/OrangeOnGreyWatch.png" alt="Orange on White Speedmaster"
 width="25%"> &nbsp;  <img src="./faceimages/SchumacherRedWatch.png" alt="Schumacher Red Speedmaster"
 width="25%"> &nbsp;  <img src="./faceimages/SchumacherYellowWatch.png" alt="Schumacher Yellow Speedmaster"
+width="25%"> &nbsp;  <img src="./faceimages/SchumacherBlueWatch.png" alt="Schumacher Blue Speedmaster"
 width="25%"> &nbsp;  <img src="./faceimages/BlackAndSilverWatch.png" alt="Black and Silver Speedmaster"
 width="25%"> &nbsp;  <img src="./faceimages/WhiteAndBlackWatch.png" alt="White andBlack Speedmaster"
 width="25%"> &nbsp;  <img src="./faceimages/RedAndBlackWatch.png" alt="Red and Black Speedmaster"
