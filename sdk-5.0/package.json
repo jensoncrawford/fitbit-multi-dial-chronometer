@@ -4,8 +4,8 @@
   },
   "fitbit": {
     "appUUID": "d736d6c7-2404-4a1d-8e9e-241023ac7960",
-    "appType": "app",
-    "appDisplayName": "Chronograph",
+    "appType": "clockface",
+    "appDisplayName": "Omega Speedmaster SDK 5.0",
     "iconFile": "resources/icon.png",
     "wipeColor": "#f44336",
     "requestedPermissions": [
@@ -19,7 +19,7 @@
     ],
     "i18n": {
       "en-US": {
-        "name": "Chronograph"
+        "name": "Chronograph Sense/Versa 3"
       }
     },
     "defaultLanguage": "en-US"
