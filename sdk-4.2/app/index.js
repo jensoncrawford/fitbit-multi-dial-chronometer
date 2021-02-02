@@ -54,6 +54,17 @@ let stepsField = document.getElementById("stepsField");
 let floorsField = document.getElementById("floorsField");
 let calsField = document.getElementById("calsField");
 
+function memoryToConsole(where) {
+  console.info(where);
+  console.info("JS memory:       used: " + memory.js.used.toLocaleString() +
+      " peak: " + memory.js.peak.toLocaleString() +
+      " total: " + memory.js.total.toLocaleString());
+  console.info("Native memory:   used: " + memory.native.used.toLocaleString() +
+      " peak: " + memory.native.peak.toLocaleString() +
+      " total: " + memory.native.total.toLocaleString());
+  console.info("Memory pressure: " + memory.monitor.pressure);
+}
+
 function loadSettings() {
   try {
     return fs.readFileSync(SETTINGS_FILE, SETTINGS_TYPE);
@@ -102,6 +113,7 @@ function loadSettings() {
     };
   }
 }
+
 let settings = loadSettings();
 
 me.addEventListener("unload", saveSettings);
@@ -191,32 +203,20 @@ if (HeartRateSensor) {
     if (user && user.maxHeartRate ) {
       hrMax.sweepAngle = - 36 / 20 * ( HR_DIAL_MAX - user.maxHeartRate);
       hrResting.sweepAngle = 36 / 20 * (user.restingHeartRate - HR_DIAL_MIN) % 360;
-      let section_one = 0;
-      let section_two = 0;
-      let section_three = 0;
-      let i=0;
-      for (i=user.restingHeartRate;i<user.maxHeartRate;i++) {
-        if (section_one == 0 && user.heartRateZone(i) == HR_FAT_BURN ) {
-          section_one = i;
-        }
-        if (section_two == 0 && user.heartRateZone(i) == HR_CARDIO ) {
-          section_two = i;
-        }
-        if (section_three == 0 && user.heartRateZone(i) == HR_PEAK ) {
-          section_three = i;
-        }
-      }
+      let fatBurnStart = user.maxHeartRate * 0.50;
+      let cardioStart = user.maxHeartRate * 0.70;
+      let peakStart = user.maxHeartRate * 0.85;
       // fat burn : fat-burn to cardio - 1
-      hrFatBurn.startAngle = (144 + 36 / 20 * section_one) % 360;
-      hrFatBurn.sweepAngle = 36 / 20 * ( section_two - section_one );
+      hrFatBurn.startAngle = (144 + 36 / 20 * fatBurnStart) % 360;
+      hrFatBurn.sweepAngle = 36 / 20 * ( cardioStart - fatBurnStart );
 
       // cardio   : cardio to peak - 1
-      hrCardio.startAngle = (144 + 36 / 20 * section_two) % 360;
-      hrCardio.sweepAngle = 36 / 20 * ( section_three - section_two );
+      hrCardio.startAngle = (144 + 36 / 20 * cardioStart) % 360;
+      hrCardio.sweepAngle = 36 / 20 * ( peakStart - cardioStart );
 
       // peak     : peak to user.maxHeartRate - 1
-      hrPeak.startAngle = (144 + 36 / 20 * section_three) % 360;
-      hrPeak.sweepAngle = 36 / 20 * ( user.maxHeartRate - section_three );
+      hrPeak.startAngle = (144 + 36 / 20 * peakStart) % 360;
+      hrPeak.sweepAngle = 36 / 20 * ( user.maxHeartRate - peakStart );
     }
   };
 
