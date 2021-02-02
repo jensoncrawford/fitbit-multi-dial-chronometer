@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
+Fitbit analog clock face for Fitbit SDK 5.0 (Sense, Versa 3) and SDK 4.2 (Versa, Versa Lite, Versa 2).
 
-You can use the [editor on GitHub](https://github.com/jensoncrawford/fitbit-multi-dial-chronometer/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+This is an analog clock face that is a tribute to classic analog
+multi-dial chronometers. This watch face shows the day, date and day of week,
+a separate 24-hour hand is shared with the battery level. The heart rate dial on the 
+bottom shows the current heart rate with a hand against a scale of the resting to maximum
+heart rate, along with indicators for fat-burning, cardio and peak heart rates.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jensoncrawford/fitbit-multi-dial-chronometer/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<img src="./faceimages/BlackWatch.png" alt="Black Speedmaster"
+width="20%"> &nbsp;  <img src="./faceimages/WhiteOnBlueWatch.png" alt="White on Blue Speedmaster"
+width="20%"> &nbsp;  <img src="./faceimages/WhiteWatch.png" alt="White Speedmaster"
+width="20%"> &nbsp;  <img src="./faceimages/OrangeOnGreyWatch.png" alt="Orange on White Speedmaster"
+width="20%"> &nbsp;  <img src="./faceimages/RacingRedWatch.png" alt="Racing Red Speedmaster"
+width="20%"> &nbsp;  <img src="./faceimages/RacingYellowWatch.png" alt="Racing Yellow Speedmaster"
+width="20%"> &nbsp;  <img src="./faceimages/RacingBlueWatch.png" alt="Racing Blue Speedmaster"
+width="20%"> &nbsp;  <img src="./faceimages/BlackAndSilverWatch.png" alt="Black and Silver Speedmaster"
+width="20%"> &nbsp;  <img src="./faceimages/WhiteAndBlackWatch.png" alt="White andBlack Speedmaster"
+width="20%"> &nbsp;  <img src="./faceimages/RedAndBlackWatch.png" alt="Red and Black Speedmaster"
+width="20%"> &nbsp;  <img src="./faceimages/BlueAndWhiteWatch.png" alt="Blue and White Speedmaster"
+width="20%"> &nbsp;  <img src="./faceimages/GrayAndBlackWatch.png" alt="Gray and Black Speedmaster"
+width="20%"> &nbsp;
