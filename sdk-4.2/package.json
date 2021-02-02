@@ -5,7 +5,7 @@
   "fitbit": {
     "appUUID": "e942e96f-e8f7-4bbe-921d-1622d25a7c3b",
     "appType": "clockface",
-    "appDisplayName": "Omega Speedmaster SDK v4.2",
+    "appDisplayName": "Chronograph Versa, Versa 2",
     "iconFile": "resources/icon.png",
     "wipeColor": "#607d8b",
     "requestedPermissions": [
