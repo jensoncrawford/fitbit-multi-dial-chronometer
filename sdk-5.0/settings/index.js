@@ -56,8 +56,8 @@ function mySettings(props) {
                                 ]
                             }
                         },
-                        {name:"Marui White", value: {
-                                name: "Marui White",
+                        {name:"White", value: {
+                                name: "White",
                                 colors: [
                                     ["tickClr", "black"],
                                     ["subMinTickClr", "black"],
@@ -177,8 +177,8 @@ function mySettings(props) {
                                 ]}
                         },
                         {
-                            name: "Schumacher Red", value: {
-                                name: "Schumacher Red",
+                            name: "Racing Red", value: {
+                                name: "Racing Red",
                                 colors: [
                                     ["tickClr", "black"],
                                     ["subMinTickClr", "black"],
@@ -218,8 +218,8 @@ function mySettings(props) {
                                 ]
                             }
                         },
-                        {name:"Schumacher Yellow", value: {
-                                name: "Schumacher Yellow",
+                        {name:"Racing Yellow", value: {
+                                name: "Racing Yellow",
                                 colors: [
                                     ["tickClr", "black"],
                                     ["subMinTickClr", "black"],
@@ -259,8 +259,8 @@ function mySettings(props) {
                                 ]
                             }
                         },
-                        {name:"Schumacher Blue", value: {
-                                name: "Schumacher Blue",
+                        {name:"Racing Blue", value: {
+                                name: "Racing Blue",
                                 colors: [
                                     ["tickClr", "black"],
                                     ["subMinTickClr", "black"],
