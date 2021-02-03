@@ -1,3 +1,16 @@
+import iconBlack from "./Black.png"
+import iconWhite from "./White.png"
+import iconOrangeOnGray from "./Orange on Gray.png"
+import iconMediumBlue from "./Medium Blue.png"
+import iconRacingRed from "./Racing Red.png"
+import iconRacingYellow from "./Racing Yellow.png"
+import iconRacingBlue from "./Racing Blue.png"
+import iconWhiteAndBlack from "./White and Black.png"
+import iconRedAndBlack from "./Red and Black.png"
+import iconBlackAndSilver from "./Black and Silver.png"
+import iconBlueAndWhite from "./Blue and White.png"
+import iconGrayAndBlack from "./Gray and Black.png"
+
 function mySettings(props) {
     return (
         <Page>
@@ -17,6 +30,7 @@ function mySettings(props) {
                     options={[
                         {name:"Black", value: {
                                 name: "Black",
+                                icon: iconBlack,
                                 colors: [
                                     ["tickClr", "white"],
                                     ["subMinTickClr", "white"],
@@ -58,6 +72,7 @@ function mySettings(props) {
                         },
                         {name:"White", value: {
                                 name: "White",
+                                icon: iconWhite,
                                 colors: [
                                     ["tickClr", "black"],
                                     ["subMinTickClr", "black"],
@@ -98,6 +113,8 @@ function mySettings(props) {
                             }
                         },
                         {name:"Orange on Gray", value: {
+                                name: "Orange on Gray",
+                                icon: iconOrangeOnGray,
                                 "colors": [
                                     ["tickClr", "#c7c7c7"],
                                     ["subMinTickClr", "#b8b8b8"],
@@ -138,6 +155,7 @@ function mySettings(props) {
                         },
                         {name:"Medium Blue", value: {
                                 name: "Medium Blue",
+                                icon: iconMediumBlue,
                                 colors: [
                                     ["tickClr", "white"],
                                     ["subMinTickClr", "white"],
@@ -179,6 +197,7 @@ function mySettings(props) {
                         {
                             name: "Racing Red", value: {
                                 name: "Racing Red",
+                                icon: iconRacingRed,
                                 colors: [
                                     ["tickClr", "black"],
                                     ["subMinTickClr", "black"],
@@ -220,6 +239,7 @@ function mySettings(props) {
                         },
                         {name:"Racing Yellow", value: {
                                 name: "Racing Yellow",
+                                icon: iconRacingYellow,
                                 colors: [
                                     ["tickClr", "black"],
                                     ["subMinTickClr", "black"],
@@ -261,6 +281,7 @@ function mySettings(props) {
                         },
                         {name:"Racing Blue", value: {
                                 name: "Racing Blue",
+                                icon: iconRacingBlue,
                                 colors: [
                                     ["tickClr", "black"],
                                     ["subMinTickClr", "black"],
@@ -302,6 +323,7 @@ function mySettings(props) {
                         },
                         {name:"White and Black", value: {
                                 name: "White and Black",
+                                icon: iconWhiteAndBlack,
                                 colors: [
                                     ["tickClr", "black"],
                                     ["subMinTickClr", "black"],
@@ -343,6 +365,7 @@ function mySettings(props) {
                         },
                         {name:"Red and Black", value: {
                                 name: "Red and Black",
+                                icon: iconRedAndBlack,
                                 colors: [
                                     ["tickClr", "white"],
                                     ["subMinTickClr", "white"],
@@ -384,6 +407,7 @@ function mySettings(props) {
                         },
                         {name:"Black and Silver", value: {
                                 name: "Black and Silver",
+                                icon: iconBlackAndSilver,
                                 colors: [
                                     ["tickClr", "white"],
                                     ["subMinTickClr", "white"],
@@ -425,6 +449,7 @@ function mySettings(props) {
                         },
                         {name:"Blue and White", value: {
                                 name: "Blue and White",
+                                icon: iconBlueAndWhite,
                                 colors: [
                                     ["tickClr", "white"],
                                     ["subMinTickClr", "white"],
@@ -466,6 +491,7 @@ function mySettings(props) {
                         },
                         {name:"Gray and Black", value: {
                                 name: "Gray and Black",
+                                icon: iconGrayAndBlack,
                                 colors: [
                                     ["tickClr", "white"],
                                     ["subMinTickClr", "white"],
@@ -511,7 +537,7 @@ function mySettings(props) {
                             <TextImageRow
                                 label={option.name}
                                 sublabel=""
-                                icon={"https://github.com/jensoncrawford/fitbit-analog-watch-speedmaster/blob/master/faceimages/"+option.name+".png?raw=true"}
+                                icon={option.value.icon}
                             />
                     }
                     onSelection={(selection) => console.log(selection.selected[0])}
