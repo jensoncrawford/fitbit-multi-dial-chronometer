@@ -1,3 +1,4 @@
+/* fitbit imports */
 import clock from "clock";
 import document from "document";
 import { units } from "user-settings";
@@ -9,6 +10,9 @@ import { battery } from "power";
 import { user } from "user-profile";
 import * as messaging from "messaging";
 import * as fs from "fs";
+
+/* our import */
+import {faces} from "./faces.js";
 
 const SETTINGS_TYPE = "cbor";
 const SETTINGS_FILE = "settings.cbor";
@@ -51,11 +55,11 @@ let calsField = document.getElementById("calsField");
 function memoryToConsole(where) {
   console.info(where);
   console.info("JS memory:       used: " + memory.js.used.toLocaleString() +
-                                    " peak: " + memory.js.peak.toLocaleString() +
-                                    " total: " + memory.js.total.toLocaleString());
+      " peak: " + memory.js.peak.toLocaleString() +
+      " total: " + memory.js.total.toLocaleString());
   console.info("Native memory:   used: " + memory.native.used.toLocaleString() +
-                                    " peak: " + memory.native.peak.toLocaleString() +
-                                    " total: " + memory.native.total.toLocaleString());
+      " peak: " + memory.native.peak.toLocaleString() +
+      " total: " + memory.native.total.toLocaleString());
   console.info("Memory pressure: " + memory.monitor.pressure);
 }
 
@@ -65,45 +69,10 @@ function loadSettings() {
   }
   catch (ex) {
     console.error("ERROR fs.readFileSync("+SETTINGS_FILE+", "+SETTINGS_TYPE+")");
+    let defaultFace = faces.get("Black");
     return {
-      face: {colors: [
-          ["tickClr", "#c7c7c7"],
-          ["subMinTickClr", "#b8b8b8"],
-          ["fiveMinOuterClr", "#f47c47"],
-          ["fiveMinMiddleClr", ""],
-          ["fiveMinInnerClr", "#b8b8b8"],
-          ["quarterHourClr", "#f47c47"],
-          ["minHandClr", "white"],
-          ["secHandClr", "#f47c47"],
-          ["handDotClr", "black"],
-          ["faceClr", "#505050"],
-          ["bezelClr", "#6f1a21"],
-          ["miniHandLClr", "white"],
-          ["miniHandRClr", "#f47c47"],
-          ["miniHandBClr", "#f47c47"],
-          ["miniBezelClr", "#6f1a21"],
-          ["miniDialClr", "#484848"],
-          ["miniDialEdgeClr", "black"],
-          ["miniTickClr", "#c7c7c7"],
-          ["miniDialTextClr", "#c7c7c7"],
-          ["dateTextClr", "black"],
-          ["dateBgClr", "#a0a0a0"],
-          ["hrFatBurnClr", "green"],
-          ["hrCardioClr", "goldenrod"],
-          ["hrPeakClr", "firebrick"],
-          ["statsIconClr", "#f47c47"],
-          ["statsTextClr", "#c7c7c7"]
-        ],
-        opacities: [
-          ["fiveMinInnerClr",1],
-          ["fiveMinMiddleClr",0],
-          ["fiveMinOuterClr",1],
-          ["quarterHourClr", 1],
-          ["mainHandArrow", 0],
-          ["miniHandArrow", 0],
-          ["miniDialEdgeClr", 0.7]
-        ]},
-      handsOpacity: 1.0,
+      defaultFace,
+      handsOpacity: 1.0
     };
   }
 }
@@ -124,7 +93,8 @@ messaging.peerSocket.onmessage = evt => {
   if (evt.data.newValue){
     switch (evt.data.key) {
       case "face":
-        settings.face = JSON.parse(evt.data.newValue).values[0].value;
+        let faceName = JSON.parse(evt.data.newValue).values[0].name;
+        settings.face = faces.get(faceName);
         let colors = settings.face.colors;
         colors.forEach(function (element) {
           setClrs(element[0], element[1]);
