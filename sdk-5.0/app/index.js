@@ -71,7 +71,7 @@ function loadSettings() {
     console.error("ERROR fs.readFileSync("+SETTINGS_FILE+", "+SETTINGS_TYPE+")");
     let defaultFace = faces.get("Black");
     return {
-      defaultFace,
+      face: defaultFace,
       handsOpacity: 1.0
     };
   }
@@ -115,6 +115,7 @@ messaging.peerSocket.onmessage = evt => {
 };
 
 function setFace(face) {
+  console.info(JSON.stringify(face));
   let colors = face.colors;
   if (colors) {
     colors.forEach(function (color) {
@@ -243,8 +244,8 @@ clock.ontick = (evt) => {
     batteryChargeLevel = battery.chargeLevel;
     batteryMeter.sweepAngle = 3.6 * batteryChargeLevel;
   }
-  if (today.adjusted.activeMins !== undefined) {
-    amField.text = today.adjusted.activeMins;
+  if (today.adjusted.activeZoneMinutes.total !== undefined) {
+    amField.text = today.adjusted.activeZoneMinutes.total;
   } else {
     amField.text = "N/A";
   }
