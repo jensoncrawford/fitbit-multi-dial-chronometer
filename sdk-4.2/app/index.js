@@ -1,3 +1,4 @@
+/* fitbit imports */
 import clock from "clock";
 import document from "document";
 import { units } from "user-settings";
@@ -10,25 +11,23 @@ import { user } from "user-profile";
 import * as messaging from "messaging";
 import * as fs from "fs";
 
+/* our import */
+import {faces} from "./faces.js";
+
 const SETTINGS_TYPE = "cbor";
 const SETTINGS_FILE = "settings.cbor";
+
 /* Heart Rate Constants */
 const HR_DIAL_MIN = 40;
 const HR_DIAL_MAX = 200;
-const HR_OUT_OF_RANGE = "out-of-range";
 const HR_FAT_BURN = "fat-burn";
 const HR_CARDIO = "cardio"
 const HR_PEAK = "peak"
-const HR_BELOW_CUSTOM = "below-custom";
-const HR_CUSTOM = "custom";
-const HR_ABOVE_CUSTOM = "above-custom";
 
 /* main dial elements */
 let hourhand = document.getElementById("hourhand");
 let minutehand = document.getElementById("minutehand");
 let secondhand = document.getElementById("secondhand");
-let outercenterdot = document.getElementById("outercenterdot");
-let innercenterdot = document.getElementById("innercenterdot");
 
 /* 24 hour mini-dial elements */
 let hourhand24 = document.getElementById("hourhand24");
@@ -45,7 +44,6 @@ let hrResting = document.getElementById("hrResting");
 let hrFatBurn = document.getElementById("hrFatBurn");
 let hrCardio = document.getElementById("hrCardio");
 let hrPeak = document.getElementById("hrPeak");
-let hr = document.getElementsByClassName("hr");
 
 /* activity metric elements */
 let amField = document.getElementById("amField");
@@ -71,45 +69,10 @@ function loadSettings() {
   }
   catch (ex) {
     console.error("ERROR fs.readFileSync("+SETTINGS_FILE+", "+SETTINGS_TYPE+")");
+    let defaultFace = faces.get("Black");
     return {
-      face: {colors: [
-          ["tickClr", "#c7c7c7"],
-          ["subMinTickClr", "#b8b8b8"],
-          ["fiveMinOuterClr", "#f47c47"],
-          ["fiveMinMiddleClr", ""],
-          ["fiveMinInnerClr", "#b8b8b8"],
-          ["quarterHourClr", "#f47c47"],
-          ["minHandClr", "white"],
-          ["secHandClr", "#f47c47"],
-          ["handDotClr", "black"],
-          ["faceClr", "#505050"],
-          ["bezelClr", "#6f1a21"],
-          ["miniHandLClr", "white"],
-          ["miniHandRClr", "#f47c47"],
-          ["miniHandBClr", "#f47c47"],
-          ["miniBezelClr", "#6f1a21"],
-          ["miniDialClr", "#484848"],
-          ["miniDialEdgeClr", "black"],
-          ["miniTickClr", "#c7c7c7"],
-          ["miniDialTextClr", "#c7c7c7"],
-          ["dateTextClr", "black"],
-          ["dateBgClr", "#a0a0a0"],
-          ["hrFatBurnClr", "green"],
-          ["hrCardioClr", "goldenrod"],
-          ["hrPeakClr", "firebrick"],
-          ["statsIconClr", "#f47c47"],
-          ["statsTextClr", "#c7c7c7"]
-        ],
-        opacities: [
-          ["fiveMinInnerClr",1],
-          ["fiveMinMiddleClr",0],
-          ["fiveMinOuterClr",1],
-          ["quarterHourClr", 1],
-          ["mainHandArrow", 0],
-          ["miniHandArrow", 0],
-          ["miniDialEdgeClr", 0.7]
-        ]},
-      handsOpacity: 1.0,
+      defaultFace,
+      handsOpacity: 1.0
     };
   }
 }
@@ -130,7 +93,8 @@ messaging.peerSocket.onmessage = evt => {
   if (evt.data.newValue){
     switch (evt.data.key) {
       case "face":
-        settings.face = JSON.parse(evt.data.newValue).values[0].value;
+        let faceName = JSON.parse(evt.data.newValue).values[0].name;
+        settings.face = faces.get(faceName);
         let colors = settings.face.colors;
         colors.forEach(function (element) {
           setClrs(element[0], element[1]);
@@ -203,10 +167,20 @@ if (HeartRateSensor) {
     if (user && user.maxHeartRate ) {
       hrMax.sweepAngle = - 36 / 20 * ( HR_DIAL_MAX - user.maxHeartRate);
       hrResting.sweepAngle = 36 / 20 * (user.restingHeartRate - HR_DIAL_MIN) % 360;
-      let fatBurnStart = user.maxHeartRate * 0.50;
-      let cardioStart = user.maxHeartRate * 0.70;
-      let peakStart = user.maxHeartRate * 0.85;
-      // fat burn : fat-burn to cardio - 1
+      let fatBurnStart = 0;
+      let cardioStart = 0;
+      let peakStart = 0;
+      for (let i=user.restingHeartRate;i<user.maxHeartRate;i++) {
+        if (fatBurnStart === 0 && user.heartRateZone(i) === HR_FAT_BURN ) {
+          fatBurnStart = i;
+        }
+        if (cardioStart === 0 && user.heartRateZone(i) === HR_CARDIO ) {
+          cardioStart = i;
+        }
+        if (peakStart === 0 && user.heartRateZone(i) === HR_PEAK ) {
+          peakStart = i;
+        }
+      }
       hrFatBurn.startAngle = (144 + 36 / 20 * fatBurnStart) % 360;
       hrFatBurn.sweepAngle = 36 / 20 * ( cardioStart - fatBurnStart );
 
@@ -250,22 +224,22 @@ let evtDateDayOfMonth=-1;let evtDateMonth=-1;
 let evtDateMinutes=-1;
 let batteryChargeLevel=-1
 clock.ontick = (evt) => {
-  if (evt.date.getDay() != evtDateDay) {
+  if (evt.date.getDay() !== evtDateDay) {
     evtDateDay = evt.date.getDay();
     monthHand.groupTransform.rotate.angle = (360.0 / 7.0 * evtDateDay)
   }
-  if (evt.date.getDate() != evtDateDayOfMonth) {
+  if (evt.date.getDate() !== evtDateDayOfMonth) {
     evtDateDayOfMonth = evt.date.getDate();
     dateField.text = evtDateDayOfMonth;
   }
-  if (evt.date.getMinutes() != evtDateMinutes) {
+  if (evt.date.getMinutes() !== evtDateMinutes) {
     evtDateMinutes = evt.date.getMinutes();
     hourhand24.groupTransform.rotate.angle = (15 * evt.date.getHours()) + (0.25 * evtDateMinutes);
     hourhand.groupTransform.rotate.angle = (30 * (evt.date.getHours() % 12)) + (0.5 * evtDateMinutes);
   }
   minutehand.groupTransform.rotate.angle = (6 * evtDateMinutes) + (0.1 * evt.date.getSeconds());
   secondhand.groupTransform.rotate.angle = (6 * evt.date.getSeconds());
-  if (batteryChargeLevel != battery.chargeLevel) {
+  if (batteryChargeLevel !== battery.chargeLevel) {
     batteryChargeLevel = battery.chargeLevel;
     batteryMeter.sweepAngle = 3.6 * batteryChargeLevel;
   }

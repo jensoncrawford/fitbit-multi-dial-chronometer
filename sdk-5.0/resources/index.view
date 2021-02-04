@@ -145,7 +145,7 @@
           -  * five minute markers (inner and outer)
           -->
         <image class="tickClr" href="minuteTicks.png"/>
-        <image class="subMinTickClr" href="subMinutesTicks.png"/>
+        <image class="subMinTickClr" href="subminuteTicks.png"/>
         <g transform="translate(50%,50%)">
 
             <!-- Quarter-hour markers -->
@@ -272,6 +272,7 @@
                 <line x1="0"  y1="-48%" x2="3"  y2="9%" stroke-width="2" stroke-linecap="butt"
                       class="secHandClr mainHandArrow"/>
             </g>
+            <!-- main hand center circles -->
             <circle id="outercenterdot" cx="0" cy="0" r="6" class="secHandClr"/>
             <circle id="innercenterdot" cx="0" cy="0" r="1" class="handDotClr"/>
         </g>

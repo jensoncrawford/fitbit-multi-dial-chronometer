@@ -1,5 +1,5 @@
 /*
- * Main Dial Colors
+ * Main Dial Colors - replaced at runtime by colors selected in ../settings/index.js
  */
 .tickClr {
     fill: white;
@@ -77,7 +77,7 @@
 }
 
 /*
- * Status colors
+ * Status colors - replaced at runtime by colors selected in ../settings/index.js
  */
 .statsIconClr {
     fill: white;
@@ -129,20 +129,6 @@
     height: 25;
 }
 
-.mainDialMin {
-    x: 0%;
-    y: -50%;
-    width: 1;
-    height: 24;
-}
-
-.mainDialHalfMin {
-    x: 0%;
-    y: -50%;
-    width: 1;
-    height: 12;
-}
-
 /*
  * Stats
  */
@@ -159,6 +145,7 @@
     font-size: 24;
     text-anchor: middle;
 }
+
 /*
  * 24 hour mini-dial
  */

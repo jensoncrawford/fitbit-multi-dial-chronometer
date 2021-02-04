@@ -1,5 +1,5 @@
 /*
- * Main Dial Colors
+ * Main Dial Colors - replaced at runtime by colors selected in ../settings/index.js
  */
 .tickClr {
     fill: white;
@@ -9,6 +9,7 @@
 }
 .fiveMinOuterClr {
     fill: white;
+    opacity: 0;
 }
 .fiveMinMiddleClr {
     fill: white;
@@ -18,58 +19,65 @@
 }
 .quarterHourClr {
     fill: white;
+    opacity: 1;
 }
 .minHandClr {
     fill: white;
 }
 .secHandClr {
-    fill: white;
-}
-.miniHandLClr {
-    fill: white;
-}
-.miniHandRClr {
-    fill: white;
-}
-.miniHandBClr {
-    fill: white;
+    fill: #eeeeee;
 }
 .handDotClr {
-    fill: black;
+    fill: #888888;
 }
 .faceClr {
-    fill: #013153;
+    fill: black;
 }
 .bezelClr {
-    fill: #025996;
+    fill: #444444;
 }
 /*
  * Mini Dial Colors
  */
-.miniDialClr {
-    fill: #012742;
-}
 .miniDialTextClr {
-    fill: white;
+    fill: black;
+}
+.miniHandLClr {
+    fill: black;
+}
+.miniHandRClr {
+    fill: black;
+}
+.miniHandBClr {
+    fill: black;
+}
+.miniBezelClr {
+    fill: #eeeeee;
+}
+.miniDialClr {
+    fill: silver;
+}
+.miniTickClr {
+    fill: black;
 }
 .dateTextClr {
-    fill: white;
+    fill: black;
 }
 .dateBgClr {
-    fill: #011c30;
+    fill: #dddddd;
 }
 .hrFatBurnClr {
-    fill: green;
+    fill: #eeeeee;
 }
 .hrCardioClr {
-    fill: goldenrod;
+    fill: #cccccc;
 }
 .hrPeakClr {
-    fill: firebrick;
+    fill: #eeeeee;
 }
 
 /*
- * Status colors
+ * Status colors - replaced at runtime by colors selected in ../settings/index.js
  */
 .statsIconClr {
     fill: white;
@@ -121,20 +129,6 @@
     height: 25;
 }
 
-.mainDialMin {
-    x: 0%;
-    y: -50%;
-    width: 1;
-    height: 24;
-}
-
-.mainDialHalfMin {
-    x: 0%;
-    y: -50%;
-    width: 1;
-    height: 12;
-}
-
 /*
  * Stats
  */
@@ -151,6 +145,7 @@
     font-size: 24;
     text-anchor: middle;
 }
+
 /*
  * 24 hour mini-dial
  */
