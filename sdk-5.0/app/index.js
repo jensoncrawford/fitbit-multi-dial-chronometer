@@ -115,7 +115,6 @@ messaging.peerSocket.onmessage = evt => {
 };
 
 function setFace(face) {
-  console.info(JSON.stringify(face));
   let colors = face.colors;
   if (colors) {
     colors.forEach(function (color) {

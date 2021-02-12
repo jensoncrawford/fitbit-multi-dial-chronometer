@@ -5,7 +5,7 @@
   "fitbit": {
     "appUUID": "d736d6c7-2404-4a1d-8e9e-241023ac7960",
     "appType": "clockface",
-    "appDisplayName": "Chronograph Sense/Versa 3",
+    "appDisplayName": "Analog Multi-dial Chronagraph",
     "iconFile": "resources/icon.png",
     "wipeColor": "#f44336",
     "requestedPermissions": [
@@ -20,7 +20,7 @@
     ],
     "i18n": {
       "en-US": {
-        "name": "Chronograph Sense/Versa 3"
+        "name": "Analog Multi-dial Chronagraph"
       }
     },
     "defaultLanguage": "en-US"
