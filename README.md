@@ -1,5 +1,6 @@
 # fitbit-multi-dial-chronometer
-Fitbit analog clock face for Fitbit [SDK 5.0 (Sense, Versa 3)](https://gallery.fitbit.com/details/d736d6c7-2404-4a1d-8e9e-241023ac7960) and [SDK 4.2 (Versa, Versa Lite, Versa 2)](https://gallery.fitbit.com/details/e942e96f-e8f7-4bbe-921d-1622d25a7c3b).
+Fitbit analog clock face for Fitbit [SDK 5.0 Smartwatches](https://gallery.fitbit.com/details/d736d6c7-2404-4a1d-8e9e-241023ac7960) 
+and [SDK 4.2 Smartwatches](https://gallery.fitbit.com/details/e942e96f-e8f7-4bbe-921d-1622d25a7c3b).
 
 This is an analog clock face that is a tribute to classic analog
 multi-dial chronometers. This watch face shows the day, date and day of week,
@@ -7,7 +8,8 @@ a separate 24-hour hand is shared with the battery level. The heart rate dial on
 bottom shows the current heart rate with a hand against a scale of the resting to maximum
 heart rate, along with indicators for fat-burning, cardio and peak heart rates.
 
-Available in the Fitbit Gallery for [Sense or Versa 3](https://gallery.fitbit.com/details/d736d6c7-2404-4a1d-8e9e-241023ac7960) and [Versa, Versa Lite, or Versa 2](https://gallery.fitbit.com/details/e942e96f-e8f7-4bbe-921d-1622d25a7c3b).
+Available in the Fitbit Gallery for [SDK 5.0 Smartwatches](https://gallery.fitbit.com/details/d736d6c7-2404-4a1d-8e9e-241023ac7960) 
+and [SDK 4.2 Smartwatches](https://gallery.fitbit.com/details/e942e96f-e8f7-4bbe-921d-1622d25a7c3b).
 
 <img src="./faceimages/BlackWatch.png" alt="Black Watch Face"
 width="20%"> &nbsp;  <img src="./faceimages/WhiteOnBlueWatch.png" alt="White on Blue Watch Face"
