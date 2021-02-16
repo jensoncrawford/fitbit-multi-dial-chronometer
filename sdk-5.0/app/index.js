@@ -46,7 +46,7 @@ let hrCardio = document.getElementById("hrCardio");
 let hrPeak = document.getElementById("hrPeak");
 
 /* activity metric elements */
-let amField = document.getElementById("amField");
+let azmField = document.getElementById("azmField");
 let distField = document.getElementById("distField");
 let stepsField = document.getElementById("stepsField");
 let floorsField = document.getElementById("floorsField");
@@ -244,9 +244,9 @@ clock.ontick = (evt) => {
     batteryMeter.sweepAngle = 3.6 * batteryChargeLevel;
   }
   if (today.adjusted.activeZoneMinutes.total !== undefined) {
-    amField.text = today.adjusted.activeZoneMinutes.total;
+    azmField.text = today.adjusted.activeZoneMinutes.total;
   } else {
-    amField.text = "N/A";
+    azmField.text = "N/A";
   }
   let steps = today.adjusted.steps;
   stepsField.text = steps.toLocaleString();

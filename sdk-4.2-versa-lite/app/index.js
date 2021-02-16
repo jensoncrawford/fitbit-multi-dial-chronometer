@@ -261,9 +261,6 @@ clock.ontick = (evt) => {
   let dist = (units.distance === "metric" ? today.adjusted.distance * 0.001 : today.adjusted.distance * 0.000621371);
   dist = Math.floor(dist * 100) / 100;
   distField.text = dist.toLocaleString();
-  if (today.local.elevationGain !== undefined) {
-    floorsField.text = today.adjusted.elevationGain;
-  } 
   let calories = today.adjusted.calories;
   calsField.text = calories.toLocaleString();
 };

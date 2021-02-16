@@ -205,10 +205,6 @@
                     <image href="calories.png" class="statsIcon statsIconClr"/>
                     <text id="calsField" class="statsField statsTextClr" text-length="8"/>
                 </use>
-                <use id="stats-floors" href="#cycleview-item">
-                    <image href="floors.png" class="statsIcon statsIconClr"/>
-                    <text id="floorsField" class="statsField statsTextClr" text-length="8"/>
-                </use>
                 <use href="#cycleview-item">
                     <image href="activeZoneMinutes.png" class="statsIcon statsIconClr"/>
                     <text id="amField" class="statsField statsTextClr" text-length="8"/>

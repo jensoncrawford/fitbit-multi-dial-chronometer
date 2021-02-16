@@ -1,5 +1,5 @@
 # fitbit-multi-dial-chronometer
-Fitbit analog clock face for Fitbit [SDK 5.0 Smartwatches](https://gallery.fitbit.com/details/d736d6c7-2404-4a1d-8e9e-241023ac7960) 
+Analog clock face for [Fitbit<sup>&reg;</sup>](https://fitbit.com) [SDK 5.0 Smartwatches](https://gallery.fitbit.com/details/d736d6c7-2404-4a1d-8e9e-241023ac7960) 
 and [SDK 4.2 Smartwatches](https://gallery.fitbit.com/details/e942e96f-e8f7-4bbe-921d-1622d25a7c3b).
 
 This is an analog clock face that is a tribute to classic analog
@@ -24,3 +24,5 @@ width="20%"> &nbsp;  <img src="./faceimages/RedAndBlackWatch.png" alt="Red and B
 width="20%"> &nbsp;  <img src="./faceimages/BlueAndWhiteWatch.png" alt="Blue and White Watch Face"
 width="20%"> &nbsp;  <img src="./faceimages/GrayAndBlackWatch.png" alt="Gray and Black Watch Face"
 width="20%"> &nbsp;
+
+Fitbit is a registered trademark of Fitbit, Inc.

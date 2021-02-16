@@ -20,7 +20,6 @@ settingsStorage.onchange = evt => {
   sendVal(data);
 };
 
-
 /* Restore saved settings and send */
 function restoreSettings() {
   for (let index = 0; index < settingsStorage.length; index++) {   
