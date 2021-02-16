@@ -210,8 +210,8 @@
                     <text id="floorsField" class="statsField statsTextClr" text-length="8"/>
                 </use>
                 <use href="#cycleview-item">
-                    <image href="activeMinutes.png" class="statsIcon statsIconClr"/>
-                    <text id="amField" class="statsField statsTextClr" text-length="8"/>
+                    <image href="activeZoneMinutes.png" class="statsIcon statsIconClr"/>
+                    <text id="azmField" class="statsField statsTextClr" text-length="8"/>
                 </use>
             </use>
       </section>

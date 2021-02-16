@@ -3,9 +3,9 @@
     "@fitbit/sdk": "~4.2.0"
   },
   "fitbit": {
-    "appUUID": "e942e96f-e8f7-4bbe-921d-1622d25a7c3b",
+    "appUUID": "f36829c1-8b5b-4038-9226-ccb419dc4168",
     "appType": "clockface",
-    "appDisplayName": "Analog Multi-dial Chronograph",
+    "appDisplayName": "Analog Multi-dial Chronagraph",
     "iconFile": "resources/icon.png",
     "wipeColor": "#607d8b",
     "requestedPermissions": [
@@ -15,13 +15,11 @@
       "access_location"
     ],
     "buildTargets": [
-      "mira",
-      "meson",
       "gemini"
     ],
     "i18n": {
       "en-US": {
-        "name": "Analog Multi-dial Chronograph"
+        "name": "Analog Multi-dial Chronagraph"
       }
     },
     "defaultLanguage": "en-US"
