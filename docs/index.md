@@ -1,5 +1,9 @@
 # Fitbit Muli-Dial Chronometer
 
+## Contents
+[Overview](#overview)
+[Changing the Watchface Color](#changing-the-watchface-color)
+
 ## Overview
 
 Fitbit analog clock face for Fitbit SDK 5.0 (Sense, Versa 3) and SDK 4.2 (Versa, Versa Lite, Versa 2).
