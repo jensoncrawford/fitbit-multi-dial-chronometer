@@ -30,24 +30,15 @@ width="20%"> &nbsp;
 
 ## Changing the Watchface Color
 
-To change the watchface color scheme click Clock Faces in the FitBit app on your mobile device  
-
-<img src="./images/Multi-Dial_Chronograph_My_Fitbit.jpg" width="30%">
-
-If the Muli-Dial Chronometer is not currently the selected watch face, select it.  
-Then click on the big watch face to open the watch face information page.  
-
-<img src="./images/Multi-Dial_Chronograph_My_Clock_Faces.jpg" width="30%">
-
-Now, click on settings
-
-<img src="./images/Multi-Dial_Chronograph_Information_Page.jpg" width="30%"> 
-
-And then, click on Watch Face Selection  
-
-<img src="./images/Multi-Dial_Chronograph_Settings.jpg" width="30%">  
-
-Finally, scroll through the list and select the watch face color scheme you want to use. Then, click done.
-
+To change the watchface color scheme click Clock Faces in the FitBit app on your mobile device.<br/><br/>
+<img src="./images/Multi-Dial_Chronograph_My_Fitbit.jpg" width="30%"><br/><br/>
+If the Muli-Dial Chronometer is not currently the selected watch face, select it.<br/>  
+Then click on the big watch face to open the watch face information page.<br/><br/>
+<img src="./images/Multi-Dial_Chronograph_My_Clock_Faces.jpg" width="30%"><br/><br/>
+Now, click on settings<br/><br/>
+<img src="./images/Multi-Dial_Chronograph_Information_Page.jpg" width="30%"><br/><br/>
+And then, click on Watch Face Selection<br/><br/>
+<img src="./images/Multi-Dial_Chronograph_Settings.jpg" width="30%"><br/><br/>
+Finally, scroll through the list and select the watch face color scheme you want to use. Then, click done.<br/><br/>
 <img src="./images/Multi-Dial_Chronograph_Face_Selection.jpg" width="30%">
 
