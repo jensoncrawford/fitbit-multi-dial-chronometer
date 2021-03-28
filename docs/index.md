@@ -31,7 +31,7 @@ width="20%"> &nbsp;
 ## Changing the Watchface Color
 <img src="./images/Multi-Dial_Chronograph_My_Fitbit.jpg" width=30%/>
 <img src="./images/Multi-Dial_Chronograph_Settings.jpg" width=30%/>
-<img src=".images/Multi-Dial_Chronograph_My_Clock_Faces.jpg" width=30%/>
-<img src=".images/Multi-Dial_Chronograph_Information_Page.jpg" width=30%/>
-<img src=".images/Multi-Dial_Chronograph_Face_Selection.jpg" width=30%/>
+<img src="./images/Multi-Dial_Chronograph_My_Clock_Faces.jpg" width=30%/>
+<img src="./images/Multi-Dial_Chronograph_Information_Page.jpg" width=30%/>
+<img src="./images/Multi-Dial_Chronograph_Face_Selection.jpg" width=30%/>
 
