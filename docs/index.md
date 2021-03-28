@@ -1,3 +1,7 @@
+# Fitbit Muli-Dial Chronometer
+
+## Overview
+
 Fitbit analog clock face for Fitbit SDK 5.0 (Sense, Versa 3) and SDK 4.2 (Versa, Versa Lite, Versa 2).
 
 This is an analog clock face that is a tribute to classic analog
@@ -19,3 +23,5 @@ width="20%"> &nbsp;  <img src="./faceimages/RedAndBlackWatch.png" alt="Red and B
 width="20%"> &nbsp;  <img src="./faceimages/BlueAndWhiteWatch.png" alt="Blue and White Watch Face"
 width="20%"> &nbsp;  <img src="./faceimages/GrayAndBlackWatch.png" alt="Gray and Black Watch Face"
 width="20%"> &nbsp;
+
+## Changing the Watchface Color
