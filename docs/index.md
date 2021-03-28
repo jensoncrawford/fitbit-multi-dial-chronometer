@@ -29,6 +29,7 @@ width="20%"> &nbsp;  <img src="./faceimages/GrayAndBlackWatch.png" alt="Gray and
 width="20%"> &nbsp;
 
 ## Changing the Watchface Color
+
 To change the watchface color scheme click Clock Faces in the FitBit app on your mobile device  
 <img src="./images/Multi-Dial_Chronograph_My_Fitbit.jpg" width="30%">  
 If the Muli-Dial Chronometer is not currently the selected watch face, select it.  
