@@ -39,8 +39,9 @@ function mySettings(props) {
                 />
             </Section>
             <Section title={<Text bold align="center">Watch Face</Text>}>
+                <Text>Select one of twelve analog chronograph watch faces</Text>
                 <Select
-                    label={`Watch Face Selection`}
+                    label="Click here to display a scrollable list of watch faces"
                     settingsKey="face"
                     options={[
                         {name:"Black", value: {
