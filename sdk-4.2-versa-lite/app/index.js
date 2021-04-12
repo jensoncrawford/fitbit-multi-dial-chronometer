@@ -232,37 +232,43 @@ let evtDateDayOfMonth=-1;let evtDateMonth=-1;
 let evtDateMinutes=-1;
 let batteryChargeLevel=-1
 clock.ontick = (evt) => {
-  if (evt.date.getDay() !== evtDateDay) {
-    evtDateDay = evt.date.getDay();
+  let date = evt.date;
+  if (date.getDay() !== evtDateDay) {
+    evtDateDay = date.getDay();
     monthHand.groupTransform.rotate.angle = (360.0 / 7.0 * evtDateDay)
   }
-  if (evt.date.getDate() !== evtDateDayOfMonth) {
-    evtDateDayOfMonth = evt.date.getDate();
+  if (date.getDate() !== evtDateDayOfMonth) {
+    evtDateDayOfMonth = date.getDate();
     dateField.text = evtDateDayOfMonth;
   }
-  if (evt.date.getMinutes() !== evtDateMinutes) {
-    evtDateMinutes = evt.date.getMinutes();
-    hourhand24.groupTransform.rotate.angle = (15 * evt.date.getHours()) + (0.25 * evtDateMinutes);
-    hourhand.groupTransform.rotate.angle = (30 * (evt.date.getHours() % 12)) + (0.5 * evtDateMinutes);
+  if (date.getMinutes() !== evtDateMinutes) {
+    evtDateMinutes = date.getMinutes();
+    hourhand24.groupTransform.rotate.angle = (15 * date.getHours()) + (0.25 * evtDateMinutes);
+    hourhand.groupTransform.rotate.angle = (30 * (date.getHours() % 12)) + (0.5 * evtDateMinutes);
   }
-  minutehand.groupTransform.rotate.angle = (6 * evtDateMinutes) + (0.1 * evt.date.getSeconds());
-  secondhand.groupTransform.rotate.angle = (6 * evt.date.getSeconds());
+  minutehand.groupTransform.rotate.angle = (6 * evtDateMinutes) + (0.1 * date.getSeconds());
+  secondhand.groupTransform.rotate.angle = (6 * date.getSeconds());
   if (batteryChargeLevel !== battery.chargeLevel) {
     batteryChargeLevel = battery.chargeLevel;
     batteryMeter.sweepAngle = 3.6 * batteryChargeLevel;
   }
   if (today.adjusted.activeZoneMinutes.total !== undefined) {
-    amField.text = today.adjusted.activeZoneMinutes.total;
+    azmField.text = today.adjusted.activeZoneMinutes.total;
   } else {
-    amField.text = "N/A";
+    azmField.text = "N/A";
   }
   let steps = today.adjusted.steps;
-  stepsField.text = steps.toLocaleString();
+  stepsField.text = "9,073"; //steps.toLocaleString();
   let dist = (units.distance === "metric" ? today.adjusted.distance * 0.001 : today.adjusted.distance * 0.000621371);
   dist = Math.floor(dist * 100) / 100;
-  distField.text = dist.toLocaleString();
+  distField.text = "4.87";
+  if (today.local.elevationGain !== undefined) {
+    floorsField.text = today.adjusted.elevationGain;
+  } else {
+    floorsField.text = "N/A";
+  }
   let calories = today.adjusted.calories;
-  calsField.text = calories.toLocaleString();
+  calsField.text = "2,571"; // calories.toLocaleString();
 };
 
 setFace(settings.face);
